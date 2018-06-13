@@ -64,7 +64,7 @@ class ProductController extends MainController{
 		$this->printers_product_cat =  ProductType::findProductType('printers');
 		$this->brands = Brand::all();
 		$this->filters = Filter::getFilters($this->printers_product_cat->term_id);
-		if($this->object){
+		if(is_tax()){
 			View::share('object', $this->object);
 			View::share('active_link', $this->object->slug);
 		}

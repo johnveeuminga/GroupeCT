@@ -40,7 +40,7 @@
 							<div class="flex wrap flex-col">
 								@foreach($product_type_children as $product_type_child)
 									@if($object->taxonomy === 'product_cat')
-										@if($product_type_child->slug === $active_link && $object->taxonomy === 'product_cat')
+										@if($product_type_child->slug !== $active_link && $object->taxonomy === 'product_cat')
 											<a href="{{ get_term_link($product_type_child)}}" class="font-sans-mada text-red my-1 px-3 inline-block"> <span class="underline">{{__($product_type_child->name, 'GROUPE-CT')}}</span></a>
 										@else
 											<span class="font-sans-mada text-blue my-1 px-3 inline-block font-bold "> {{__($product_type_child->name, 'GROUPE-CT')}}</span>
@@ -60,7 +60,7 @@
 							<div class="flex wrap flex-col">
 								@foreach($brands as $brand_single)
 									@if($object->taxonomy === 'product_brands')
-										@if($brand_single->slug === $active_link)
+										@if($brand_single->slug !== $active_link)
 											<a href="{{ get_term_link($brand_single)}}" class="font-sans-mada text-red my-1 px-3 inline-block"> <span class="underline">{{__($brand_single->name, 'GROUPE-CT')}}</span></a>
 										@else
 											<span class="font-sans-mada text-blue my-1 px-3 inline-block font-bold "> {{__($brand_single->name, 'GROUPE-CT')}}</span>
