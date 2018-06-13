@@ -274,43 +274,50 @@ Ajax::listen('get-products', function(){
         $filter_array = json_decode(stripslashes($_GET['filters']));
 
         $attributes = [];
-        foreach($filter_array as $index=>$filter_group){
-            if(!empty($filter_group)){
-                $values = [];
-                foreach($filter_group as $filter){
-                    $values[] = $filter;
-                }
 
-                $attributes[] = [
-                    'taxonomy' => $index,
-                    'field' => 'term_id',
-                    'terms' => $values,
-                ];
-            }  
+        if(!empty($filter_array)){
+            foreach($filter_array as $index=>$filter_group){
+                if(!empty($filter_group)){
+                    $values = [];
+                    foreach($filter_group as $filter){
+                        $values[] = $filter;
+                    }
+
+                    $attributes[] = [
+                        'taxonomy' => $index,
+                        'field' => 'term_id',
+                        'terms' => $values,
+                    ];
+                }  
+            }
         }
-
-        $attributes[] =[
-            'taxonomy' => $_GET['taxonomy'],
-            'field' => 'term_id',
-            'terms' => $_GET['term_id']
-        ];
 
         $args = [
             'post_type' => 'product',
         ];
 
+        $args['tax_query'] = [
+            'relation' => 'AND', 
+            [
+                'taxonomy' => $_GET['taxonomy'],
+                'field' => 'term_id',
+                'terms' => $_GET['term_id']
+            ],
+        ];
+
         if($attributes){
-            $args['tax_query'] = [
-                'relation' => 'AND', 
-                $attributes
-            ];
+            $args['tax_query'][] = $attributes;
         }
 
         $query = new WP_Query($args);
 
-
         if(!$query->posts){
-            $result['data'] = '<p class="font-sans-mada text-center text-lg py-4 w-full font-bold">No Products according to search</p>';
+            if($attributes){
+                $message = 'No products according to search.';
+            }else{
+                $message = 'No products.';
+            }
+            $result['data'] = '<p class="font-sans-mada text-center text-lg py-4 w-full font-bold">' . $message .'</p>';
         }else{
             ob_start();
         ?>

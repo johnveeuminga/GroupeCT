@@ -9,6 +9,7 @@ use Theme\Models\Filter;
 use Theme\Models\ProductType;
 use Theme\Models\WooProduct as Product;
 use Themosis\Facades\Asset;
+use Themosis\Facades\View;
 
 class ProductController extends MainController{
 	/**
@@ -30,34 +31,63 @@ class ProductController extends MainController{
 	 *
 	 * @return void
 	 */
+
+	/**
+	 * The current object.
+	 *
+	 * @var mixed $object
+	 */
+	protected $object;
+
+	/**
+	 * The printers product type
+	 *
+	 * @var mixed $printers_product
+	 */
+	protected $printers_product_cat;
+
+	/**
+	 * The brands.
+	 *
+	 * @var mixed $brands
+	 */
+	protected $brands;
+
+	/**
+	 * The filters
+	 *
+	 * @var mixed $filters
+	 */
 	public function __construct(){
 		parent::__construct();
+		$this->object = get_queried_object();
+		$this->printers_product_cat =  ProductType::findProductType('printers');
+		$this->brands = Brand::all();
+		$this->filters = Filter::getFilters($this->printers_product_cat->term_id);
+		View::share('object', $this->object);
+		View::share('brands', $this->brands);
+		View::share('product_type', $this->printers_product_cat);
+		View::share('filters', $this->filters);
+		View::share('active_link', $this->object->slug);
 	}
 
 	/**
 	 * Displays the products under a product type and product brand
 	 */
 	public function getProductsWithBrandType(){
-		$object = get_queried_object();
-		$brands = Brand::all();
-		$product_type = ProductType::findProductType('printers');
-		$product_type_children = ProductType::getSubcategories($product_type->term_id);
-		if($object->taxonomy === $this->product_brand_tax_name){
-			$products = Product::getProductsWithBrandAndType($object->term_id, $product_type->term_id);
+		$product_type_children = ProductType::getSubcategories($this->printers_product_cat->term_id);
+
+		if($this->object->taxonomy === $this->product_brand_tax_name){
+			$products = Product::getProductsWithBrandAndType($this->object->term_id, $this->printers_product_cat->term_id);
 		}else{
-			$products = Product::getProductsOfCategory($object->term_id);
+			$products = Product::getProductsOfCategory($this->object->term_id);
 		}
-		$filters = Filter::getFilters($product_type->term_id);
 
 		return view('pages.woocommerce.product-listing',[
-			'object' => $object,
-			'brands' => $brands,
-			'filters'	=> $filters,
 			'product_type_children' => $product_type_children,
-			'logo' => $this->getLogo($object),
-			'product_type' => $product_type,
+			'logo' => $this->getLogo($this->object),
+			'page_title' => $this->getTitle($this->object, $this->printers_product_cat),
 			'products' => $products,
-			'page_title' => $this->getTitle($object, $product_type),
 		]);
 	}
 
