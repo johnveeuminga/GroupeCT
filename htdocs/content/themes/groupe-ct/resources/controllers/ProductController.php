@@ -12,6 +12,20 @@ use Themosis\Facades\Asset;
 
 class ProductController extends MainController{
 	/**
+	 * The product brand taxonomy name.
+	 *
+	 * @var string $product_brand_tax_name;
+	 */
+	protected $product_brand_tax_name = 'product_brands';
+
+	/**
+	 * The product category taxonomy name.
+	 *
+	 * @var string $product_cat_tax_name
+	 */
+	protected $product_cat_tax_name = 'product_cat';
+
+	/**
 	 * Enqueues assets from MainController
 	 *
 	 * @return void
@@ -24,24 +38,26 @@ class ProductController extends MainController{
 	 * Displays the products under a product type and product brand
 	 */
 	public function getProductsWithBrandType(){
-		$brand = get_queried_object();
+		$object = get_queried_object();
 		$brands = Brand::all();
-		$brand_logo = Brand::getBrandLogo($brand->term_id);
 		$product_type = ProductType::findProductType('printers');
 		$product_type_children = ProductType::getSubcategories($product_type->term_id);
-		$products = Product::getProductsWithBrandAndType($brand->term_id, $product_type->term_id);
+		if($object->taxonomy === $this->product_brand_tax_name){
+			$products = Product::getProductsWithBrandAndType($object->term_id, $product_type->term_id);
+		}else{
+			$products = Product::getProductsOfCategory($object->term_id);
+		}
 		$filters = Filter::getFilters($product_type->term_id);
-		$page_title = __($brand->name. ' ' . $product_type->name);
 
 		return view('pages.woocommerce.product-listing',[
-			'brand' => $brand,
+			'object' => $object,
 			'brands' => $brands,
 			'filters'	=> $filters,
 			'product_type_children' => $product_type_children,
-			'brand_logo' => $brand_logo,
+			'logo' => $this->getLogo($object),
 			'product_type' => $product_type,
 			'products' => $products,
-			'page_title' => $page_title,
+			'page_title' => $this->getTitle($object, $product_type),
 		]);
 	}
 
@@ -72,7 +88,6 @@ class ProductController extends MainController{
 		]);
 	}
 
-//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css
 	/**
 	 * Displays a listing of all the product subcategories
 	 *
@@ -89,4 +104,35 @@ class ProductController extends MainController{
 			'page_title' => $page_title,
 		]);
 	}
+
+	/**
+	 * Gets the page title according to if its a brand or a category
+	 *
+	 * @return string The corresponding page title.
+	 */
+	private function getTitle($object, $product_type = null){
+		if($object->taxonomy === $this->product_brand_tax_name){
+			return __($object->name. ' ' . $product_type->name, 'GROUPE-CT');
+		}
+
+
+		return __($object->name, 'GROUPE-CT');
+	}
+
+	/**
+	 * Gets the brand or category logo
+	 *
+	 * @return string The logo url.
+	 */
+	private function getLogo($object){
+		if($object->taxonomy === $this->product_brand_tax_name){
+			return Brand::getBrandLogo($object->term_id);
+		}
+
+		$thumbnail_id = get_woocommerce_term_meta( $object->term_id, 'thumbnail_id', true );
+		$image = wp_get_attachment_url( $thumbnail_id != 0 ? $thumbnail_id : 1991 );
+
+		return $image;
+	}
+
 }

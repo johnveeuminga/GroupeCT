@@ -13,12 +13,16 @@ module.exports = {
         filename: '[name].min.js'
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader'
-            }
+                loader: 'babel-loader',
+                query: {
+                   presets: ['es2015', ]
+                }
+            },
+
         ]
     },
     externals: {
@@ -35,6 +39,8 @@ module.exports = {
             $: "jQuery",
             backbone: "Backbone",
             underscore: "_"
-        })
-    ]
+        }),
+    ],
+    resolve: {
+    }
 };

@@ -20,7 +20,9 @@
 				data:{
 				action: 'get-products',
 					security: 'get-products',
-					filters: JSON.stringify(filters)
+					filters: JSON.stringify(filters),
+					taxonomy: $('#taxonomy').val(),
+					term_id: $('#base_id').val(),
 				},
 
 				beforeSend: function(){

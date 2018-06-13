@@ -9,7 +9,8 @@
 	    			<div class="sidebar-header text-center">
 	    				<h3 class="text-center mx-3 text-blue uppercase font-sans font-bold py-2 border-b-4 border-blue border-solid inline-block text-xl">{{ __('Refine Your Research', 'GROUPE-CT') }}</h3>
 	    			</div>
-	    			<input type="hidden" name="base_id" value="{{$brand->term_id}}">
+	    			<input type="hidden" name="term_id" value="{{$object->term_id}}" id="base_id">
+	    			<input type="hidden" name="taxonomy" value="{{ $object->taxonomy }}" id="taxonomy">
 	    			@foreach($filters as $index=>$filter)
 	    				@if(count($filter) > 0)
 	    					<div class="sidebar-section my-4">
@@ -58,15 +59,15 @@
 					</div>
 	    		</aside>
     	    	<div class="col-md-8">
-    	    		<h2 class="product-brand__title text-3xl uppercase font-bold font-sans">{{ __($brand->name . ' ' . $product_type->name, 'GROUPE-CT') }}</h2>
+    	    		<h2 class="product-brand__title text-3xl uppercase font-bold font-sans">{{ __($object->name . ' ' . $product_type->name, 'GROUPE-CT') }}</h2>
     	    		<div class="product-brand-header">
-    	    			<div class="row middle-xs">
+    	    			<div class="row middle-xs my-3">
     	    				<div class="col-md-3">
-    	    					<img src="{{$brand_logo}}" alt="{{$brand->name}}">
+    	    					<img src="{{$logo}}" alt="{{$object->name}}">
     	    				</div>
     	    				<div class="col-md-9">
     	    					<p class="font-sans-mada text-lg">
-    	    						{{$brand->description}}
+    	    						{{$object->description}}
     	    					</p>
     	    				</div>
     	    			</div>
@@ -78,7 +79,7 @@
     	    			<div class="row my-4 product-brand__products-row">
     	    				@foreach($products as $product)
     	    					<div class="col-md-3 product-brand__products-col">
-    	    						<div class="product-brand__product my-8">
+    	    						<div class="product-brand__product my-8 text-center px-2">
     	    							@if(has_post_thumbnail($product->ID))
     	    							<img src="{{ get_the_post_thumbnail_url($product->ID) }}" alt="{{$product->post_title}}" class="w-100 block">
     	    							@else

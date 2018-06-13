@@ -248,3 +248,134 @@ Stack trace:
 [13-Jun-2018 02:35:24 UTC] PHP Notice:  Undefined variable: brand_logo in /home/mnwebsolutionsin/public_html/my-project-name/storage/views/3bdd87ac8f4a5631e4d69da00eeee5d56780c7f3.php on line 67
 [13-Jun-2018 02:35:24 UTC] PHP Notice:  Undefined variable: page_title in /home/mnwebsolutionsin/public_html/my-project-name/storage/views/3bdd87ac8f4a5631e4d69da00eeee5d56780c7f3.php on line 79
 [13-Jun-2018 02:35:49 UTC] PHP Notice:  Undefined variable: brand_logo in /home/mnwebsolutionsin/public_html/my-project-name/storage/views/3bdd87ac8f4a5631e4d69da00eeee5d56780c7f3.php on line 67
+[13-Jun-2018 04:05:49 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at C:\Users\webdesign\websites\GroupeCT\.env.production. in C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Loader.php:75
+Stack trace:
+#0 C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Dotenv.php(91): Dotenv\Loader->load()
+#2 C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 C:\Users\webdesign\websites\GroupeCT\bootstrap\autoload.php(39): Dotenv\Dotenv->load()
+#4 C:\Users\webdesign\websites\GroupeCT\htdocs\wp-config.php(11): require_once('C:\\Users\\webdes...')
+#5 C:\Users\webdesign\websites\GroupeCT\htdocs\cms\wp-load.php(42): require_once('C:\\Users\\webdes...')
+#6 C:\Users\webdesign\websites\GroupeCT\htdocs\cms\wp-blog-header.php(13): require_once('C:\\Users\\webdes...')
+#7 C:\Users\webdesign\websites\GroupeCT\ in C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Loader.php on line 75
+[13-Jun-2018 04:05:49 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at C:\Users\webdesign\websites\GroupeCT\.env.production. in C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Loader.php:75
+Stack trace:
+#0 C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Dotenv.php(91): Dotenv\Loader->load()
+#2 C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 C:\Users\webdesign\websites\GroupeCT\bootstrap\autoload.php(39): Dotenv\Dotenv->load()
+#4 C:\Users\webdesign\websites\GroupeCT\htdocs\wp-config.php(11): require_once('C:\\Users\\webdes...')
+#5 C:\Users\webdesign\websites\GroupeCT\htdocs\cms\wp-load.php(42): require_once('C:\\Users\\webdes...')
+#6 C:\Users\webdesign\websites\GroupeCT\htdocs\cms\wp-blog-header.php(13): require_once('C:\\Users\\webdes...')
+#7 C:\Users\webdesign\websites\GroupeCT\ in C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Loader.php on line 75
+[13-Jun-2018 04:54:38 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at C:\Users\webdesign\websites\GroupeCT\.env.production. in C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Loader.php:75
+Stack trace:
+#0 C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Dotenv.php(91): Dotenv\Loader->load()
+#2 C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 C:\Users\webdesign\websites\GroupeCT\bootstrap\autoload.php(39): Dotenv\Dotenv->load()
+#4 C:\Users\webdesign\websites\GroupeCT\htdocs\wp-config.php(11): require_once('C:\\Users\\webdes...')
+#5 C:\Users\webdesign\websites\GroupeCT\htdocs\cms\wp-load.php(42): require_once('C:\\Users\\webdes...')
+#6 C:\Users\webdesign\websites\GroupeCT\htdocs\cms\wp-blog-header.php(13): require_once('C:\\Users\\webdes...')
+#7 C:\Users\webdesign\websites\GroupeCT\ in C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Loader.php on line 75
+[13-Jun-2018 04:54:39 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at C:\Users\webdesign\websites\GroupeCT\.env.production. in C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Loader.php:75
+Stack trace:
+#0 C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Dotenv.php(91): Dotenv\Loader->load()
+#2 C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 C:\Users\webdesign\websites\GroupeCT\bootstrap\autoload.php(39): Dotenv\Dotenv->load()
+#4 C:\Users\webdesign\websites\GroupeCT\htdocs\wp-config.php(11): require_once('C:\\Users\\webdes...')
+#5 C:\Users\webdesign\websites\GroupeCT\htdocs\cms\wp-load.php(42): require_once('C:\\Users\\webdes...')
+#6 C:\Users\webdesign\websites\GroupeCT\htdocs\cms\wp-blog-header.php(13): require_once('C:\\Users\\webdes...')
+#7 C:\Users\webdesign\websites\GroupeCT\ in C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Loader.php on line 75
+[13-Jun-2018 04:54:40 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at C:\Users\webdesign\websites\GroupeCT\.env.production. in C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Loader.php:75
+Stack trace:
+#0 C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Dotenv.php(91): Dotenv\Loader->load()
+#2 C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 C:\Users\webdesign\websites\GroupeCT\bootstrap\autoload.php(39): Dotenv\Dotenv->load()
+#4 C:\Users\webdesign\websites\GroupeCT\htdocs\wp-config.php(11): require_once('C:\\Users\\webdes...')
+#5 C:\Users\webdesign\websites\GroupeCT\htdocs\cms\wp-load.php(42): require_once('C:\\Users\\webdes...')
+#6 C:\Users\webdesign\websites\GroupeCT\htdocs\cms\wp-blog-header.php(13): require_once('C:\\Users\\webdes...')
+#7 C:\Users\webdesign\websites\GroupeCT\ in C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Loader.php on line 75
+[13-Jun-2018 04:54:40 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at C:\Users\webdesign\websites\GroupeCT\.env.production. in C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Loader.php:75
+Stack trace:
+#0 C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Dotenv.php(91): Dotenv\Loader->load()
+#2 C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 C:\Users\webdesign\websites\GroupeCT\bootstrap\autoload.php(39): Dotenv\Dotenv->load()
+#4 C:\Users\webdesign\websites\GroupeCT\htdocs\wp-config.php(11): require_once('C:\\Users\\webdes...')
+#5 C:\Users\webdesign\websites\GroupeCT\htdocs\cms\wp-load.php(42): require_once('C:\\Users\\webdes...')
+#6 C:\Users\webdesign\websites\GroupeCT\htdocs\cms\wp-blog-header.php(13): require_once('C:\\Users\\webdes...')
+#7 C:\Users\webdesign\websites\GroupeCT\ in C:\Users\webdesign\websites\GroupeCT\vendor\vlucas\phpdotenv\src\Loader.php on line 75
+[13-Jun-2018 05:45:20 UTC] PHP Notice:  Undefined variable: brand in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 10
+[13-Jun-2018 05:45:20 UTC] PHP Notice:  Trying to get property of non-object in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 10
+[13-Jun-2018 05:45:20 UTC] PHP Notice:  Undefined variable: brand in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 11
+[13-Jun-2018 05:45:20 UTC] PHP Notice:  Trying to get property of non-object in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 11
+[13-Jun-2018 05:45:20 UTC] PHP Notice:  Undefined variable: brand in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 68
+[13-Jun-2018 05:45:20 UTC] PHP Notice:  Trying to get property of non-object in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 68
+[13-Jun-2018 05:45:20 UTC] PHP Notice:  Undefined variable: brand in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 72
+[13-Jun-2018 05:45:20 UTC] PHP Notice:  Trying to get property of non-object in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 72
+[13-Jun-2018 05:46:55 UTC] PHP Notice:  Undefined variable: brand in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 10
+[13-Jun-2018 05:46:55 UTC] PHP Notice:  Trying to get property of non-object in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 10
+[13-Jun-2018 05:46:55 UTC] PHP Notice:  Undefined variable: brand in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 11
+[13-Jun-2018 05:46:55 UTC] PHP Notice:  Trying to get property of non-object in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 11
+[13-Jun-2018 05:46:55 UTC] PHP Notice:  Undefined variable: brand in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 68
+[13-Jun-2018 05:46:55 UTC] PHP Notice:  Trying to get property of non-object in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 68
+[13-Jun-2018 05:46:55 UTC] PHP Notice:  Undefined variable: brand in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 72
+[13-Jun-2018 05:46:55 UTC] PHP Notice:  Trying to get property of non-object in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 72
+[13-Jun-2018 05:47:11 UTC] PHP Notice:  Undefined variable: brand in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 10
+[13-Jun-2018 05:47:11 UTC] PHP Notice:  Trying to get property of non-object in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 10
+[13-Jun-2018 05:47:11 UTC] PHP Notice:  Undefined variable: brand in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 11
+[13-Jun-2018 05:47:11 UTC] PHP Notice:  Trying to get property of non-object in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 11
+[13-Jun-2018 05:47:11 UTC] PHP Notice:  Undefined variable: brand in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 68
+[13-Jun-2018 05:47:11 UTC] PHP Notice:  Trying to get property of non-object in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 68
+[13-Jun-2018 05:47:11 UTC] PHP Notice:  Undefined variable: brand in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 72
+[13-Jun-2018 05:47:11 UTC] PHP Notice:  Trying to get property of non-object in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 72
+[13-Jun-2018 05:47:29 UTC] PHP Notice:  Undefined variable: brand in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 10
+[13-Jun-2018 05:47:29 UTC] PHP Notice:  Trying to get property of non-object in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 10
+[13-Jun-2018 05:47:29 UTC] PHP Notice:  Undefined variable: brand in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 11
+[13-Jun-2018 05:47:29 UTC] PHP Notice:  Trying to get property of non-object in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 11
+[13-Jun-2018 05:47:29 UTC] PHP Notice:  Undefined variable: brand in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 68
+[13-Jun-2018 05:47:29 UTC] PHP Notice:  Trying to get property of non-object in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 68
+[13-Jun-2018 05:47:29 UTC] PHP Notice:  Undefined variable: brand in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 72
+[13-Jun-2018 05:47:29 UTC] PHP Notice:  Trying to get property of non-object in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 72
+[13-Jun-2018 05:48:04 UTC] PHP Notice:  Undefined variable: brand in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 10
+[13-Jun-2018 05:48:04 UTC] PHP Notice:  Trying to get property of non-object in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 10
+[13-Jun-2018 05:48:04 UTC] PHP Notice:  Undefined variable: brand in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 11
+[13-Jun-2018 05:48:04 UTC] PHP Notice:  Trying to get property of non-object in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 11
+[13-Jun-2018 05:48:04 UTC] PHP Notice:  Undefined variable: brand in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 68
+[13-Jun-2018 05:48:04 UTC] PHP Notice:  Trying to get property of non-object in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 68
+[13-Jun-2018 05:48:04 UTC] PHP Notice:  Undefined variable: brand in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 72
+[13-Jun-2018 05:48:04 UTC] PHP Notice:  Trying to get property of non-object in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 72
+[13-Jun-2018 05:48:46 UTC] PHP Notice:  Undefined variable: brand in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 10
+[13-Jun-2018 05:48:46 UTC] PHP Notice:  Trying to get property of non-object in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 10
+[13-Jun-2018 05:48:46 UTC] PHP Notice:  Undefined variable: brand in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 11
+[13-Jun-2018 05:48:46 UTC] PHP Notice:  Trying to get property of non-object in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 11
+[13-Jun-2018 06:46:14 UTC] PHP Notice:  Undefined variable: brand in C:\Users\webdesign\websites\GroupeCT\htdocs\content\themes\groupe-ct\resources\controllers\ProductController.php on line 43
+[13-Jun-2018 06:46:14 UTC] PHP Notice:  Trying to get property of non-object in C:\Users\webdesign\websites\GroupeCT\htdocs\content\themes\groupe-ct\resources\controllers\ProductController.php on line 43
+[13-Jun-2018 06:46:14 UTC] PHP Notice:  Undefined variable: brand in C:\Users\webdesign\websites\GroupeCT\htdocs\content\themes\groupe-ct\resources\controllers\ProductController.php on line 46
+[13-Jun-2018 06:46:14 UTC] PHP Notice:  Trying to get property of non-object in C:\Users\webdesign\websites\GroupeCT\htdocs\content\themes\groupe-ct\resources\controllers\ProductController.php on line 46
+[13-Jun-2018 06:46:14 UTC] PHP Notice:  Undefined variable: logo in C:\Users\webdesign\websites\GroupeCT\htdocs\content\themes\groupe-ct\resources\controllers\ProductController.php on line 54
+[13-Jun-2018 06:46:14 UTC] PHP Notice:  Undefined variable: brand_logo in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 67
+[13-Jun-2018 06:56:03 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ';' in C:\Users\webdesign\websites\GroupeCT\htdocs\content\themes\groupe-ct\resources\controllers\ProductController.php on line 131
+[13-Jun-2018 06:56:09 UTC] PHP Notice:  Undefined variable: brand in C:\Users\webdesign\websites\GroupeCT\htdocs\content\themes\groupe-ct\resources\controllers\ProductController.php on line 45
+[13-Jun-2018 06:56:09 UTC] PHP Notice:  Trying to get property of non-object in C:\Users\webdesign\websites\GroupeCT\htdocs\content\themes\groupe-ct\resources\controllers\ProductController.php on line 45
+[13-Jun-2018 06:56:09 UTC] PHP Notice:  Undefined variable: product_type in C:\Users\webdesign\websites\GroupeCT\htdocs\content\themes\groupe-ct\resources\controllers\ProductController.php on line 127
+[13-Jun-2018 06:56:09 UTC] PHP Notice:  Trying to get property of non-object in C:\Users\webdesign\websites\GroupeCT\htdocs\content\themes\groupe-ct\resources\controllers\ProductController.php on line 127
+[13-Jun-2018 06:56:09 UTC] PHP Notice:  Undefined variable: brand_logo in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 67
+[13-Jun-2018 06:57:00 UTC] PHP Notice:  Undefined variable: brand_logo in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 67
+[13-Jun-2018 06:57:43 UTC] PHP Notice:  Undefined variable: brand_logo in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 67
+[13-Jun-2018 06:58:05 UTC] PHP Notice:  Undefined variable: brand_logo in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 67
+[13-Jun-2018 07:05:46 UTC] PHP Parse error:  syntax error, unexpected ''field'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in C:\Users\webdesign\websites\GroupeCT\htdocs\content\themes\groupe-ct\resources\admin\ajax.php on line 294
+[13-Jun-2018 07:08:04 UTC] PHP Notice:  Undefined variable: object in C:\Users\webdesign\websites\GroupeCT\htdocs\content\themes\groupe-ct\resources\controllers\ProductController.php on line 41
+[13-Jun-2018 07:13:49 UTC] PHP Notice:  Undefined variable: products in C:\Users\webdesign\websites\GroupeCT\htdocs\content\themes\groupe-ct\resources\controllers\ProductController.php on line 59
+[13-Jun-2018 07:13:49 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\webdesign\websites\GroupeCT\storage\views\0cd6685d78c3167527d5579e12d0f65151e9cbc2.php on line 83
+[13-Jun-2018 07:25:22 UTC] PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected '$logo' (T_VARIABLE), expecting ',' or ')' in C:\Users\webdesign\websites\GroupeCT\htdocs\content\themes\groupe-ct\resources\models\Brand.php:33
+Stack trace:
+#0 C:\Users\webdesign\websites\GroupeCT\vendor\composer\ClassLoader.php(322): Composer\Autoload\includeFile('C:\\Users\\webdes...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('Theme\\Models\\Br...')
+#2 C:\Users\webdesign\websites\GroupeCT\htdocs\content\themes\groupe-ct\resources\controllers\ProductController.php(42): spl_autoload_call('Theme\\Models\\Br...')
+#3 [internal function]: Theme\Controllers\ProductController->getProductsWithBrandType(Object(WP_Post), Object(WP_Query))
+#4 C:\Users\webdesign\websites\GroupeCT\vendor\illuminate\routing\Controller.php(54): call_user_func_array(Array, Array)
+#5 C:\Users\webdesign\websites\GroupeCT\vendor\illuminate\routing\ControllerDispatcher.php(45): Illuminate\Routing\Controller->callAction('getProductsW in C:\Users\webdesign\websites\GroupeCT\htdocs\content\themes\groupe-ct\resources\models\Brand.php on line 33

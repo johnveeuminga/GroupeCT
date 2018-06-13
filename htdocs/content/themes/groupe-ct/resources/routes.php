@@ -14,7 +14,7 @@ Route::any('front', 'PageController@index');
 Route::get('singular', ['job_offer', 'uses' => 'LightboxController@job_offer']);
 Route::get('singular', ['product', 'uses' => 'ProductController@single']);
 Route::get('tax', ['product_brands', 'uses' => 'ProductController@getProductsWithBrandType']);
-Route::any('tax', ['product_cat', 'uses' => 'ProductController@getProduct']);
+Route::any('tax', ['product_cat', 'uses' => 'ProductController@getProductsWithBrandType']);
 
 /**
  * Custom WooCommerce product brand and product type route.

@@ -30,7 +30,7 @@ class Brand{
 	 */
 	public static function getBrandLogo($brand_id){
 		$logo = get_term_meta($brand_id, 'thumbnail', true);
-		$logo_url = wp_get_attachment_url($logo);
+		$logo_url = wp_get_attachment_url($logo != 0 ? $logo : 1991);
 
 		return $logo_url;
 	}

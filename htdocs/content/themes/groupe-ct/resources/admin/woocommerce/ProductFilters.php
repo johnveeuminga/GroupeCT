@@ -113,7 +113,7 @@ class ProductFilters{
 	 * @return void
 	 */
 	public function saveProductFiltersMeta($term_id){
-		if(!isset($_POST['parent']) && $_POST['parent'] == '-1'){
+		if(isset($_POST['parent']) && $_POST['parent'] == '-1'){
 			$old_product_filters = get_term_meta($term_id, 'product-cat-filters', false);
 			$new_product_filters = isset($_POST['product_cat_filters']) ? $_POST['product_cat_filters'] : [];
 

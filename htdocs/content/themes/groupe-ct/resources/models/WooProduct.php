@@ -27,4 +27,21 @@ class WooProduct{
 		return $query->get_posts();
 
 	}
+
+	public static function getProductsOfCategory($type_id){
+		$query = new WP_Query([
+			'post_type' => 'product',
+			'posts_per_page' => -1,
+			'tax_query' => [
+				'relation' => 'AND',
+				[
+					'taxonomy' => 'product_cat',
+					'field' => 'term_id',
+					'terms' => $type_id
+				],
+			]
+		]);
+
+		return $query->get_posts();
+	}
 }

@@ -289,12 +289,21 @@ Ajax::listen('get-products', function(){
             }  
         }
 
+        $attributes[] =[
+            'taxonomy' => $_GET['taxonomy'],
+            'field' => 'term_id',
+            'terms' => $_GET['term_id']
+        ];
+
         $args = [
             'post_type' => 'product',
         ];
 
         if($attributes){
-            $args['tax_query'] = ['relation' => 'AND', $attributes];
+            $args['tax_query'] = [
+                'relation' => 'AND', 
+                $attributes
+            ];
         }
 
         $query = new WP_Query($args);
@@ -310,7 +319,7 @@ Ajax::listen('get-products', function(){
                     $product_image = has_post_thumbnail($product->ID) ? get_the_post_thumbnail_url($product->ID) : wp_get_attachment_url(1991); 
                 ?>
                 <div class="col-md-3 product-brand__products-col">
-                    <div class="product-brand__product my-8">
+                    <div class="product-brand__product my-8 text-center px-2">
                         <img src="<?php echo $product_image; ?>" alt="<?php echo $product->post_title?>" class="w-100 block">
                         <a href="<?php echo get_the_permalink($product->ID); ?>" class="font-sans-mada text-blue text-lg">
                             <?php echo $product->post_title; ?>

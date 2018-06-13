@@ -1,6 +1,6 @@
-import Vue from 'vue/dist/vue.js';
+// import Vue from 'vue/dist/vue.js';
 require('./components/filters.js');
-window.axios = require('axios');
+// window.axios = require('axios');
 
 (function($) {
     $(document).ready(function() {
