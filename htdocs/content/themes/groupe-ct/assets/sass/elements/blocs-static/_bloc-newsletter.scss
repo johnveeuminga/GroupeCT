@@ -1,0 +1,272 @@
+.bloc-newsletter .default-padding{
+  @media (min-width: $screen-lg-min) {
+    padding: 0 14px;
+    //border: 1px solid red;
+  }
+}
+.bloc-newsletter{
+  background-color: $newsletter-light-blue;
+  background-size: cover!important;
+
+  padding: 30px 0;
+
+  @media (min-width: $screen-sm-min) {
+    padding: 100px 0;
+    background: url($assets + "/images/bg/background_newsletter.png") #042b46 no-repeat bottom;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    padding: 295px 0 200px 0;
+    background: url($assets + "/images/bg/background_newsletter.png") transparent no-repeat bottom;
+  }
+
+  .newsletter-contact-form-container {
+
+    max-width:630px;
+    margin: auto;
+
+    .newsletter-title-container {
+      text-align: center;
+      color:white!important;
+      margin-bottom: 15px;
+
+      @media (min-width: $screen-sm-min) {
+        margin-bottom: 60px;
+      }
+
+
+      .newsletter-upper-title {
+        text-transform: uppercase;
+        @extend .poppins22SemiBoldWhite;
+      }
+      .newsletter-title {
+        @extend .poppins50BoldWhite;
+        text-transform: uppercase;
+        margin: 15px 0;
+
+        @media (min-width: $screen-sm-min) {
+          margin-top:30px;
+          margin-bottom: 45px;
+        }
+
+        @extend .h2-size;
+      }
+
+      p {
+        @extend .mada22LightWhite;
+        @extend .text-size;
+      }
+
+    }
+
+
+
+    .contact-field-container {
+      @include flexbox();
+      @include flex-direction(column);
+
+
+      .contact-row {
+        @include flexbox();
+        @include flex-direction(column);
+
+        @media (min-width: $screen-sm-min) {
+          margin:10px 0;
+          @include flex-direction(row);
+          input:not(:first-of-type){
+            margin-left:3%;
+          }
+        }
+
+
+      }
+
+      input, select{
+
+        -webkit-appearance: none;
+        -webkit-border-radius: 0px;
+        background-color: transparent;
+        outline: none;
+        border:1px solid white;
+        resize: none;
+        padding: 20px 10px;
+        @include border-radius(2px);
+        @extend .mada18LightWhite;
+      }
+
+      input, .select-container{
+        margin:15px 0;
+        @media (min-width: $screen-sm-min) {
+          margin:0;
+        }
+      }
+
+
+
+      /*** ROW #1 ***/
+      .contact-row:nth-child(1){
+        .select-container {
+          //
+          @media (min-width: $screen-sm-min) {
+            margin-right:3%;
+            @include flex-basis(17%);
+          }
+          background: url($assets + "/images/icon/icon-arrow.png") no-repeat 85% 50%;
+        }
+
+        select {
+          border: 2px solid white;
+          opacity: 0.6;
+          width:100%;
+        }
+
+        input {
+
+          @media (min-width: $screen-sm-min) {
+            @include flex-basis(35%);
+          }
+        }
+      }
+      /*** ROW #2 **/
+      .contact-row:nth-child(2){
+        input {
+
+          @media (min-width: $screen-sm-min) {
+            @include flex-basis(45%);
+          }
+        }
+        .select-container {
+
+
+          @media (min-width: $screen-sm-min) {
+            @include flex-basis(48%);
+            margin-left:3%;
+          }
+          //background: url($assets + "/images/icon/icon-arrow.png") no-repeat 85% 50%;
+          background: url($assets + "/images/icon/icon-chevron-white-down.svg") no-repeat 85% 50%;
+          background-size:24px ;
+          select {
+            border: 2px solid white;
+            opacity: 0.6;
+            width:100%;
+          }
+        }
+        input {
+
+          @media (min-width: $screen-sm-min) {
+            @include flex-basis(45%);
+          }
+        }
+      }
+
+      .contact-row:nth-child(3) {
+        input {
+
+          @media (min-width: $screen-sm-min) {
+            @include flex-basis(100%);
+          }
+        }
+      }
+
+
+      /*** ROW #4 ***/
+      .contact-row:nth-child(4) {
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items(center);
+        .check-container{
+          @include flexbox();
+          //@include flex-basis(70%);
+          //@include align-items(center);
+
+          margin-bottom: 15px;
+          @media (min-width: $screen-sm-min) {
+            margin-bottom: 0px;
+          }
+        }
+
+        label:before {
+          top:0px;
+        }
+
+        .submit-btn {
+          @include border-radius(2px);
+          width:165px;
+          padding:15px 0;
+          background-color: white;
+          border:none;
+          @extend .poppins15BoldBlack;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          margin-bottom: 15px;
+          @media (min-width: $screen-sm-min) {
+
+            margin-bottom: 0px;
+          }
+        }
+      }
+
+      @include placeholder(18px, $mada, 300, white, 0.6);
+
+
+    }
+
+    .mandatory-field-msg {
+      @extend .mada18LightWhite;
+      margin-bottom: 15px;
+    }
+
+    select > option{
+      background-color: $blue-dark;
+      @extend .mada18LightWhite;
+    }
+
+  }//CONTACT FORM END
+
+  /* Cachons la case à cocher */
+  [type="checkbox"]:not(:checked),
+  [type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+  }
+
+  [type="checkbox"]:not(:checked) + label,
+  [type="checkbox"]:checked + label {
+    position: relative; /* permet de positionner les pseudo-éléments */
+    padding-left: 45px; /* fait un peu d'espace pour notre case à venir */
+    cursor: pointer;    /* affiche un curseur adapté */
+    @include set-font(18px, $mada, 300, white);
+    margin:15px 0;
+    padding-top:5px;
+  }
+
+  /* Aspect des checkboxes */
+  /* :before sert à créer la case à cocher */
+  [type="checkbox"]:not(:checked) + label:before,
+  [type="checkbox"]:checked + label:before {
+    content:  url($assets + "/images/icon/form-unchecked.png");
+    position: absolute;
+    left:0px; top: -5px;
+  }
+
+  //* Aspect général de la coche */
+  [type="checkbox"]:not(:checked) + label:after,
+  [type="checkbox"]:checked + label:after {
+    content:  url($assets + "/images/icon/form-checked.png");
+    position: absolute;
+    left:0px; top: 0px;
+    transition: all .2s; /* on prévoit une animation */
+  }
+  /* Aspect si "pas cochée" */
+  [type="checkbox"]:not(:checked) + label:after {
+    opacity: 0; /* coche invisible */
+    transform: scale(0); /* mise à l'échelle à 0 */
+  }
+  /* Aspect si "cochée" */
+  [type="checkbox"]:checked + label:after {
+    opacity: 1; /* coche opaque */
+    transform: scale(1); /* mise à l'échelle 1:1 */
+  }
+
+
+}

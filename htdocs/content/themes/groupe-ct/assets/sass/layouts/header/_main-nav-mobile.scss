@@ -1,0 +1,237 @@
+.top-bar-content-container.top-bar-mobile {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  background-color: $primary-bg;
+  height:80px;
+
+
+  @media (min-width: $screen-lg-min) {
+    display: none;
+  }
+
+  .top-bar-content {
+    @include flexbox();
+    @include justify-content(space-between);
+    @include align-items(center);
+  }
+
+  .top-bar-logo-container {
+    height:75px;
+    width: 75px;
+    background-image: url($assets + "images/logo/logo-ct.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 70px 70px;
+
+  }
+
+
+  .top-bar-menu-btn-container {
+    background-color: $blue;
+    padding:10px;
+  }
+
+  #menu-btn {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top:6px;
+    cursor: pointer;
+    display: block;
+  }
+
+
+  #menu-btn span{
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: white;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+  }
+  #menu-btn span:nth-child(1) {
+    top: 0px;
+  }
+
+  #menu-btn span:nth-child(2),#menu-btn span:nth-child(3) {
+    top: 6px;
+  }
+
+  #menu-btn span:nth-child(4) {
+    top: 12px;
+  }
+}
+.mobile-open-contact-form {
+  :first-letter {
+    text-transform: uppercase!important;
+  }
+
+}
+
+/*** TOP BAR END *****/
+
+/**** MOBILE MENU START *****/
+
+#menu-mobile{
+
+  //display:none;
+  //right:-50px;
+
+  position: fixed;
+  width:90%;
+  height:100%;
+  background-color: white;
+  z-index: 9999;
+  right: -100vw;
+  padding: 15px;
+  @include transition(all 0.6s ease);
+
+  @media (min-width: $screen-sm-min) {
+    width:50%;
+  }
+
+
+  border: 1px solid $grey-light;
+
+  @media (min-width: $screen-lg-min) {
+    display:none;
+  }
+
+  .close-menu-btn{
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+    width:30px;
+    height:30px;
+    background-color: $blue;
+    img {
+      width:20px;
+      @include rotate(90);
+    }
+  }
+
+  /*** THE NAV ****/
+
+  .nav-link {
+    text-decoration: none;
+    font-family: $poppins;
+    font-weight: 500;
+
+    &:hover {
+      color: $red;
+    }
+  }
+
+  .nav-bottom {
+    margin-top:30px;
+  }
+
+  .nav-bottom .menu-item {
+    margin: 20px 0;
+  }
+
+  .nav-bottom .nav-link{
+    font-size: 16px;
+    color:$black;
+    text-transform: uppercase;
+    position: relative;
+    display: block;
+    width: 100%;
+
+  }
+  .menu-item {
+    position: relative;
+    width:90%;
+    z-index: 10;
+  }
+
+  .sub-menu-trigger, .sub-sub-menu-trigger {
+    position: absolute;
+    display: block;
+    right:0px;
+    top:-11px;
+
+    width: 35px;
+    height:35px;
+    z-index: 100;
+  }
+
+  .fa-plus-circle,.fa-minus-circle {
+    @include center-img(50%, 50%);
+    color:$black;
+  }
+
+  .nav-top {
+    margin-top:30px;
+    margin-bottom:30px;
+  }
+
+  .nav-top .menu-item {
+    margin: 15px 0;
+  }
+
+  .nav-top .nav-link{
+    font-size: 14px;
+    color:$grey-light;
+  }
+
+  .nav-top .link-account{
+    @include flexbox();
+    @include align-items(center);
+    padding-right: 0;
+    position: relative;
+    color:$black;
+    margin-left:25px;
+    &:before {
+      content:url($assets + "/images/icon/icon-account.svg");
+      background-size: 24px 24px;
+      width:25px;
+      height:24px;
+
+      position: absolute;
+      top:-7px;
+      left:-28px;
+      padding-right:5px;
+
+    }
+  }
+
+
+}
+
+#global-container {
+  max-width:1920px!important;
+  margin:auto!important;
+  width:100%;
+  position: relative;
+  left:0;
+  top: 80px;
+  @include transition(all 0.6s ease);
+  @media (min-width: $screen-md-min) {
+    top: 0;
+  }
+}
+
+.menu-mobile-active {
+  //right: -50px!important;
+  right: -5vw!important;
+  overflow-y: auto!important;
+  @include transition(all 0.6s ease);
+  @media (min-width: $screen-sm-min) {
+    //right: -150px!important;
+  }
+}
+
+.move-global {
+  position:fixed!important;
+  left:-100px!important;
+  @media (min-width: $screen-sm-min) {
+    left:-200px!important;
+  }
+}
+

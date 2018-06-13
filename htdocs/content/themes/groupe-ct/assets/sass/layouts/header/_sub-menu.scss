@@ -1,0 +1,129 @@
+
+.sub-menu-main-container {
+  display: none;
+  @media (min-width: $screen-sm-min) {
+    display: block;
+  }
+
+  background-color: $black;
+  position: relative;
+  z-index: 900;
+  width:100%;
+  @include set-font(16px, $poppins, 400, white);
+  .sub-menu-container {
+    @include flexbox();
+    @include flex-direction(column);
+    position: absolute;
+    width: 100%;
+    left:0;
+    top:0;
+    background-color: $black;
+    //@include transition(left 0.6s ease);
+  }
+  .sub-menu-title-container {
+    margin-bottom:25px;
+  }
+  .sub-menu-title {
+    //margin-bottom: 25px;
+    text-transform: uppercase;
+    @include set-font(17px, $poppins, 400, white);
+
+    a {
+      color: white;
+    }
+  }
+  .nav-section-title {
+    padding-bottom:15px;
+    text-transform: uppercase;
+    @include set-font(17px, $poppins, 400, white);
+
+    a {
+      color: white;
+    }
+  }
+
+  .sub-menu-container {
+    @include flexbox();
+    padding: 50px 0;
+  }
+
+  .menu-item {
+    @include flexbox();
+    @include align-items(center);
+    //border: 1px solid red;
+    &:hover {
+      .arrow-hover {
+        visibility: visible;
+      }
+    }
+  }
+
+  .nav-sub{
+    .menu-item {
+      padding:10px 0;
+    }
+
+    .nav-link {
+      color:$grey-light;
+      text-transform: uppercase;
+      text-decoration: none;
+      position: relative;
+      display: inline;
+
+      &:hover {
+        color:$red;
+        &:after {
+          display:block;
+        }
+      }
+    }
+  }
+
+  .arrow-hover {
+    visibility: hidden;
+    width:22px;
+    margin-left: 15px;
+  }
+
+  .nl1 {
+    height: 375px;
+    .nav-sub {
+      position: absolute;
+      margin: 0;
+      top: 85px;
+    }
+  }
+
+  .nl2 {
+    .nav-sub-container {
+      height: 190px;
+    }
+  }
+
+  .nl3 {
+    height: 375px;
+    .nav-sub {
+      position: absolute;
+      margin: 0;
+      top: 85px;
+    }
+  }
+
+  .nl4 {
+    height: 425px!important;
+    .nav-sub {
+      position: absolute;
+      margin: 0;
+      top: 85px;
+    }
+  }
+}
+
+
+.hide-from-screen {
+
+  position: absolute!important;
+  left:-3000px!important;
+  top:0!important;
+
+}

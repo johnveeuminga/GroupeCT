@@ -1,0 +1,197 @@
+.nav-content-container.desktop {
+  position: relative;
+  background-color: $primary-bg;
+  display: none;
+  @media (min-width: 1200px) and (max-width: 1350px) {
+    .nav-container .nav-bottom .nav-link {
+      width: 130px;
+    }
+  }
+  @media (min-width: $screen-lg-min) {
+    @include flexbox();
+  }
+
+  .nav-logo-container {
+    background-image: url($assets + "images/logo/logo-ct.svg");
+    background-position: 50% bottom;
+    background-repeat: no-repeat;
+    background-size: 140px 120px;
+    @include transition(all 0.25s ease);
+    @media (max-width: 1110px) {
+      background-size: 180px;
+
+    }
+  }
+
+  /*** SETTING WIDTH
+
+  .nav-logo-container {
+    @include flex-basis(16%);
+    max-width: 16%;
+  }
+  .nav-container {
+    @include flex-basis(65.28%);
+    max-width: 65.28%;
+  }
+  .nav-contact-us {
+    @include flex-basis(14.5%);
+    max-width: 14.5%;
+  } ***/
+
+  .link-home {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .nav-container {
+    @include flexbox();
+    @include flex-direction(column);
+    padding: 30px 30px 30px;
+    .nav-top{
+      padding-bottom: 40px;
+    }
+
+    .nav-link-container {
+      @include flexbox();
+      @include justify-content(flex-end);
+
+      li {
+       @include flexbox();
+
+      }
+      .nav-link {
+        text-decoration: none;
+        font-family: $poppins;
+        font-weight: 500;
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+
+    .nav-top .nav-link{
+      font-size: 14px;
+      color: $grey-light;
+      padding: 0 15px;
+      border-right: 1px solid $grey-light;
+    }
+
+    .nav-top .link-account{
+      border-right:none;
+      margin-left:25px;
+      padding-right: 0;
+      position: relative;
+      color:$black;
+      &:before {
+        content:url($assets + "/images/icon/icon-account.svg");
+        background-size: 24px 24px;
+        width:25px;
+        height:24px;
+        position: absolute;
+        left:-15px;
+        top:-5px;
+      }
+    }
+
+    .nav-bottom {
+      @include flexbox();
+      @include flex-direction(column);
+
+    }
+    .nav-bottom .menu-item{
+      @include flexbox();
+      position: relative;
+      margin-left: 15px;
+
+      @media (min-width: $screen-xxl-min){
+        margin-left: 30px;
+      }
+
+    }
+
+    .menu-item-triangle {
+      display: none;
+      width: 160px;
+      z-index: 1000;
+      @include center-img(50%,-15%);
+      text-align: center;
+      left: calc(50% - 30px);
+      @media (max-width: 1350px) {
+        top:18px;
+      }
+      .triangle {
+        padding: 0 50px;
+        width: 120px;
+      }
+
+
+    }
+
+    .show-arrow {
+      display: block!important;
+    }
+
+
+
+    .nav-bottom .nav-link{
+      font-size: 15px;
+      @media (min-width: $screen-xxl-min){
+        font-size: 16px;
+      }
+
+      color:$black;
+      text-transform: uppercase;
+      &.has-submenu {
+        &:after {
+          padding-left:5px;
+          font-family: FontAwesome;
+          content: "\f0d7";
+        }
+      }
+    }
+  }
+
+
+
+  .nav-contact-us {
+    @include flexbox();
+    position: relative;
+    background-color: $blue;
+
+    .contact-us-link {
+      display: block;
+      position: absolute;
+      width:100%;
+      height:100%;
+      z-index: 100;
+    }
+
+    .contact-us-text {
+      position: absolute;
+      @include center-img(50%, 18%);
+      width:100%;
+      color:white;
+      font-family: $poppins;
+      font-size: 14px;
+      text-decoration: none;
+      text-align: center;
+      span {
+        width:100%;
+        display:block;
+        //padding-top: 50px;
+      }
+      .icon-arrow {
+        margin-top:10px;
+        width:31px;
+      }
+    }
+
+  }
+
+
+
+
+
+}
+

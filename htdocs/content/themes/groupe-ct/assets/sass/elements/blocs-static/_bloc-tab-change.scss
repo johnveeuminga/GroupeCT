@@ -1,0 +1,351 @@
+.bloc-tab-change-main-container {
+
+  @include flexbox();
+  @include flex-direction(row);
+  flex-wrap: wrap;
+  @media (min-width: 1240px) {
+    flex-wrap: nowrap;
+  }
+
+  padding: 25px 0 0 0;
+
+  .tab-change-container {
+
+    @include flexbox();
+    @include flex-direction(column);
+    padding: 60px 25px;
+    position: relative;
+    @include flex-basis(100%);
+
+    @media (min-width: $screen-sm-min) {
+      @include flex-direction(row);
+    }
+
+
+    @media (min-width: 1240px) {
+      @include flex-direction(column);
+      min-height:690px;
+      @include flex-basis(33%);
+      padding: 33px 40px;
+    }
+
+  }
+
+  /**** TITLE *****/
+
+  .tab-change-title-container {
+    @include flexbox();
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @include align-items(center);
+    @include justify-content(center);
+
+    @media (max-width: 1240px - 1) {
+      width: 100%;
+
+      @include justify-content(center);
+      .tab-change-img-container,
+      h2 {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    @media (min-width: $screen-sm-min) {
+      @include flex-basis(40%);
+      margin-bottom:25px;
+      @media (min-width: 1240px) {
+        @include flex-basis(40%);
+      }
+    }
+  }
+
+  .tab-change-img-container {
+
+    @media (min-width: 1240px) {
+      text-align: center;
+      width: 105px;
+      height:90px;
+    }
+  }
+
+  .tab-change-icon {
+    max-width:70px;
+    margin-bottom:30px;
+    max-height:66px;
+  }
+  .tab-change-title {
+    width: 100%;
+    @extend .poppins28SemiBoldWhite;
+    text-transform: uppercase;
+    text-align: center;
+    @media (min-width: 1240px) {
+      height:90px;
+      margin-bottom:25px;
+      text-align: center;
+    }
+  }
+
+
+  /**** CONTENT *****/
+
+  .tab-change-content-container {
+    @media (min-width: $screen-sm-min) {
+      @include flex-basis(60%);
+    }
+    @media (min-width: 1240px) {
+      @include flex-basis(100%);
+      margin-top: 30px;
+    }
+    
+    margin-top: 30px;
+    @media (min-width: 1240px) {
+      h3 {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .tab-change-content-title {
+    @extend .poppins18SemiBoldWhite;
+    text-transform: uppercase;
+    margin-bottom:25px;
+  }
+
+  .tab-change-content {
+    @extend .mada18LightWhite;
+    list-style: none;
+    position: relative;
+    list-style-type: disc;
+    list-style-position: outside;
+    margin-left: 20px;
+  }
+
+  .triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 65px 0 65px 32px;
+    border-color: #007bff transparent transparent transparent;
+
+
+
+    bottom:-79px;
+    position: absolute;
+    z-index: 100;
+    @include rotate(90);
+    @include align-self(center);
+
+    left:44%;
+    @media (min-width: $screen-sm-min) {
+      left:44%;
+    }
+
+    @media (min-width: 1240px) {
+      border-width: 65px 0 65px 32px;
+      left: auto;
+      bottom:auto;
+      right:-32px;
+      top:38%;
+
+      @include rotate(0);
+    }
+
+  }
+
+  .triangle-border {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 65px 0 65px 32px;
+    border-color: #007bff transparent transparent transparent;
+    @include align-self(center);
+    @include rotate(90);
+
+
+    bottom:-81px;
+    position: absolute;
+    z-index: 99;
+    left:44%;
+    @media (min-width: $screen-sm-min) {
+      left:44%;
+    }
+
+    @media (min-width: 1240px) {
+      left: auto;
+      bottom:auto;
+      right:-34px;
+      top:38%;
+      @include rotate(0);
+
+    }
+
+  }
+  /***************************/
+  /**** Table Change 01 ******/
+
+  .tc01:nth-child(1) {
+    background-color: $blue01;
+    border-bottom: 2px solid #05355f;
+
+    @media (min-width: 1240px) {
+      border-right: 2px solid #05355f;
+      border-bottom:none;
+    }
+
+    .triangle {
+      border-color: transparent transparent transparent $blue01;
+    }
+    .triangle-border {
+      border-color: transparent transparent transparent #0B2D4F;
+    }
+  }
+
+  .tc01:nth-child(2) {
+    background-color: $blue02;
+    border-bottom: 2px solid #15456f;
+    @media (min-width: 1240px) {
+      border-right: 2px solid #15456f;
+      border-bottom:none;
+    }
+
+    .triangle {
+      border-color: transparent transparent transparent $blue02;
+    }
+    .triangle-border {
+      border-color: transparent transparent transparent #103a61;
+    }
+  }
+
+  .tc01:nth-child(3) {
+    background-color: $blue03;
+    border-bottom: 2px solid #2a5b84;
+    @media (min-width: 1240px) {
+      border-right: 2px solid #2a5b84;
+      border-bottom:none;
+    }
+    .triangle {
+      border-color: transparent transparent transparent $blue03;
+    }
+    .triangle-border {
+      border-color: transparent transparent transparent #26547e;
+    }
+  }
+
+  .tc01:nth-child(4) {
+    background-color: $blue04;
+  }
+
+  /***************************/
+  /**** Table Change 02 ******/
+
+  .tc02:nth-child(1) {
+    background-color: $blue05;
+    border-bottom: 2px solid #267ab2;
+
+    @media (min-width: 1240px) {
+      border-right: 2px solid #267ab2;
+      border-bottom:none;
+    }
+
+    .triangle {
+      border-color: transparent transparent transparent $blue05;
+    }
+    .triangle-border {
+      border-color: transparent transparent transparent #2d78b0;
+    }
+  }
+
+  .tc02:nth-child(2) {
+    background-color: $blue06;
+    border-bottom: 2px solid #3787bb;
+    @media (min-width: 1240px) {
+      border-right: 2px solid #3787bb;
+      border-bottom:none;
+    }
+
+    .triangle {
+      border-color: transparent transparent transparent $blue06;
+    }
+    .triangle-border {
+      border-color: transparent transparent transparent #307db4;
+    }
+  }
+
+  .tc02:nth-child(3) {
+    background-color: $blue07;
+    border-bottom: 2px solid #4b95c3;
+    @media (min-width: 1240px) {
+      border-right: 2px solid #4b95c3;
+      border-bottom:none;
+    }
+    .triangle {
+      border-color: transparent transparent transparent $blue07;
+    }
+    .triangle-border {
+      border-color: transparent transparent transparent #3e86b9;
+    }
+  }
+
+  .tc02:nth-child(4) {
+    background-color: $blue08;
+  }
+
+  /***************************/
+  /**** Table Change 03 ******/
+
+  .tc03:nth-child(1) {
+    background-color: $green01;
+    border-bottom: 2px solid #047160;
+
+    @media (min-width: 1240px) {
+      border-right: 2px solid #047160;
+      border-bottom:none;
+    }
+
+    .triangle {
+      border-color: transparent transparent transparent $green01;
+    }
+    .triangle-border {
+      border-color: transparent transparent transparent #036f5d;
+    }
+  }
+
+  .tc03:nth-child(2) {
+    background-color: $green02;
+    border-bottom: 2px solid #168573;
+    @media (min-width: 1240px) {
+      border-right: 2px solid #168573;
+      border-bottom:none;
+    }
+
+    .triangle {
+      border-color: transparent transparent transparent $green02;
+    }
+    .triangle-border {
+      border-color: transparent transparent transparent #137f6d;
+    }
+  }
+
+  .tc03:nth-child(3) {
+    background-color: $green03;
+    border-bottom: 2px solid #2b9583;
+    @media (min-width: 1240px) {
+      border-right: 2px solid #2b9583;
+      border-bottom:none;
+    }
+    .triangle {
+      border-color: transparent transparent transparent $green03;
+    }
+    .triangle-border {
+      border-color: transparent transparent transparent #228775;
+    }
+  }
+
+  .tc03:nth-child(4) {
+    background-color: $green04;
+  }
+
+
+
+}//BLOC END

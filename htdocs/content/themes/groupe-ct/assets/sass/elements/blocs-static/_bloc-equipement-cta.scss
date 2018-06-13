@@ -1,0 +1,26 @@
+.bloc-equipement-main-container {
+
+  @include flexbox();
+  @include flex-wrap(wrap);
+
+  .equipement-container {
+    margin: 15px 0;
+    @media (min-width: $screen-sm-min) {
+
+    }
+  }
+
+  .equipement-title {
+    @extend .poppins22BoldBlue;
+    text-transform: uppercase;
+    @media (min-width: $screen-sm-min) {
+      height: 60px;
+    }
+  }
+
+  .equipement-desc {
+    @extend .mada18LightBlack;
+    margin-bottom:30px ;
+  }
+
+}//SECTION END

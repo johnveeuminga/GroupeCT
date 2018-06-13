@@ -1,0 +1,83 @@
+.toggle-main-container {
+  margin:10px auto;
+
+
+  .toggle-content {
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+
+    width:100%;
+
+    @media (min-width: $screen-xs-min) {
+      @include flex-direction(row);
+      @include flex-wrap(wrap);
+    }
+  }
+}
+
+.bloc-15-teams {
+  .toggle-content{
+    align-items: flex-start!important;
+  }
+}
+
+
+.team-info-container {
+
+  @include flexbox();
+  @include flex-direction(column);
+  position: relative;
+  width: 100%;
+  padding: 40px 0;
+  @media (min-width: $screen-sm-min) {
+    width:calc(100%/2);
+  }
+  @media (min-width: $screen-md-min) {
+    width:calc(100%/3);
+  }
+
+  .team-info-inner-container {
+    padding: 0 2%;
+
+  }
+
+  .team-info-img {
+    width:100%;
+  }
+
+
+  .team-info-name {
+    @extend .poppins22BoldBlue;
+    text-transform: uppercase;
+    margin-top:30px;
+  }
+  .team-info-title {
+    @extend .mada18RegBlack;
+    text-transform: uppercase;
+    margin-top:5px;
+    margin-bottom:15px;
+  }
+
+  .team-info-phone {
+    display: block;
+    @extend .mada18RegBlack;
+    span {
+      @extend .mada18LightBlack;
+      padding-right:15px;
+      line-height: 27px;
+    }
+  }
+
+  .team-info-email {
+    @extend .mada18RegBlue;
+  }
+
+
+}
+
+
+
+
+
+

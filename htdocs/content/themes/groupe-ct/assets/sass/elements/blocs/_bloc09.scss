@@ -1,0 +1,38 @@
+
+.chart-main-container {
+  @include flexbox();
+  @include flex-direction(column);
+  @include align-items(baseline);
+  @media (min-width: $screen-sm-min) {
+    @include flex-direction(row);
+    @include justify-content(space-around);
+  }
+}
+
+
+.chart-container {
+  max-width:375px;
+  margin: 0;
+  .doughnut-chart {
+    margin:auto;
+    width:215px!important;
+    height:215px!important;
+
+  }
+
+  
+  .chart-text {
+    text-align: center;
+
+    p {
+      margin: 25px 0 0;
+      @include set-font(22px, $poppins, 300, $blue);
+    }
+    span {
+      @include set-font(14px, $mada, 400, $blue);
+    }
+    @media (max-width: $screen-sm-min - 1) {
+      margin-bottom: 50px;
+    }
+  }
+}

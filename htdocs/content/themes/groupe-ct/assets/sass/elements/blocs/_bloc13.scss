@@ -1,0 +1,77 @@
+
+.contact-header {
+  background-color: $blue;
+  @extend .poppins22BoldWhite;
+  padding: 20px 15px;
+}
+
+.contact-info-main-container {
+  @include flexbox();
+  @include justify-content(space-between);
+  @include flex-direction(column);
+  @media (min-width: $screen-xs-min) {
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+  }
+}
+
+.contact-info-container {
+  padding:40px 0;
+  @include flexbox();
+  @include flex-direction(column);
+  width: 100%;
+  @media (min-width: $screen-xs-min) {
+    width:calc(100%/2);
+  }
+  @media (min-width: $screen-sm-min) {
+    width:calc(100%/3);
+  }
+
+  .contact-info-title {
+    @extend .poppins22BoldBlue;
+    text-transform: uppercase;
+    margin-bottom:20px;
+  }
+
+  .contact-info-adress {
+    @extend .mada18LightBlack;
+    margin-left:50px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    position: relative;
+    line-height: 20px;
+    &:before {
+      content: url($assets + "/images/icon/icon-location-marker.svg");
+      position: absolute;
+      left:-50px;
+      width:40px;
+      height:45px;
+    }
+  }
+
+  .contact-info-phone01, .contact-info-phone02, .contact-info-fax {
+    @extend .mada18RegBlack;
+    margin:5px 0;
+    span {
+      @extend .mada18LightBlack;
+      padding-right:15px;
+    }
+  }
+
+  .contact-info-email {
+    margin-top:20px;
+    @extend .mada18RegBlue;
+  }
+
+  .info {
+    display: block;
+  }
+
+}
+
+
+
+.contact-info-fax {
+  color: $black!important;
+}
+

@@ -1,0 +1,167 @@
+
+
+.timeline-bar {
+  @include flexbox();
+  @include flex-direction(column);
+  position: relative;
+  width: 40px;
+  height: 100%;
+  margin-bottom:50px;
+ // padding-top:60px;
+  background-color:white;
+ // border: 3px solid $blue;
+  z-index: 1;
+
+  -webkit-box-shadow: 2px 2px 50px 2px rgba(0,0,0,0.55);
+  -moz-box-shadow: 2px 2px 50px 2px rgba(0,0,0,0.55);
+  box-shadow: 2px 2px 50px 2px rgba(0,0,0,0.55);
+  @media (min-width: $screen-xs-min) {
+    margin-left:calc(50% - 200px);
+  }
+  @media (min-width: $screen-md-min) {
+    margin-left: 0;
+    margin:auto;
+  }
+}
+
+.timeline-bar-line {
+  border-left: 3px solid $blue;
+  height: calc(100% - 30px);
+  width:1px;
+  margin:auto;
+  position: absolute;
+  @include center-img(50%, 50%);
+  z-index: 1;
+}
+
+.timeline-event-container:nth-child(odd) {
+  .timeline-dot-container {
+    margin-left: 2px;
+    @media (min-width: $screen-md-min) {
+      //margin-left: 4px;
+      margin-left: 2px;
+    }
+  }
+}
+
+.timeline-event-container:nth-child(even) {
+  .timeline-dot-container {
+      margin-left:2px;
+    @media (min-width: $screen-md-min) {
+      margin-left:0;
+      //margin-right: 3px;
+      margin-right: 1px;
+    }
+  }
+}
+
+.timeline-event-main-container{
+  @include flexbox();
+  @include flex-direction(column);
+  position: relative;
+  z-index: 100;
+  width:440px;
+  margin-bottom: 30px;
+
+  .timeline-dot-container {
+    position: relative;
+
+    .timeline-dot {
+        width:30px;
+        height:31px;
+      @media (min-width: $screen-md-min) {
+        width:30px;
+        height:30px;
+      }
+    }
+  }
+
+
+  .timeline-event-container {
+    @include flexbox();
+    @include align-items(flex-start);
+    position: relative;
+    left:2px;
+    margin-bottom:60px;
+    height: 120px;
+    &:first-child {
+      margin-top: 10px;
+    }
+  }
+
+  .timeline-date-container{
+    @include flexbox();
+    @include align-items(flex-start);
+    margin-left:20px;
+  }
+
+
+  .event {
+    @include flexbox();
+    @include align-items(flex-start);
+    margin:10px 0;
+  }
+
+  .event-line {
+
+    margin-top:5px;
+    width:30px;
+    margin-left:10px;
+    margin-right:10px;
+    border-bottom: 3px solid $blue;
+    @media (min-width: $screen-sm-min) {
+      width:90px;
+      margin-left:20px;
+      margin-right:30px;
+    }
+  }
+
+
+
+  .event-txt {
+    margin-top: -5px;
+    width: 190px;
+    @media (min-width: $screen-sm-min) {
+      width:300px;
+    }
+
+    h2 {
+      @extend .poppins22BoldBlue;
+      text-transform: uppercase;
+
+      &:not(:first-child) {
+        margin-top: 15px;
+      }
+    }
+
+    p {
+      @extend .poppins15LightdBlue;
+      margin-top: 5px;
+      text-transform: uppercase;
+      line-height: 20px;
+    }
+
+  }
+
+
+}
+
+/**************************************/
+
+
+.timeline-event-container.left {
+  @media (min-width: $screen-md-min) {
+    @include flex-direction(row-reverse);
+    left:-405px;
+    .event {
+      @include flex-direction(row-reverse);
+      text-align: right;
+    }
+
+    .event-line {
+      margin-left:30px;
+      margin-right:20px;
+    }
+  }
+
+}

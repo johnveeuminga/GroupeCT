@@ -1,0 +1,250 @@
+[12-Jun-2018 07:26:54 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at /home/mnwebsolutionsin/public_html/my-project-name/.env. in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php:75
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(91): Dotenv\Loader->load()
+#2 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 /home/mnwebsolutionsin/public_html/my-project-name/bootstrap/autoload.php(39): Dotenv\Dotenv->load()
+#4 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/wp-config.php(11): require_once('/home/mnwebsolu...')
+#5 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/cms/wp-load.php(42): require_once('/home/mnwebsolu...')
+#6 /home/mnwebsolutionsin/public_html/my-project-name/h in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php on line 75
+[12-Jun-2018 07:26:55 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at /home/mnwebsolutionsin/public_html/my-project-name/.env. in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php:75
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(91): Dotenv\Loader->load()
+#2 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 /home/mnwebsolutionsin/public_html/my-project-name/bootstrap/autoload.php(39): Dotenv\Dotenv->load()
+#4 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/wp-config.php(11): require_once('/home/mnwebsolu...')
+#5 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/cms/wp-load.php(42): require_once('/home/mnwebsolu...')
+#6 /home/mnwebsolutionsin/public_html/my-project-name/h in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php on line 75
+[12-Jun-2018 07:28:02 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at /home/mnwebsolutionsin/public_html/my-project-name/.env. in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php:75
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(91): Dotenv\Loader->load()
+#2 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 /home/mnwebsolutionsin/public_html/my-project-name/bootstrap/autoload.php(39): Dotenv\Dotenv->load()
+#4 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/wp-config.php(11): require_once('/home/mnwebsolu...')
+#5 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/cms/wp-load.php(42): require_once('/home/mnwebsolu...')
+#6 /home/mnwebsolutionsin/public_html/my-project-name/h in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php on line 75
+[12-Jun-2018 07:28:02 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at /home/mnwebsolutionsin/public_html/my-project-name/.env. in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php:75
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(91): Dotenv\Loader->load()
+#2 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 /home/mnwebsolutionsin/public_html/my-project-name/bootstrap/autoload.php(39): Dotenv\Dotenv->load()
+#4 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/wp-config.php(11): require_once('/home/mnwebsolu...')
+#5 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/cms/wp-load.php(42): require_once('/home/mnwebsolu...')
+#6 /home/mnwebsolutionsin/public_html/my-project-name/h in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php on line 75
+[12-Jun-2018 07:28:06 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at /home/mnwebsolutionsin/public_html/my-project-name/.env. in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php:75
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(91): Dotenv\Loader->load()
+#2 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 /home/mnwebsolutionsin/public_html/my-project-name/bootstrap/autoload.php(39): Dotenv\Dotenv->load()
+#4 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/wp-config.php(11): require_once('/home/mnwebsolu...')
+#5 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/cms/wp-load.php(42): require_once('/home/mnwebsolu...')
+#6 /home/mnwebsolutionsin/public_html/my-project-name/h in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php on line 75
+[12-Jun-2018 07:28:06 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at /home/mnwebsolutionsin/public_html/my-project-name/.env. in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php:75
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(91): Dotenv\Loader->load()
+#2 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 /home/mnwebsolutionsin/public_html/my-project-name/bootstrap/autoload.php(39): Dotenv\Dotenv->load()
+#4 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/wp-config.php(11): require_once('/home/mnwebsolu...')
+#5 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/cms/wp-load.php(42): require_once('/home/mnwebsolu...')
+#6 /home/mnwebsolutionsin/public_html/my-project-name/h in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php on line 75
+[12-Jun-2018 07:28:07 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at /home/mnwebsolutionsin/public_html/my-project-name/.env. in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php:75
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(91): Dotenv\Loader->load()
+#2 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 /home/mnwebsolutionsin/public_html/my-project-name/bootstrap/autoload.php(39): Dotenv\Dotenv->load()
+#4 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/wp-config.php(11): require_once('/home/mnwebsolu...')
+#5 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/cms/wp-load.php(42): require_once('/home/mnwebsolu...')
+#6 /home/mnwebsolutionsin/public_html/my-project-name/h in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php on line 75
+[12-Jun-2018 07:28:07 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at /home/mnwebsolutionsin/public_html/my-project-name/.env. in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php:75
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(91): Dotenv\Loader->load()
+#2 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 /home/mnwebsolutionsin/public_html/my-project-name/bootstrap/autoload.php(39): Dotenv\Dotenv->load()
+#4 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/wp-config.php(11): require_once('/home/mnwebsolu...')
+#5 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/cms/wp-load.php(42): require_once('/home/mnwebsolu...')
+#6 /home/mnwebsolutionsin/public_html/my-project-name/h in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php on line 75
+[12-Jun-2018 07:28:08 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at /home/mnwebsolutionsin/public_html/my-project-name/.env. in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php:75
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(91): Dotenv\Loader->load()
+#2 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 /home/mnwebsolutionsin/public_html/my-project-name/bootstrap/autoload.php(39): Dotenv\Dotenv->load()
+#4 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/wp-config.php(11): require_once('/home/mnwebsolu...')
+#5 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/cms/wp-load.php(42): require_once('/home/mnwebsolu...')
+#6 /home/mnwebsolutionsin/public_html/my-project-name/h in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php on line 75
+[12-Jun-2018 07:28:08 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at /home/mnwebsolutionsin/public_html/my-project-name/.env. in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php:75
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(91): Dotenv\Loader->load()
+#2 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 /home/mnwebsolutionsin/public_html/my-project-name/bootstrap/autoload.php(39): Dotenv\Dotenv->load()
+#4 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/wp-config.php(11): require_once('/home/mnwebsolu...')
+#5 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/cms/wp-load.php(42): require_once('/home/mnwebsolu...')
+#6 /home/mnwebsolutionsin/public_html/my-project-name/h in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php on line 75
+[12-Jun-2018 07:28:08 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at /home/mnwebsolutionsin/public_html/my-project-name/.env. in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php:75
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(91): Dotenv\Loader->load()
+#2 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 /home/mnwebsolutionsin/public_html/my-project-name/bootstrap/autoload.php(39): Dotenv\Dotenv->load()
+#4 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/wp-config.php(11): require_once('/home/mnwebsolu...')
+#5 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/cms/wp-load.php(42): require_once('/home/mnwebsolu...')
+#6 /home/mnwebsolutionsin/public_html/my-project-name/h in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php on line 75
+[12-Jun-2018 07:28:09 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at /home/mnwebsolutionsin/public_html/my-project-name/.env. in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php:75
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(91): Dotenv\Loader->load()
+#2 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 /home/mnwebsolutionsin/public_html/my-project-name/bootstrap/autoload.php(39): Dotenv\Dotenv->load()
+#4 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/wp-config.php(11): require_once('/home/mnwebsolu...')
+#5 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/cms/wp-load.php(42): require_once('/home/mnwebsolu...')
+#6 /home/mnwebsolutionsin/public_html/my-project-name/h in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php on line 75
+[12-Jun-2018 07:28:09 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at /home/mnwebsolutionsin/public_html/my-project-name/.env. in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php:75
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(91): Dotenv\Loader->load()
+#2 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 /home/mnwebsolutionsin/public_html/my-project-name/bootstrap/autoload.php(39): Dotenv\Dotenv->load()
+#4 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/wp-config.php(11): require_once('/home/mnwebsolu...')
+#5 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/cms/wp-load.php(42): require_once('/home/mnwebsolu...')
+#6 /home/mnwebsolutionsin/public_html/my-project-name/h in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php on line 75
+[12-Jun-2018 07:28:09 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at /home/mnwebsolutionsin/public_html/my-project-name/.env. in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php:75
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(91): Dotenv\Loader->load()
+#2 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 /home/mnwebsolutionsin/public_html/my-project-name/bootstrap/autoload.php(39): Dotenv\Dotenv->load()
+#4 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/wp-config.php(11): require_once('/home/mnwebsolu...')
+#5 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/cms/wp-load.php(42): require_once('/home/mnwebsolu...')
+#6 /home/mnwebsolutionsin/public_html/my-project-name/h in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php on line 75
+[12-Jun-2018 07:28:09 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at /home/mnwebsolutionsin/public_html/my-project-name/.env. in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php:75
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(91): Dotenv\Loader->load()
+#2 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 /home/mnwebsolutionsin/public_html/my-project-name/bootstrap/autoload.php(39): Dotenv\Dotenv->load()
+#4 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/wp-config.php(11): require_once('/home/mnwebsolu...')
+#5 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/cms/wp-load.php(42): require_once('/home/mnwebsolu...')
+#6 /home/mnwebsolutionsin/public_html/my-project-name/h in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php on line 75
+[12-Jun-2018 07:28:09 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at /home/mnwebsolutionsin/public_html/my-project-name/.env. in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php:75
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(91): Dotenv\Loader->load()
+#2 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 /home/mnwebsolutionsin/public_html/my-project-name/bootstrap/autoload.php(39): Dotenv\Dotenv->load()
+#4 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/wp-config.php(11): require_once('/home/mnwebsolu...')
+#5 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/cms/wp-load.php(42): require_once('/home/mnwebsolu...')
+#6 /home/mnwebsolutionsin/public_html/my-project-name/h in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php on line 75
+[12-Jun-2018 07:28:10 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at /home/mnwebsolutionsin/public_html/my-project-name/.env. in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php:75
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(91): Dotenv\Loader->load()
+#2 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 /home/mnwebsolutionsin/public_html/my-project-name/bootstrap/autoload.php(39): Dotenv\Dotenv->load()
+#4 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/wp-config.php(11): require_once('/home/mnwebsolu...')
+#5 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/cms/wp-load.php(42): require_once('/home/mnwebsolu...')
+#6 /home/mnwebsolutionsin/public_html/my-project-name/h in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php on line 75
+[12-Jun-2018 07:28:10 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at /home/mnwebsolutionsin/public_html/my-project-name/.env. in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php:75
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(91): Dotenv\Loader->load()
+#2 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 /home/mnwebsolutionsin/public_html/my-project-name/bootstrap/autoload.php(39): Dotenv\Dotenv->load()
+#4 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/wp-config.php(11): require_once('/home/mnwebsolu...')
+#5 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/cms/wp-load.php(42): require_once('/home/mnwebsolu...')
+#6 /home/mnwebsolutionsin/public_html/my-project-name/h in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php on line 75
+[12-Jun-2018 07:28:45 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at /home/mnwebsolutionsin/public_html/my-project-name/.env.production. in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php:75
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(91): Dotenv\Loader->load()
+#2 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 /home/mnwebsolutionsin/public_html/my-project-name/bootstrap/autoload.php(39): Dotenv\Dotenv->load()
+#4 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/wp-config.php(11): require_once('/home/mnwebsolu...')
+#5 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/cms/wp-load.php(42): require_once('/home/mnwebsolu...')
+#6 /home/mnwebsolutionsin/public_html/my-pro in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php on line 75
+[12-Jun-2018 07:28:45 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at /home/mnwebsolutionsin/public_html/my-project-name/.env.production. in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php:75
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(91): Dotenv\Loader->load()
+#2 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 /home/mnwebsolutionsin/public_html/my-project-name/bootstrap/autoload.php(39): Dotenv\Dotenv->load()
+#4 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/wp-config.php(11): require_once('/home/mnwebsolu...')
+#5 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/cms/wp-load.php(42): require_once('/home/mnwebsolu...')
+#6 /home/mnwebsolutionsin/public_html/my-pro in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php on line 75
+[12-Jun-2018 08:12:21 UTC] PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function pll_current_language() in /home/mnwebsolutionsin/public_html/my-project-name/storage/views/2882b5b80cdc0790c2cb91b9e42924adc40cc543.php:5
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/mnwebsolu...', Array)
+#2 /home/mnwebsolutionsin/public_html/my-project-name/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/home/mnwebsolu...', Array)
+#3 /home/mnwebsolutionsin/public_html/my-project-name/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /home/mnwebsolutionsin/public_html/my-project-name/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#5 /home/mnwebsolutionsin/public_html/my-project-name/stora in /home/mnwebsolutionsin/public_html/my-project-name/storage/views/2882b5b80cdc0790c2cb91b9e42924adc40cc543.php on line 5
+[12-Jun-2018 08:12:53 UTC] PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function pll_current_language() in /home/mnwebsolutionsin/public_html/my-project-name/htdocs/content/themes/groupe-ct/resources/helpers/PageHelper.php:166
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/storage/views/1584b9edb88803101494c0fcb9e7da297c15d416.php(12): PageHelper::get_page_permalink('environnement-p...')
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/home/mnwebsolu...')
+#2 /home/mnwebsolutionsin/public_html/my-project-name/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/mnwebsolu...', Array)
+#3 /home/mnwebsolutionsin/public_html/my-project-name/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/home/mnwebsolu...', Array)
+#4 /home/mnwebsolutionsin/public_html/my-project-name/vendor/illuminate/view/View.php(125): Illuminate\View\View->getC in /home/mnwebsolutionsin/public_html/my-project-name/htdocs/content/themes/groupe-ct/resources/helpers/PageHelper.php on line 166
+[12-Jun-2018 08:16:46 UTC] PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function pll_current_language() in /home/mnwebsolutionsin/public_html/my-project-name/htdocs/content/themes/groupe-ct/resources/helpers/PageHelper.php:166
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/storage/views/1584b9edb88803101494c0fcb9e7da297c15d416.php(12): PageHelper::get_page_permalink('environnement-p...')
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/home/mnwebsolu...')
+#2 /home/mnwebsolutionsin/public_html/my-project-name/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/mnwebsolu...', Array)
+#3 /home/mnwebsolutionsin/public_html/my-project-name/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/home/mnwebsolu...', Array)
+#4 /home/mnwebsolutionsin/public_html/my-project-name/vendor/illuminate/view/View.php(125): Illuminate\View\View->getC in /home/mnwebsolutionsin/public_html/my-project-name/htdocs/content/themes/groupe-ct/resources/helpers/PageHelper.php on line 166
+[13-Jun-2018 02:27:22 UTC] PHP Warning:  preg_match() expects parameter 2 to be string, object given in /home/mnwebsolutionsin/public_html/my-project-name/htdocs/cms/wp-includes/formatting.php on line 1529
+[13-Jun-2018 02:27:22 UTC] PHP Warning:  strip_tags() expects parameter 1 to be string, object given in /home/mnwebsolutionsin/public_html/my-project-name/htdocs/cms/wp-includes/formatting.php on line 1981
+[13-Jun-2018 02:27:22 UTC] PHP Notice:  Undefined offset: 0 in /home/mnwebsolutionsin/public_html/my-project-name/htdocs/content/themes/groupe-ct/resources/models/Brand.php on line 25
+[13-Jun-2018 02:27:22 UTC] PHP Notice:  Trying to get property of non-object in /home/mnwebsolutionsin/public_html/my-project-name/htdocs/content/themes/groupe-ct/resources/controllers/ProductController.php on line 29
+[13-Jun-2018 02:27:22 UTC] PHP Notice:  Trying to get property of non-object in /home/mnwebsolutionsin/public_html/my-project-name/htdocs/content/themes/groupe-ct/resources/controllers/ProductController.php on line 32
+[13-Jun-2018 02:27:22 UTC] PHP Notice:  Trying to get property of non-object in /home/mnwebsolutionsin/public_html/my-project-name/htdocs/content/themes/groupe-ct/resources/controllers/ProductController.php on line 34
+[13-Jun-2018 02:27:22 UTC] PHP Notice:  Trying to get property of non-object in /home/mnwebsolutionsin/public_html/my-project-name/storage/views/e7ad1e1eef488334889b3acf48687b1c46e79e16.php on line 63
+[13-Jun-2018 02:27:22 UTC] PHP Notice:  Trying to get property of non-object in /home/mnwebsolutionsin/public_html/my-project-name/storage/views/e7ad1e1eef488334889b3acf48687b1c46e79e16.php on line 67
+[13-Jun-2018 02:27:22 UTC] PHP Notice:  Trying to get property of non-object in /home/mnwebsolutionsin/public_html/my-project-name/storage/views/e7ad1e1eef488334889b3acf48687b1c46e79e16.php on line 71
+[13-Jun-2018 02:30:29 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ']' in /home/mnwebsolutionsin/public_html/my-project-name/htdocs/content/themes/groupe-ct/resources/controllers/ProductController.php on line 49
+[13-Jun-2018 02:31:33 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: View [pages.woocomerce.product-listing] not found. in /home/mnwebsolutionsin/public_html/my-project-name/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('pages.woocomerc...', Array)
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('pages.woocomerc...')
+#2 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/content/mu-plugins/themosis-framework/src/Themosis/helpers.php(562): Illuminate\View\Factory->make('pages.woocomerc...', Array, Array)
+#3 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/content/themes/groupe-ct/resources/controllers/ProductController.php(49): view('pages.woocomerc...', Array)
+#4 [internal function]: Theme\Controllers\ProductController->getProductsWithBrandType(Object(WP_Post), Object(WP_Query))
+#5 /home/mn in /home/mnwebsolutionsin/public_html/my-project-name/vendor/illuminate/view/FileViewFinder.php on line 137
+[13-Jun-2018 02:32:02 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: View [pages.woocomerce.product-listing] not found. in /home/mnwebsolutionsin/public_html/my-project-name/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('pages.woocomerc...', Array)
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('pages.woocomerc...')
+#2 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/content/mu-plugins/themosis-framework/src/Themosis/helpers.php(562): Illuminate\View\Factory->make('pages.woocomerc...', Array, Array)
+#3 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/content/themes/groupe-ct/resources/controllers/ProductController.php(49): view('pages.woocomerc...', Array)
+#4 [internal function]: Theme\Controllers\ProductController->getProductsWithBrandType(Object(WP_Post), Object(WP_Query))
+#5 /home/mn in /home/mnwebsolutionsin/public_html/my-project-name/vendor/illuminate/view/FileViewFinder.php on line 137
+[13-Jun-2018 02:33:09 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: View [pages.woocomerce.product-listing] not found. in /home/mnwebsolutionsin/public_html/my-project-name/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('pages.woocomerc...', Array)
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('pages.woocomerc...')
+#2 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/content/mu-plugins/themosis-framework/src/Themosis/helpers.php(562): Illuminate\View\Factory->make('pages.woocomerc...', Array, Array)
+#3 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/content/themes/groupe-ct/resources/controllers/ProductController.php(49): view('pages.woocomerc...', Array)
+#4 [internal function]: Theme\Controllers\ProductController->getProductsWithBrandType(Object(WP_Post), Object(WP_Query))
+#5 /home/mn in /home/mnwebsolutionsin/public_html/my-project-name/vendor/illuminate/view/FileViewFinder.php on line 137
+[13-Jun-2018 02:33:58 UTC] PHP Notice:  Undefined variable: filters in /home/mnwebsolutionsin/public_html/my-project-name/storage/views/3bdd87ac8f4a5631e4d69da00eeee5d56780c7f3.php on line 11
+[13-Jun-2018 02:33:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/mnwebsolutionsin/public_html/my-project-name/storage/views/3bdd87ac8f4a5631e4d69da00eeee5d56780c7f3.php on line 11
+[13-Jun-2018 02:33:58 UTC] PHP Notice:  Undefined variable: product_type_children in /home/mnwebsolutionsin/public_html/my-project-name/storage/views/3bdd87ac8f4a5631e4d69da00eeee5d56780c7f3.php on line 41
+[13-Jun-2018 02:33:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/mnwebsolutionsin/public_html/my-project-name/storage/views/3bdd87ac8f4a5631e4d69da00eeee5d56780c7f3.php on line 41
+[13-Jun-2018 02:33:58 UTC] PHP Notice:  Undefined variable: product_type in /home/mnwebsolutionsin/public_html/my-project-name/storage/views/3bdd87ac8f4a5631e4d69da00eeee5d56780c7f3.php on line 63
+[13-Jun-2018 02:33:58 UTC] PHP Notice:  Trying to get property of non-object in /home/mnwebsolutionsin/public_html/my-project-name/storage/views/3bdd87ac8f4a5631e4d69da00eeee5d56780c7f3.php on line 63
+[13-Jun-2018 02:33:58 UTC] PHP Notice:  Undefined variable: brand_logo in /home/mnwebsolutionsin/public_html/my-project-name/storage/views/3bdd87ac8f4a5631e4d69da00eeee5d56780c7f3.php on line 67
+[13-Jun-2018 02:33:58 UTC] PHP Notice:  Undefined variable: page_title in /home/mnwebsolutionsin/public_html/my-project-name/storage/views/3bdd87ac8f4a5631e4d69da00eeee5d56780c7f3.php on line 79
+[13-Jun-2018 02:33:58 UTC] PHP Notice:  Undefined variable: products in /home/mnwebsolutionsin/public_html/my-project-name/storage/views/3bdd87ac8f4a5631e4d69da00eeee5d56780c7f3.php on line 82
+[13-Jun-2018 02:33:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/mnwebsolutionsin/public_html/my-project-name/storage/views/3bdd87ac8f4a5631e4d69da00eeee5d56780c7f3.php on line 82
+[13-Jun-2018 02:35:10 UTC] PHP Parse error:  syntax error, unexpected ''product_type_children'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/mnwebsolutionsin/public_html/my-project-name/htdocs/content/themes/groupe-ct/resources/controllers/ProductController.php on line 51
+[13-Jun-2018 02:35:24 UTC] PHP Notice:  Undefined variable: brand_logo in /home/mnwebsolutionsin/public_html/my-project-name/storage/views/3bdd87ac8f4a5631e4d69da00eeee5d56780c7f3.php on line 67
+[13-Jun-2018 02:35:24 UTC] PHP Notice:  Undefined variable: page_title in /home/mnwebsolutionsin/public_html/my-project-name/storage/views/3bdd87ac8f4a5631e4d69da00eeee5d56780c7f3.php on line 79
+[13-Jun-2018 02:35:49 UTC] PHP Notice:  Undefined variable: brand_logo in /home/mnwebsolutionsin/public_html/my-project-name/storage/views/3bdd87ac8f4a5631e4d69da00eeee5d56780c7f3.php on line 67

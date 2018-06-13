@@ -1,0 +1,186 @@
+@function calculateRem($size) {
+  $remSize: $size / 10px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size !important;
+  font-size: calculateRem($size);
+}
+
+/*@mixin set-font($size, $font, $color) {
+  font-family: $font;
+  @include font-size($size);
+  color: $color;
+}*/
+
+@mixin set-font($size, $font, $font-weight, $color) {
+  font-family: $font;
+  font-weight: $font-weight;
+  @include font-size($size);
+  color: $color;
+}
+
+@mixin background-transition() {
+  @include transition(background-color 0.25s ease-out);
+}
+
+@mixin color-transition() {
+  @include transition(color 0.25s ease-out);
+}
+
+@mixin fade-in($seconds: 0.25s) {
+  @include animate(fadein $seconds ease-out);
+}
+@mixin fade-out() {
+  @include animate(fadeout 0.25s ease-out);
+}
+
+
+@mixin animate-width($seconds: 0.25s) {
+  @include animate(enlargewidth $seconds ease-out);
+}
+
+@mixin animate ($animation) {
+  -webkit-animation: $animation;
+  -moz-animation: $animation;
+  -ms-animation: $animation;
+  -o-animation: $animation;
+  animation: $animation;
+}
+
+@mixin transition ($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin transform($transforms) {
+  -webkit-transform: $transforms;
+  -moz-transform: $transforms;
+  -ms-transform: $transforms;
+  transform: $transforms;
+}
+
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+@mixin scale($scale) {
+  @include transform(scale($scale));
+}
+
+@mixin scaleImportant($scale) {
+  -webkit-transform: scale($scale)!important;
+  -moz-transform: scale($scale)!important;
+  -ms-transform: scale($scale)!important;
+  transform: scale($scale)!important;
+}
+
+@mixin translate ($x, $y) {
+  @include transform(translate($x, $y) );
+}
+
+@mixin skew ($x, $y) {
+  @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+@mixin transform-origin ($origin) {
+  -webkit-transform-origin: $origin;
+  -moz-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  transform-origin: $origin;
+}
+
+
+
+@keyframes enlargewidth {
+  from { width: 0; }
+  to   { width: 95%; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes enlargewidth {
+  from { width: 0; }
+  to   { width: 95%; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes enlargewidth {
+  from { width: 0; }
+  to   { width: 95%; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes enlargewidth {
+  from { width: 0; }
+  to   { width: 95%; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes enlargewidth {
+  from { width: 0; }
+  to   { width: 95%; }
+}
+
+
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+

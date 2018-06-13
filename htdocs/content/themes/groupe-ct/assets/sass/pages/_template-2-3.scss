@@ -1,0 +1,16 @@
+.template-2-3-container {
+  .bloc-product-container {
+    .menu-item {
+      a {
+        color: $green!important;
+      }
+    }
+  }
+
+  .prod-logiciel-container {
+    @media (min-width: $screen-lg-min) {
+      margin-top: 70px;
+    }
+  }
+}
+

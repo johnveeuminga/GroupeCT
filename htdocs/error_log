@@ -1,0 +1,27 @@
+[12-Jun-2018 07:25:30 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at /home/mnwebsolutionsin/public_html/my-project-name/.env. in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php:75
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(91): Dotenv\Loader->load()
+#2 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 /home/mnwebsolutionsin/public_html/my-project-name/bootstrap/autoload.php(39): Dotenv\Dotenv->load()
+#4 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/wp-config.php(11): require_once('/home/mnwebsolu...')
+#5 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/cms/wp-load.php(42): require_once('/home/mnwebsolu...')
+#6 /home/mnwebsolutionsin/public_html/my-project-name/h in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php on line 75
+[12-Jun-2018 07:25:37 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at /home/mnwebsolutionsin/public_html/my-project-name/.env. in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php:75
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(91): Dotenv\Loader->load()
+#2 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 /home/mnwebsolutionsin/public_html/my-project-name/bootstrap/autoload.php(39): Dotenv\Dotenv->load()
+#4 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/wp-config.php(11): require_once('/home/mnwebsolu...')
+#5 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/cms/wp-load.php(42): require_once('/home/mnwebsolu...')
+#6 /home/mnwebsolutionsin/public_html/my-project-name/h in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php on line 75
+[12-Jun-2018 07:25:41 UTC] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidPathException: Unable to read the environment file at /home/mnwebsolutionsin/public_html/my-project-name/.env. in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php:75
+Stack trace:
+#0 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php(52): Dotenv\Loader->ensureFileIsReadable()
+#1 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(91): Dotenv\Loader->load()
+#2 /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Dotenv.php(48): Dotenv\Dotenv->loadData()
+#3 /home/mnwebsolutionsin/public_html/my-project-name/bootstrap/autoload.php(39): Dotenv\Dotenv->load()
+#4 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/wp-config.php(11): require_once('/home/mnwebsolu...')
+#5 /home/mnwebsolutionsin/public_html/my-project-name/htdocs/cms/wp-load.php(42): require_once('/home/mnwebsolu...')
+#6 /home/mnwebsolutionsin/public_html/my-project-name/h in /home/mnwebsolutionsin/public_html/my-project-name/vendor/vlucas/phpdotenv/src/Loader.php on line 75

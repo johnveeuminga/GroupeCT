@@ -1,0 +1,396 @@
+.hero,
+.hero-page {
+
+  .contact-form-container {
+
+    position: absolute;
+
+
+    //height:100%;
+    overflow-y: auto;
+
+    transition: 0.5s;
+    right: -2000px;
+    &.slide-in {
+      position: fixed;
+      top: 0;
+      right:0;
+    }
+    &.sticky {
+      //position: fixed;
+      //top: 0;
+      //width:70%;
+
+      @media (min-width: $screen-sm-min) {
+        max-height: 90vh;
+        //padding:40px;
+      }
+    }
+    z-index: 9999;
+
+    background-color: $black;
+    padding:40px;
+
+
+    @media (min-width: $screen-xs-min) {
+      width:70vw!important;
+    }
+    @media (min-width: $screen-md-min) {
+      width:620px!important;
+
+    }
+
+    .contact-form-inner-container {
+      width:100%;
+      -ms-overflow-style:none;
+    }
+
+    .contact-form-title {
+      @extend .poppins20SemiBoldWhite;
+      text-transform: uppercase;
+      margin-bottom:30px;
+      margin-top: 0;
+      width: 100%;
+
+    }
+
+    .arrow-right {
+      width:21px;
+      @include rotate(90);
+      opacity: 0.6;
+    }
+
+    .close-contact-form {
+      float: right;
+      padding-bottom:15px;
+      @extend .poppins20SemiBoldWhite;
+      text-transform: uppercase;
+    }
+
+    .contact-success-message {
+      @extend .mada18LightWhite;
+    }
+
+    .contact-field-container {
+      @include flexbox();
+      @include flex-direction(column);
+      width: 100%;
+
+      .contact-row {
+        @include flexbox();
+        margin:10px 0;
+        input:not(:first-of-type){
+          margin-left:3%;
+        }
+      }
+
+      input, select, textarea{
+        -webkit-appearance: none;
+        -webkit-border-radius: 0px;
+        background-color: transparent;
+        outline: none;
+        border:1px solid white;
+        resize: none;
+        padding: 20px 10px;
+        @include border-radius(2px);
+        @extend .mada18LightWhite;
+
+      }
+
+      select::-ms-expand {
+        display: none;
+      }
+
+      -ms-overflow-style: none;
+
+      textarea:focus, input:focus, select:focus, .select2-selection:focus{
+        outline: none;
+      }
+
+
+      .selection{
+        border:none;
+        -webkit-appearance: none;
+        -webkit-border-radius: 0px;
+        background-color: transparent;
+        padding: 20px 10px;
+        @include border-radius(2px);
+        @extend .mada18LightWhite;
+      }
+
+      .select2-selection {
+        background-color: transparent;
+        border:none;
+      }
+      .select2-selection__arrow {
+        display: none;
+      }
+
+
+
+        //select {
+      //  border:none;
+      //  -webkit-appearance: none;
+      //  -webkit-border-radius: 0px;
+      //  background-color: transparent;
+      //  padding: 20px 10px;
+      //  @include border-radius(2px);
+      //  @extend .mada18LightWhite;
+      //}
+
+
+      /*** ROW #1 ***/
+      .contact-row:nth-child(2){
+
+        .select2-container {
+           @include flex-basis(17%);
+           border:1px solid white;
+           margin-right:3%;
+           background: url($assets + "/images/icon/icon-chevron-white-down.svg") no-repeat 85% 50%;
+           background-color: transparent;
+
+        }
+
+        select {
+          @include flex-basis(17%);
+          border:1px solid white;
+          margin-right:3%;
+          //background: url($assets + "/images/icon/icon-arrow.png") no-repeat 85% 50%;
+          background: url($assets + "/images/icon/icon-chevron-white-down.svg") no-repeat 95% 50%;
+          background-size: 24px 24px;
+          @media (min-width: $screen-sm-min) {
+            background-position: 85% 50%;
+          }
+          color: rgba(255, 255, 255, 0.6);
+
+          option {
+            background-color: #222;
+            color: rgba(255, 255, 255, 1);
+          }
+        }
+
+        input {
+          @include flex-basis(35%);
+        }
+      }
+      /*** ROW #2 **/
+      .contact-row:nth-child(3){
+        input {
+          @include flex-basis(45%);
+
+        }
+      }
+
+      .contact-row:nth-child(4) {
+
+        select {
+          @include flex-basis(50.5%);
+          border:1px solid white;
+          margin-right:3%;
+          background: url($assets + "/images/icon/icon-chevron-white-down.svg") no-repeat 95% 50%;
+          background-size: 24px 24px;
+          color: rgba(255, 255, 255, 0.6);
+
+
+          option {
+              background-color: #222;
+            color: rgba(255, 255, 255, 1);
+          }
+        }
+
+        input {
+          @include flex-basis(47%);
+        }
+      }
+
+      .contact-row:nth-child(5){
+        #phone {
+          @include flex-basis(45%);
+        }
+        #post {
+          width:90px;
+          margin-left: calc(3% - 1px);
+        }
+      }
+      /*** ROW #4 ***/
+      .contact-row:nth-child(6) {
+        textarea {
+          width:100%;
+        }
+      }
+      /*** ROW #5 ***/
+      .contact-row:nth-child(7) {
+
+        .check-container{
+          @include flexbox();
+          @include flex-basis(100%);
+          @extend .mada18LightWhite;
+          padding-right: 15px;
+          @media (min-width: $screen-sm-min) {
+            @include flex-basis(60%);
+          }
+        }
+        .submit-btn {
+
+          @include border-radius(2px);
+          width:240px;
+          padding:15px 0;
+          background-color: white;
+          border:none;
+          @extend .poppins15BoldBlack;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          &:hover {
+            background-color: #d2deea;
+          }
+        }
+      }
+
+      @include placeholder(18px, $mada, 300, white, 0.6);
+
+    }
+
+    .mandatory-field-msg {
+      @extend .mada14LightWhite;
+    }
+
+  //CONTACT FORM END
+
+  /* Cachons la case à cocher */
+  [type="checkbox"]:not(:checked),
+  [type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+  }
+
+  [type="checkbox"]:not(:checked) + label,
+  [type="checkbox"]:checked + label {
+    position: relative; /* permet de positionner les pseudo-éléments */
+    padding-left: 30px; /* fait un peu d'espace pour notre case à venir */
+    cursor: pointer;    /* affiche un curseur adapté */
+    @media (max-width: $screen-sm-min) {
+      //padding-left: 30px;
+    }
+  }
+
+  /* Aspect des checkboxes */
+  /* :before sert à créer la case à cocher */
+  [type="checkbox"]:not(:checked) + label:before,
+  [type="checkbox"]:checked + label:before {
+    content:  url($assets + "/images/icon/form-unchecked.png");
+    position: absolute;
+    left:0px; top: 5px;
+
+  }
+
+  //* Aspect général de la coche */
+  [type="checkbox"]:not(:checked) + label:after,
+  [type="checkbox"]:checked + label:after {
+    content:  url($assets + "/images/icon/form-checked.png");
+    position: absolute;
+    left:0px; top: 5px;
+    transition: all .2s; /* on prévoit une animation */
+  }
+  /* Aspect si "pas cochée" */
+  [type="checkbox"]:not(:checked) + label:after {
+    opacity: 0; /* coche invisible */
+    transform: scale(0); /* mise à l'échelle à 0 */
+  }
+  /* Aspect si "cochée" */
+  [type="checkbox"]:checked + label:after {
+    opacity: 1; /* coche opaque */
+    transform: scale(1); /* mise à l'échelle 1:1 */
+  }
+
+    @media (max-width: $screen-sm-min - 1) {
+      max-width: 100%;
+      width: calc(100% - 30px);
+      display: flex;
+      flex-wrap: wrap;
+      padding: 15px;
+      overflow-y: visible;
+
+      .contact-form-inner-container {
+
+        .contact-field-container {
+          padding: 15px;
+        }
+
+        form {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          overflow: scroll;
+          height: 100vh;
+
+          h2.contact-form-title {
+            display: flex;
+            flex-wrap: wrap-reverse;
+            text-align: right;
+          }
+          a.close-contact-form {
+            float: right;
+            display: block;
+            width: 100%;
+          }
+          .mandatory-field-msg {
+            padding: 15px 0;
+          }
+          .check-container {
+            padding: 15px 0;
+          }
+          .contact-field-container {
+            display: flex;
+            flex-wrap: wrap;
+
+            .contact-row {
+              display: flex;
+              flex-wrap: wrap;
+              margin: 0!important;
+
+              input, select {
+                width: 100%!important;
+                margin: 0!important;
+                flex-basis: 100%!important;
+                margin-bottom: 15px!important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+/**** FORMS ****/
+
+.error-msg-container {
+  @include set-font(16px, $mada, 300, $red);
+  .error {
+    display: block;
+    margin:5px 0;
+  }
+
+  > p {
+    @include set-font(16px, $mada, 300, $red);
+  }
+
+}
+
+
+input.field-error,
+textarea.field-error {
+  border: 1px solid $red!important;
+  color: $red!important;
+}
+
+select.field-error {
+  border: 1px solid $red!important;
+  opacity: 1!important;
+}
+
+.submit-btn {
+  cursor: pointer;
+}

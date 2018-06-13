@@ -1,0 +1,52 @@
+/* ELEMENTS */
+
+
+
+// Border radius shorthand
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+}
+
+
+@mixin center-img($posX,$posY){
+  position:absolute;
+  left:50%;
+  top: 50%;
+
+  transform: translate(-$posX,-$posY);
+  -webkit-transform: translate(-$posX,-$posY);
+  -ms-transform: translate(-$posX,-$posY);
+}
+
+
+@mixin linear-gradient-horizontal($firstColor, $secondColor) {
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e69758+1,f0d131+100 */
+  background: -moz-linear-gradient(left, $firstColor 1%, $secondColor 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, $firstColor 1%,$secondColor 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, $firstColor 1%,$secondColor 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$firstColor', endColorstr='$secondColor',GradientType=1 ); /* IE6-9 */
+}
+
+
+@mixin placeholder($font-size, $font-family, $font-weight, $color, $opacity){
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    @include set-font($font-size, $font-family, $font-weight, $color);
+    opacity: $opacity;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    @include set-font($font-size, $font-family, $font-weight, $color);
+    opacity: $opacity;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    @include set-font($font-size, $font-family, $font-weight, $color);
+    opacity: $opacity;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    @include set-font($font-size, $font-family, $font-weight, $color);
+    opacity: $opacity;
+  }
+}

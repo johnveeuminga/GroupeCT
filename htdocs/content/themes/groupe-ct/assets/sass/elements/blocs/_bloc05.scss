@@ -1,0 +1,146 @@
+.testimonials-main-container {
+
+  position: relative;
+
+  padding: 70px 30px 15px 30px;
+
+
+  .slider-main-container {
+    position: relative;
+    width: 100%;
+    min-height:550px;
+    max-width: 1200px;
+    margin: auto!important;
+
+    background: -webkit-linear-gradient(left top, $gradient-black-first, $gradient-black-second); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, $gradient-black-first, $gradient-black-second); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, $gradient-black-first, $gradient-black-second); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, $gradient-black-first, $gradient-black-second); /* Standard syntax (must be last) */
+
+    @media (min-width: $screen-sm-min) {
+
+    }
+    @media (min-width: $screen-md-min) {
+      min-height:350px;
+      max-height: 580px;
+    }
+
+  }
+
+  .slide-container {
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content(space-between);
+    &.reverse-elem {
+      @include flex-direction(column-reverse);
+    }
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:0;
+    top:0;
+    z-index: 10;
+    opacity: 0;
+    @include transition(opacity 0.5s ease);
+    @media (min-width: $screen-md-min) {
+      @include flex-direction(row);
+      &.reverse-elem {
+        @media (min-width: $screen-md-min) {
+          @include flex-direction(row-reverse);
+        }
+
+        @media (min-width: $screen-lg-min) {
+          p {
+            padding-right: 20px!important;
+          }
+        }
+
+      }
+      @include align-items(center);
+    }
+
+    a {
+      background-color: white!important;
+      color: $black!important;
+      margin-top: 30px;
+    }
+  }
+
+  .img-container {
+    max-width: 580px;
+    width:100%;
+    margin: auto;
+    padding: 0;
+
+    @media (min-width: $screen-sm-min) {
+      padding: 50px 0 0;
+    }
+    @media (min-width: $screen-md-min) {
+      padding: 0;
+    }
+    @media (min-width: $screen-md-min) {
+      padding: 0;
+      margin: 0;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+  .text-container {
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+    text-align: center;
+    padding: 0 30px 30px;
+    margin:auto;
+    @media (min-width: $screen-md-min) {
+      //padding: 0;
+    }
+
+    .testimonial-quote {
+      width:50px;
+      margin:30px 0;
+
+    }
+
+    .text {
+      width:100%;
+      @include set-font(20px, $poppins, 300, white);
+      line-height: 30px;
+      @media (min-width: $screen-sm-min) {
+        @include set-font(22px, $mada, 300, white);
+      }
+    }
+
+    .testimonial-name {
+      @include set-font(20px, $poppins, 600, white);
+      .testimonial-desc {
+        @include set-font(20px, $poppins, 300, white);
+      }
+    }
+
+
+  }//TEXT CONTAINER END
+
+
+  @media (min-width: $screen-lg-min) {
+    margin-bottom: 30px;
+  }
+
+
+  .slider-link-container {
+    position: absolute;
+    left: 50%;
+    @media (min-width: $screen-md-min) {
+      left: 25%;
+    }
+    bottom: 0;
+    transform: translateX(-50%);
+    .slider-dot {
+      background: transparent!important;
+    }
+  }
+}
+

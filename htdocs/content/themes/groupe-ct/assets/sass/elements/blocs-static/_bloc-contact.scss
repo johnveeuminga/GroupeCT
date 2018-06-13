@@ -1,0 +1,86 @@
+.bloc-contact-container {
+
+  @include flexbox();
+  @include flex-direction(column);
+  @media (min-width: $screen-md-min) {
+    @include flex-direction(row);
+  }
+
+  .contact-container {
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+    padding:30px;
+    text-align: center;
+    background-color: $blue2;
+    @media (min-width: $screen-md-min) {
+      @include flex-basis(30%);
+      padding-top:75px;
+      padding-bottom: 60px;
+    }
+
+
+    .contact-link-cta {
+      margin:15px auto;
+      width:32px;
+      height:20px;
+      display: block;
+
+      @media (min-width: $screen-md-min) {
+        margin-top:60px;
+      }
+
+
+    }
+
+  }
+  .inner-container {
+    width:100%;
+  }
+
+  .contact-title {
+    @extend .poppins30BoldWhite;
+    margin:15px 0;
+    text-transform: uppercase;
+    line-height: 40px;
+
+    @media (min-width: $screen-md-min) {
+      margin-top:60px;
+      margin-bottom:15px;
+    }
+  }
+
+  .contact-text {
+    @extend .poppins18LightWhite;
+  }
+
+
+  .about-img-container {
+    min-height: 110px;
+
+    .contact-icon {
+      max-width: 105px;
+      height:95px;
+    }
+  }
+
+  &.static-4-0,
+  &.static-4-7 {
+    margin: 30px auto;
+
+
+    .contact-container {
+
+      margin-bottom: 30px;
+
+      @media (min-width: $screen-md-min) {
+        margin: 0;
+        &:nth-child(2) {
+          margin: 0 15px;
+        }
+      }
+    }
+  }
+
+}//SECTION END
+

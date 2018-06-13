@@ -1,0 +1,86 @@
+/* path */
+$assets: '/content/themes/groupe-ct/dist/';
+
+
+/* colors */
+
+
+//#HEX
+$primary-bg: #f5f5f5;
+$blue: #063a65;
+$blue2: #094265;
+$blue-light: #227bb1;
+$blue-dark: #09283c;
+$blue-sky: #2e87bc;
+$blue-grey: #3a6a86;
+
+
+
+$black: #222222;
+$grey: #f1f1f1;
+$grey-light: #acacac;
+$grey-placeholder : #4c4c4c;
+$dark-gray: #1a1a1a;
+
+$red: #bb0929;
+
+$green: #047866;
+$light-green: #cde4e0;
+
+
+
+//Déclinaison couleur des tableau
+
+/* TC01 */
+$blue01 : #063a65;
+$blue02 : #174b76;
+$blue03 : #2e618b;
+$blue04 : #4a789f;
+
+/* TC02 */
+$blue05:#2e87bc;
+$blue06:#4193c4;
+$blue07:#519bc8;
+$blue08:#60a4cd;
+
+/* TC02 */
+$green01:#047866;
+$green02:#188c7a;
+$green03:#2f9b8a;
+$green04:#49ad9d;
+
+//Gradient
+$gradient-black-first: #232323;
+$gradient-black-second: #383838;
+
+$newsletter-light-blue: #052940;
+
+/* Responsive */
+//$screen-xs-min: 0px;
+//$screen-sm-min: 767px;
+//$screen-md-min: 991px;
+//$screen-lg-min: 1199px;
+
+//MOBILE FIRST BREAKPOINTS
+
+/* Custom, iPhone Retina */
+$screen-xs-min: 576px;
+
+/* Extra Small Devices, Phones */
+//$screen-xs-min: 480px;
+
+/* Small Devices, Tablets */
+$screen-sm-min: 768px;
+
+/* Medium Devices, Desktops */
+$screen-md-min: 992px;
+
+/* Large Devices, Wide Screens */
+$screen-lg-min: 1200px;
+
+/* Extra Devices, Wide Screens */
+$screen-xl-min: 1400px;
+
+$screen-xxl-min: 1600px;
+
+

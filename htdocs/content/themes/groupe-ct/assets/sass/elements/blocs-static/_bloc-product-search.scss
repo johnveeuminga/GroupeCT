@@ -1,0 +1,120 @@
+.bloc-product-outer-container {
+  @media (min-width: $screen-lg-min) {
+    padding-top: 90px;
+  }
+}
+.bloc-product-search-main-container {
+  background-color: #f1f1f1;
+
+  .wysiwyg-container {
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .product-dropdown-container {
+    background-color: white;
+    @media (min-width: $screen-sm-min) {
+      display: none;
+    }
+
+  }
+
+  .select-title {
+    @extend .poppins15BoldBlack;
+  }
+
+  .nav-type-container {
+    display: none;
+    background-color: transparent;
+
+    @media (min-width: $screen-sm-min) {
+      display: block;
+      padding-top: 60px;
+    }
+    @media (min-width: $screen-lg-min) {
+      display: block;
+      padding-top: 0;
+    }
+
+    .menu-item-container {
+      @include flexbox();
+      @include justify-content(space-between);
+      .menu-item {
+        text-align: center;
+        border-right:2px solid transparent;
+        width: 100%;
+
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+      }
+
+      .menu-item a {
+        @extend .poppins17SemiBoldBlueSky;
+        text-transform: uppercase;
+        width: 100%;
+        height:100%;
+        max-width: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
+      }
+
+    }
+  }
+
+  .nav-cat-main-container {
+    background-color: white;
+    @media (min-width: $screen-sm-min) {
+      padding-top:75px;
+      -webkit-box-shadow: 0 41px -41px 41px rgba(0,0,0,0.2);
+      -moz-box-shadow: 0 41px -41px 41px rgba(0,0,0,0.2);
+      box-shadow: 0 41px -41px 41px rgba(0,0,0,0.2);
+    }
+  }
+
+  .nav-cat-container {
+    .menu-item-container {
+      @include flexbox();
+      @include flex-wrap(wrap);
+
+      a {
+        margin: 20px 0 0 0;
+        display: block;
+      }
+
+      @media (min-width: $screen-sm-min) {
+        width: auto;
+        margin: 20px 0 85px;
+        padding-bottom: 45px;
+        .menu-item {
+          margin: 0 40px 0 0;
+        }
+      }
+
+      @media (max-width: $screen-sm-min - 1) {
+        display: block;
+        width: 100%;
+        .menu-item {
+          margin: 0;
+        }
+      }
+      border-bottom:1px solid #8295a0;
+    }
+
+  }
+
+  .nav-cat-container a:hover {
+    background-color: #599ec8;
+  }
+
+
+  .item-type-active {
+    background-color: white!important;
+    border-right:2px solid #e1e1e1!important;
+  }
+
+
+}//SECTION END
+

@@ -1,0 +1,99 @@
+.four-col-icons-main-container {
+  position: relative;
+  text-align: center;
+
+  padding: 30px 0;
+
+  .four-col-icons-container {
+
+    @include flexbox();
+    @include flex-wrap(wrap);
+    //@include flex-direction(column);
+
+    @media (min-width: $screen-sm-min) {
+      @include flexbox();
+      @include flex-direction(row);
+      @include flex-wrap(wrap);
+      @include align-items(flex-start);
+
+    }
+  }
+
+  .four-col-icons-item {
+    text-align: center;
+    margin-bottom: 30px;
+    @media (min-width: $screen-md-min) {
+      @include flexbox();
+      @include flex-direction(row);
+      //@include justify-content(center);
+      @include flex-wrap(wrap);
+      @include align-items(center);
+      margin-bottom: 10px;
+    }
+
+    .four-col-icons-img-container {
+      position: relative;
+      text-align: center;
+      margin: auto;
+      width: 100%;
+      //height: 100%;
+      height: 90px;
+
+      @media (min-width: $screen-sm-min) {
+        max-width: 90px;
+      }
+
+      .four-col-icons-img {
+
+        @include center-img(50%, 50%);
+        max-width: 80px;
+        max-height:80px;
+
+        @media (min-width: $screen-sm-min) {
+          max-width: 90px;
+        }
+
+      }
+    }
+
+    .four-col-icons-title {
+      text-transform: uppercase;
+      width: 100%;
+      @include set-font(20px, $poppins, 700, $black);
+      line-height: 24px;
+      margin: 15px 0;
+      @media (min-width: $screen-sm-min) {
+        margin: 30px 0;
+      }
+    }
+    .four-col-icons-desc {
+      @include set-font(16px, $mada, 300, $black);
+      line-height: 24px;
+
+      @media (min-width: $screen-sm-min) {
+        @include font-size(18px);
+      }
+
+    }
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-md-min ) {
+      &:nth-child(odd) {
+        padding-right: 15px;
+      }
+
+      &:nth-child(even) {
+        padding-left: 15px;
+      }
+    }
+  }//END FOUR COL ICON ITEM
+
+  .btn-container {
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-md-min ) {
+      margin-bottom: 50px;
+    }
+  }
+
+
+}//SECTION 02 END

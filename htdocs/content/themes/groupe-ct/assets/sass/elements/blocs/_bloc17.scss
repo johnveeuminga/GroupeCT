@@ -1,0 +1,71 @@
+.stats-main-container {
+
+  background-image: url($assets + "/images/bg/4_0_MODULE_GROUPECTCEST_MOBILE.jpg");
+  @media (min-width: $screen-md-min) {
+    background-image: url($assets + "/images/bg/4_0_MODULE_GROUPECTCEST.jpg");
+  }
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  //min-height:740px;
+  padding: 170px 0;
+  margin: 0;
+
+  .stats-container {
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+    padding: 50px 0;
+    @media (min-width: $screen-md-min) {
+      padding:0;
+    }
+  }
+
+  .stats-icon-container {
+    height:100px;
+    width:100px;
+    position: relative;
+    img {
+      max-width:100px;
+      @include center-img(50%, 50%);
+    }
+
+  }
+
+
+
+  .stats-number-container {
+    margin-top:60px;
+    margin-bottom:30px;
+
+
+    .stats-number {
+      @extend .poppins90SemiBoldWhite;
+
+    }
+    .line {
+      border: 2px solid white;
+      width:25px;
+      margin:auto;
+      margin-top:10px;
+    }
+  }
+
+  .stats-desc-container {
+    text-align: center;
+    width: 100%;
+    .stats-desc {
+      @extend .poppins24LightWhite;
+    }
+  }
+
+
+}
+
+
+.main-container {
+  border: 1px solid red;
+  .container {
+    border: 1px solid blue;
+  }
+}

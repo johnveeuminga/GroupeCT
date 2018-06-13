@@ -1,0 +1,17 @@
+.product-brand__products{
+	.product-brand__products-row{
+		.product-brand__products-col{
+			@apply .border-grey .border-dotted .border-b;
+
+			&:not(:nth-child(4n)):not(:last-child){
+				.product-brand__product{
+					@apply .border-grey .border-dotted .border-r;
+				}
+			}
+		}
+	}
+}
+
+#ajax-overlay{
+	transition: opacity .2s ease;
+}

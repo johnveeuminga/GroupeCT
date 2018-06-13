@@ -1,0 +1,119 @@
+.publication-list-main-container {
+
+  padding-top: 45px;
+  padding-bottom: 0px;
+
+  @include flexbox();
+  @include flex-direction(column);
+
+
+  .publication-header-container {
+    max-width:835px;
+    margin:auto;
+    text-align: center;
+    margin-bottom: 30px;
+    .publication-header-title {
+      @extend .poppins44BoldBlack;
+      text-transform: uppercase;
+    }
+    .publication-header-subtitle{
+      @extend .mada22LightBlack;
+    }
+    .publication-header-subtitle:first-of-type{
+      @extend .mada22RegBlack;
+      margin: 75px 0 30px;
+    }
+  }
+
+  .nav-cat-container {
+
+    .menu-item-container {
+      border-bottom:none;
+      margin: 20px 0 45px;
+    }
+
+    .menu-item-container {
+      padding-bottom: 0;
+    }
+
+    .menu-item {
+      margin: 0 20px 20px 0;
+      width: 100%;
+      display: flex;
+      a {
+        width: 100%;
+      }
+      @media (min-width: $screen-sm-min) {
+        width: auto;
+        a {
+          width: auto;
+        }
+      }
+
+      .publication-category.item-cat-active {
+        background-color: $blue;
+      }
+      .publication-category:hover {
+        background-color: $blue;
+      }
+    }
+  }
+
+  .publication-nav {
+    @include flexbox();
+    @include flex-wrap(wrap);
+    position: relative;
+    @include justify-content(center);
+    border-top:1px solid $grey-light;
+    border-bottom:1px solid $grey-light;
+    padding: 18px 0;
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+
+  .publication-nav-item {
+    @include set-font(17px, $poppins, 400, $grey-light );
+    position: relative;
+    margin-left:20px;
+  }
+
+
+  .publication-nav-item.cta-pub-left {
+    position: relative;
+    margin-top:10px;
+
+    @include set-font(17px, $poppins, 700, $blue );
+    @media (min-width: $screen-sm-min) {
+      position: absolute;
+      margin-top: 0px;
+      left: 0;
+      top: 18px;
+    }
+  }
+
+  .publication-nav-item.cta-pub-right {
+    position: relative;
+    margin-top:10px;
+
+    @include set-font(17px, $poppins, 700, $blue );
+    @media (min-width: $screen-sm-min) {
+      position: absolute;
+      margin-top: 0px;
+      right: 0;
+      top: 18px;
+    }
+
+  }
+
+  .cta-container {
+    text-align: center;
+    a {
+      @include justify-content(center);
+      @media (min-width: $screen-lg-min) {
+        @include justify-content(flex-start);
+      }
+    }
+  }
+
+}
+

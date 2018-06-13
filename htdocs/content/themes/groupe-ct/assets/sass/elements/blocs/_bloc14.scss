@@ -1,0 +1,240 @@
+
+.toggle-main-container {
+  margin:10px auto;
+  .toggle-content {
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+
+    width:100%;
+
+    @media (min-width: $screen-xs-min) {
+      @include flex-direction(row);
+      @include flex-wrap(wrap);
+    }
+  }
+
+}
+
+
+.job-info-detailed-container {
+  @include flexbox();
+  @include flex-direction(column);
+  position: relative;
+  padding:20px 0;
+
+  p {
+    @extend .mada18RegBlack;
+    span {
+      @extend .mada18LightBlack;
+      padding-right:15px;
+      line-height: 27px;
+    }
+  }
+
+  .job-info-inner-container {
+    padding: 0 2%;
+
+    .job-info-description {
+
+      h1,h2,h3,h4,h5,h6 {
+        font-family: $poppins;
+        font-weight: 700;
+        margin:15px 0;
+      }
+
+      h1, h2 {
+        @include set-font(44px, $poppins, 700, $black);
+        text-transform: uppercase;
+        padding-bottom: 25px;
+      }
+      h3,h4,h5,h6  {
+        @include set-font(22px, $mada, 400, $black);
+        line-height: 32px;
+        padding: 25px 0;
+      }
+      p {
+        @include set-font(22px, $mada, 300, $black);
+        padding-bottom: 25px;
+        line-height: 32px;
+      }
+
+      li {
+        @include set-font(22px, $mada, 300, $black);
+        margin:10px 0;
+      }
+      img {
+        max-width:100%;
+        height:100%;
+      }
+
+      ul {
+        list-style-type: disc;
+        list-style-position: outside;
+        margin-left: 30px;
+        padding-bottom: 25px;
+      }
+      ol {
+        list-style-type: decimal;
+        list-style-position: outside;
+        margin-left: 30px;
+        padding-bottom: 25px;
+      }
+      ul ul, ol ul {
+        list-style-type: circle;
+        list-style-position: outside;
+        margin-left: 15px;
+      }
+      ol ol, ul ol {
+        list-style-type: lower-latin;
+        list-style-position: outside;
+        margin-left: 15px;
+      }
+
+    }
+    a:not(.btn) {
+      @extend .form-link;
+    }
+  }
+
+  .job-info-title {
+    @extend .poppins22BoldBlue;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom:20px;
+    line-height: 27px;
+  }
+
+  .job-info-description {
+    margin: 30px 0;
+
+    p {
+      @extend .mada18LightBlack;
+      margin-bottom: 15px;
+    }
+  }
+
+  .btn-container {
+    @include flexbox();
+    @include flex-direction(column);
+    margin: 20px 0;
+    .btn {
+      width:120px;
+    }
+  }
+
+}
+
+
+.job-info-container {
+
+  @include flexbox();
+  @include flex-direction(column);
+  position: relative;
+  padding: 30px 0;
+
+  @media (min-width: $screen-xs-min) {
+    width:calc(100%/2);
+    padding:40px 0;
+  }
+  @media (min-width: $screen-sm-min) {
+    width:calc(100%/3);
+  }
+
+  p {
+    @extend .mada18RegBlack;
+    span {
+      @extend .mada18LightBlack;
+      padding-right:15px;
+      line-height: 27px;
+    }
+  }
+
+  .job-info-inner-container {
+    width: 90%;
+    p {
+      @extend .mada18LightBlack;
+      font-weight: 400!important;
+
+      span {
+        @media (max-width: $screen-md-min - 1) {
+          width: 100%;
+          display: block;
+        }
+        font-weight: 300;
+      }
+
+      @media (max-width: $screen-md-min - 1) {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .job-info-title {
+    @extend .poppins22BoldBlue;
+    text-transform: uppercase;
+    margin-bottom:20px;
+    line-height: 27px;
+  }
+
+  .job-info-description {
+    margin: 30px 0;
+    overflow: scroll;
+
+    p {
+      @extend .mada18LightBlack;
+      margin-bottom: 15px;
+    }
+  }
+
+  .btn-container {
+    @include flexbox();
+    @include flex-direction(column);
+    margin: 20px 0;
+    .btn {
+      margin-top:15px;
+      width:120px;
+    }
+  }
+
+}
+
+
+.job-content-container {
+  margin-bottom:10px;
+}
+
+.job-content-header {
+
+  @include flexbox();
+  @include justify-content(space-between);
+  @include align-items(center);
+  height:60px;
+  padding: 0px 25px;
+  background-color: $blue;
+  position: relative;
+
+  /*************************/
+  .title-container{
+    @include flexbox();
+    @include align-items(center);
+  }
+  .job-content-title {
+    @include set-font(20px, $poppins, 600, white);
+    margin-left:15px;
+    position: relative;
+    z-index:300;
+  }
+
+
+  .triangle-blue {
+    border-top: 30px solid $blue;
+  }
+}
+
+
+
+.lity-iframe-container {
+  //padding-top: 100%!important;
+}

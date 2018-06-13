@@ -1,0 +1,15 @@
+@font-face {
+  @import url('https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700');
+}
+@font-face {
+  @import url('https://fonts.googleapis.com/css?family=Mada:100,300,400,500,900');
+}
+@font-face {
+  font-family: Roboto;
+  @import 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700';
+}
+
+
+$poppins: 'Poppins', sans-serif;
+$mada: 'Mada', sans-serif;
+$roboto: Roboto, sans-serif;

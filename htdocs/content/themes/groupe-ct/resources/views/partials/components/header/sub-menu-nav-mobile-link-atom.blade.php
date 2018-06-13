@@ -1,0 +1,1 @@
+<li class="menu-item"><a class="nav-link @if (isset($margin_left) && $margin_left) margin-left-15 @endif" href="{{ PageHelper::get_page_permalink($page_id) }}">{{ PageHelper::get_page_title($page_id) }}</a></li>

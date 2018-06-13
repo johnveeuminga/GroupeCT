@@ -1,0 +1,110 @@
+.section-title-wrapper {
+
+  padding: 0;
+  @media (min-width: $screen-sm-min) {
+    padding: 45px 0;
+  }
+
+  .section-title-container {
+    h2,
+    .title {
+      @include set-font(44px, $poppins, 700, $black);
+      text-transform: uppercase;
+      @extend .h2-size;
+      text-align: center;
+      @media (min-width: $screen-md-min) {
+        margin: 30px 0;
+        text-align: left;
+      }
+    }
+    .desc {
+      @extend .mada22LightBlack;
+      @extend .text-size;
+      p {
+        margin: 15px 0;
+      }
+
+      text-align: center;
+      @media (min-width: $screen-md-min) {
+        margin: 30px 0;
+        text-align: left;
+      }
+    }
+
+    .upper-title {
+      text-align: center;
+      @media (min-width: $screen-md-min) {
+        text-align: left;
+      }
+    }
+
+  }
+
+
+  h1,h2,h3,h4,h5,h6 {
+    font-family: $poppins;
+    font-weight: 700;
+    margin:15px 0;
+
+  }
+
+  h1, h2 {
+    @include set-font(44px, $poppins, 700, $black);
+    text-transform: uppercase;
+    padding-bottom: 25px;
+
+    @media (max-width: $screen-sm-min) {
+      padding-bottom: 0!important;
+    }
+  }
+  h3,h4,h5,h6  {
+    @include set-font(22px, $mada, 400, $black);
+    line-height: 32px;
+    padding: 25px 0;
+
+  }
+  p {
+    @include set-font(22px, $mada, 300, $black);
+    padding-bottom: 25px;
+    line-height: 32px;
+
+    &.upper-title,
+    &.upper-title-no-dot{
+      @include set-font(22px, $poppins, 700, $red);
+    }
+  }
+
+  li {
+    @include set-font(22px, $mada, 300, $black);
+    margin:10px 0;
+  }
+
+  img {
+    max-width:100%;
+    height:100%;
+  }
+
+  ul {
+    list-style-type: disc;
+    list-style-position: outside;
+    margin-left: 30px;
+    padding-bottom: 25px;
+  }
+  ol {
+    list-style-type: decimal;
+    list-style-position: outside;
+    margin-left: 30px;
+    padding-bottom: 25px;
+  }
+  ul ul, ol ul {
+    list-style-type: circle;
+    list-style-position: outside;
+    margin-left: 15px;
+  }
+  ol ol, ul ol {
+    list-style-type: lower-latin;
+    list-style-position: outside;
+    margin-left: 15px;
+  }
+
+}
