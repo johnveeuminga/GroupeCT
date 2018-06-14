@@ -12,7 +12,7 @@ Route::any('front', 'PageController@index');
 Route::get('singular', ['job_offer', 'uses' => 'LightboxController@job_offer']);
 Route::get('singular', ['product', 'uses' => 'ProductController@single']);
 Route::get('product-brands', 'ProductController@getProductBrands');
-Route::get('product-category', 'ProductController@productSubCat');
+Route::get('product-categories', 'ProductController@productSubCat');
 Route::get('tax', ['product_brands', 'uses' => 'ProductController@getProductsWithBrandType']);
 Route::any('tax', ['product_cat', 'uses' => 'ProductController@getProductsWithBrandType']);
 
