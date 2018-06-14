@@ -24,8 +24,8 @@ class ProductCat{
 	 * @return void
 	 */
 	public function init(){
-		Action::add('init', $this->registerBrandsRewrite());
-		Action::add('wp_loaded', $this->rewriteFlushRules());
+		// Action::add('init', $this->registerBrandsRewrite());
+		// Action::add('wp_loaded', $this->rewriteFlushRules());
 	}
 
 

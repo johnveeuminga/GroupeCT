@@ -30,8 +30,8 @@ class ProductBrands{
 	 */
 	public function init(){
 		Action::add('init', $this->registerBrandsTaxonomy());
-		Action::add('init', array($this, 'registerBrandsRewrite'));
-		Action::add('wp_loaded', $this->rewriteFlushRules());
+		// Action::add('init', array($this, 'registerBrandsRewrite'));
+		// Action::add('wp_loaded', $this->rewriteFlushRules());
 
 	}
 
