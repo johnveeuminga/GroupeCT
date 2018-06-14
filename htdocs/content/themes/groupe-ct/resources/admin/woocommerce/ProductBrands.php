@@ -21,7 +21,7 @@ class ProductBrands{
 	 *
 	 * @var string $product_brands_rewrite_url
 	 */
-	protected $product_brands_rewrite_url = '^product/brand/(.*)/?$';
+	protected $product_brands_rewrite_url = '^product-brands/?';
 
 	/**
 	 * ProductBrands initialization
@@ -30,8 +30,8 @@ class ProductBrands{
 	 */
 	public function init(){
 		Action::add('init', $this->registerBrandsTaxonomy());
-		// Action::add('init', $this->registerBrandsRewrite());
-		// Action::add('wp_loaded', $this->rewriteFlushRules());
+		Action::add('init', array($this, 'registerBrandsRewrite'));
+		Action::add('wp_loaded', $this->rewriteFlushRules());
 
 	}
 
@@ -95,32 +95,32 @@ class ProductBrands{
 		return $attributes;
 	}
 
-	// /**
-	//  * Registers the rewrite tag and rewrite url
-	//  * 
-	//  * @return void
-	//  */
-	// private function registerBrandsRewrite(){
-	// 	add_rewrite_tag("%{$this->product_brands_tax_name}%", '([^&]+)');
-	// 	add_rewrite_tag("%product_cat%", '([^&]+)');
-	// 	// add_rewrite_rule($this->product_brands_rewrite_url, 'index.php?post_type=product&' . $this->product_brands_tax_name . '=$matches[1]', 'top');
-	// 	add_rewrite_rule('^product/type/(.*)/?$', 'index.php?post_type=product&product_cat=$matches[1]', 'top');
+	/**
+	 * Registers the rewrite tag and rewrite url
+	 * 
+	 * @return void
+	 */
+	public function registerBrandsRewrite(){
+		add_rewrite_tag("%{$this->product_brands_tax_name}_archive%", '([^&]+)');
+		add_rewrite_tag("%product_cat%", '([^&]+)');
+		// add_rewrite_rule($this->product_brands_rewrite_url, 'index.php?post_type=product&' . $this->product_brands_tax_name . '=$matches[1]', 'top');
+		add_rewrite_rule('^product-brands/?', 'index.php?product_brands_archive=all', 'top');
 
-	// }
+	}
 
-	// /**
-	//  * Flushes the rewrite rules if our rewrite rule is not yet defined
-	//  *
-	//  * @return void
-	//  */
+	/**
+	 * Flushes the rewrite rules if our rewrite rule is not yet defined
+	 *
+	 * @return void
+	 */
 
-	// private function rewriteFlushRules(){
-	// 	$rules = get_option( 'rewrite_rules' );
+	private function rewriteFlushRules(){
+		$rules = get_option( 'rewrite_rules' );
 
-	// 	if ( ! isset( $rules[$this->product_brands_rewrite_url] ) ) {
-	// 		global $wp_rewrite;
-	// 	   	$wp_rewrite->flush_rules();
-	// 	}
-	// }
+		if ( ! isset( $rules[$this->product_brands_rewrite_url] ) ) {
+			global $wp_rewrite;
+		   	$wp_rewrite->flush_rules();
+		}
+	}
 
 }	

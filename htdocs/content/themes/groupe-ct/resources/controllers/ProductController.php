@@ -125,10 +125,9 @@ class ProductController extends MainController{
 	 *
 	 * @return void
 	 */
-	public function productSubCat($product_type){
-		$product_type = ProductType::findProductType($product_type);
-		$product_type_children = ProductType::getSubcategories($product_type->term_id);
-		$page_title = __($product_type->name . ' Categories', 'GROUPE-CT');
+	public function productSubCat($product_type = false){
+		$product_type_children = ProductType::getSubcategories($this->printers_product_cat->term_id);
+		$page_title = __($this->printers_product_cat->name . ' Categories', 'GROUPE-CT');
 		return view('pages.woocommerce.product_cat_listing', [
 			'product_types' => $product_type_children,
 			'page_title' => $page_title,

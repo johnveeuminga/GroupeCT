@@ -26,11 +26,4 @@ class ProductType{
 
 		return $product_types;
 	}
-
-	/**
-	 * Lists all product categories
-	 */
-	public static function getProductsWithBrandType(){
-		return true;
-	}
 }
