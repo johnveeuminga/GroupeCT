@@ -16,14 +16,6 @@ Route::get('product-category', 'ProductController@productSubCat');
 Route::get('tax', ['product_brands', 'uses' => 'ProductController@getProductsWithBrandType']);
 Route::any('tax', ['product_cat', 'uses' => 'ProductController@getProductsWithBrandType']);
 
-/**
- * Custom WooCommerce product brand and product type route.
- * i.e(/product/hp/printers).
- */
-Route::get('products/brand/{brand}/{product_type}', 'ProductController@getProductsWithBrandType');
-Route::get('product-category/{product_cat}', 'ProductController@productSubCat');
-
-
 Route::any('template', [
     'page-2-1',
     'uses' => 'PageController@page_2_1'
