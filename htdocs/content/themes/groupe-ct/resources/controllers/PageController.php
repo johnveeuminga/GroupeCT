@@ -90,7 +90,6 @@ class PageController extends MainController
 
     public function page_2_2()
     {
-        return 'true';
         return view('pages.page_2_2', [
             'acquisition' => $this->get_acquisition(),
         ]);
