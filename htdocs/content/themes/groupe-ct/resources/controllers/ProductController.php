@@ -111,12 +111,17 @@ class ProductController extends MainController{
 			}
 		}
 
+		if(isset($_SERVER['HTTP_REFERER'])) {
+		    $previous = $_SERVER['HTTP_REFERER'];
+		}
+
 		$product_types = array_values($product_types);
 		return view('pages.woocommerce.single', [
 			'product' => $product,
 			'product_types' => $product_types,
 			'product_types_name' => $product_types_name,
 			'product_brand' => $product_brand[0] ?? null,
+			'previous' => $previous,
 		]);
 	}
 

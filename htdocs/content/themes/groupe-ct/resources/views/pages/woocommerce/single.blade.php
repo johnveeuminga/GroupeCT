@@ -5,22 +5,15 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-					@if( get_previous_post() || get_next_post())
-						<div class="publication-nav-container">
-						    <div class="publication-nav">
-							        @if (get_previous_post())
-							            <a class="publication-nav-item cta-pub-left" href="{{ get_permalink(get_previous_post()) }}">{{ pll__('Go Back to the Previous Page') }}</a>
-							        @else
-							            <span></span>
-							        @endif
-							        @if (get_next_post())
-							            <a class="publication-nav-item cta-pub-right" href="{{ get_permalink(get_next_post()) }}">{{ pll__('Go to The Next Page') }}</a>
-							        @else
-							            <span></span>
-							        @endif
-						    </div>
-						</div>	
-					@endif
+					<div class="publication-nav-container">
+					    <div class="publication-nav">
+					        @if ($previous)
+					            <a class="publication-nav-item cta-pub-left" href="{{ $previous }}">{{ pll__('Go Back to the Product Listing Page') }}</a>
+					        @else
+					            <span></span>
+					        @endif
+					    </div>
+					</div>	
 					<div class="single-product__header bg-blue-light px-4 py-3 my-8">
 						<h2 class="text-lg text-white uppercase font-sans font-bold">{{$product->get_name()}}</h2>
 					</div>
@@ -91,13 +84,10 @@
 							<div class="tabs">
 								<div id="single-product__product-description" class="active fade tab in">
 									<div class="product-description-container row">
-										<div class="col-md-8">
-											<div class="product-description md:border-r border-dark-grey border-dashed md:pr-3 ">
+										<div class="col-md-12">
+											<div class="product-description">
 												{!! wpautop($product->get_description()) !!}
 											</div>
-										</div>
-										<div class="col-md-4">
-											Stock: {{ $product->get_stock_quantity()}}
 										</div>
 									</div>
 								</div>
