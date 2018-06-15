@@ -32,9 +32,33 @@ class PageHelper
     const PAGE_5_0_PUBLICATIONS = 'publications';
     const PAGE_5_0_LEGAL = 'legal';
     const PAGE_6_0_SERVICES = 'services';
+    const PAGE_6_1_1_AMELIORATION = 'amelioration-des-processus-dentreprise';
+    const PAGE_6_1_2_CONTROLE_DES_COUTS = 'controle-des-couts';
+    const PAGE_6_1_3_SECURITE_CONFIDENTIALITE = 'securite-confidentialite';
+    const PAGE_6_1_4_REDUCTION_ENVIRONNEMENTALE = 'reduction-de-lempreinte-environnementale';
+    const PAGE_6_2_1_REPARATION_DIMPRESSION = 'reparation-dequipement-dimpression';
+    const PAGE_6_2_2_SERVICES_GERES = 'services-dimpression-geres'; 
+    const PAGE_6_2_3_AMERLIORATION_PROCESSUS = 'amelioration-des-processus';
+    const PAGE_6_2_4_FACTURATION_CONSOLIDEE = 'facturation-consolidee';
+    const PAGE_6_2_5_COMMANDES = 'commandes-de-cartouches-automatisees';
     const PAGE_7_0_PRODUITS_IMPRESSION = 'produits-dimpression';
+    const PAGE_7_1_1 = 'cartouches-d-imprimantes';
+    const PAGE_7_1_2 = 'papier-d-imprimantes';
+    const PAGE_7_1_3 = 'papier-specialise';
+    const PAGE_7_1_4 = 'papier-grand-format';
+    const PAGE_7_1_5 = 'commandes-de-cartouches-automatisees';
     const PAGE_8_0_LOGICELS = 'logicels';
+    const PAGE_8_1_1 = 'indexation-et-traitement-des-donnees';
+    const PAGE_8_1_2 = 'archivage-electronique';
+    const PAGE_8_1_3 = 'automatisation-des-processus';
+    const PAGE_8_2_1 = 'gestion-de-parc-d-impression';
+    const PAGE_8_2_2 = 'recuperation-des-couts-dimpression';
+    const PAGE_8_2_3 = 'follow-me-print';
+    const PAGE_8_2_4 = 'automatisation-des-impressions';
     const PAGE_9_0_DEMANDER_UNE_SOUMISSION = 'demander-une-soumission';
+    const PAGE_10_0_ZONE_CLIENT = 'zone-client';
+    const PAGE_11_0_NOUVELLES = 'nouvelles';
+    const PAGE_12_0_BLOUGE = 'blouge';
 
     private static function get_pages_array()
     {
@@ -159,18 +183,115 @@ class PageHelper
 		    	'fr' => 2000,
 		    	'en' => 2000
 		    ],
+		    self::PAGE_6_1_1_AMELIORATION => [
+		    	'fr' => 2030,
+		    	'en' => 2032
+		    ],
+		    self::PAGE_6_1_2_CONTROLE_DES_COUTS => [
+		    	'fr' => 2036,
+		    	'en' => 2038
+		    ],
+		    self::PAGE_6_1_3_SECURITE_CONFIDENTIALITE => [
+		    	'fr' => 2040,
+		    	'en' => 2042
+		    ],
+		    self::PAGE_6_1_4_REDUCTION_ENVIRONNEMENTALE => [
+		    	'fr' => 2044,
+		    	'en' => 2046
+		    ],
+		    self::PAGE_6_2_1_REPARATION_DIMPRESSION => [
+		    	'fr' => 2052,
+		    	'en' => 2054
+		    ],
+		    self::PAGE_6_2_2_SERVICES_GERES => [
+		    	'fr' => 1548,
+		    	'en' => 1551
+		    ],
+		    self::PAGE_6_2_3_AMERLIORATION_PROCESSUS => [
+		    	'fr' => 2060,
+		    	'en' => 2060
+		    ],
+		    self::PAGE_6_2_4_FACTURATION_CONSOLIDEE => [
+		    	'fr' => 2062,
+		    	'en' => 2062
+		    ],
+		    self::PAGE_6_2_5_COMMANDES => [
+		    	'fr' => 2064,
+		    	'en' => 2064
+		    ],
 		    self::PAGE_7_0_PRODUITS_IMPRESSION => [
 		    	'fr' => 2010,
 		    	'en' => 2012
 		    ],
+		    self::PAGE_7_1_1 => [
+		    	'fr' => 2068,
+		    	'en' => 2068
+		    ],
+		    self::PAGE_7_1_2 => [
+		    	'fr' => 2070,
+		    	'en' => 2070
+		    ],
+		    self::PAGE_7_1_3 => [
+		    	'fr' => 2072,
+		    	'en' => 2072
+		    ],
+		    self::PAGE_7_1_4 => [
+		    	'fr' => 2074,
+		    	'en' => 2074
+		    ],
+		    self::PAGE_7_1_5 => [
+		    	'fr' => 2064,
+		    	'en' => 2064
+		    ], 
 		    self::PAGE_8_0_LOGICELS => [
 		    	'fr' => 2017,
 		    	'en' => 2019
 		    ],
+		    self::PAGE_8_1_1 => [
+		    	'fr' => 2078,
+		    	'en' => 2078
+		    ],
+		    self::PAGE_8_1_2 => [
+		    	'fr' => 2080,
+		    	'en' => 2080
+		    ],
+		    self::PAGE_8_1_3 => [
+		    	'fr' => 2082,
+		    	'en' => 2082
+		    ],
+		    self::PAGE_8_2_1 => [
+		    	'fr' => 2084,
+		    	'en' => 2084
+		    ],
+		    self::PAGE_8_2_2 => [
+		    	'fr' => 2086,
+		    	'en' => 2086
+		    ],
+		    self::PAGE_8_2_3 => [
+		    	'fr' => 2088,
+		    	'en' => 2088
+		    ],
+		    self::PAGE_8_2_4 => [
+		    	'fr' => 2090,
+		    	'en' => 2090
+		    ],
 		    self::PAGE_9_0_DEMANDER_UNE_SOUMISSION => [
 		    	'fr' => 2021,
 		    	'en' => 2023
+		    ],
+		    self::PAGE_10_0_ZONE_CLIENT => [
+		    	'fr' => 2026,
+		    	'en' => 2028
+		    ],
+		    self::PAGE_11_0_NOUVELLES => [
+		    	'fr' => 2092,
+		    	'en' => 2092
+		    ],
+		    self::PAGE_12_0_BLOUGE => [
+		    	'fr' => 2094,
+		    	'en' => 2094 
 		    ]
+		 
 	    ];
     }
 

@@ -2,16 +2,35 @@
     <a class="nav-link @if($submenu_id)nl{{ $submenu_id }} has-submenu @endif" href="{{ PageHelper::get_page_permalink($page_id) }}">{{ PageHelper::get_page_title($page_id) }}</a>
     <a class="sub-menu-trigger" href="#"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
     <a class="sub-menu-trigger hideMe" href="#"><i class="fa fa-minus-circle" aria-hidden="true"></i></a>
-
-    <div class="sub-menu-container-mobile nl3">
-        <nav class="nav-sub">
-            <ul class="nav-link-container">
-                <li class="menu-item"><a class="nav-link" href="{{ PageHelper::get_page_permalink(PageHelper::PAGE_3_0_ASSISTANCE) }}#section-01"><?= pll__('Accéder à Mon CT', GROUPE_CT) ?></a></li>
-                <li class="menu-item"><a class="nav-link" href="{{ PageHelper::get_page_permalink(PageHelper::PAGE_3_0_ASSISTANCE) }}#section-02"><?= pll__('Compléter une demande d\'assistance', GROUPE_CT) ?></a></li>
-                <li class="menu-item"><a class="nav-link" href="{{ PageHelper::get_page_permalink(PageHelper::PAGE_3_0_ASSISTANCE) }}#section-03"><?= pll__('Commander des fournitures', GROUPE_CT) ?></a></li>
-                <li class="menu-item"><a class="nav-link" href="{{ PageHelper::get_page_permalink(PageHelper::PAGE_3_0_ASSISTANCE) }}#section-04"><?= pll__('Contacter le service à la clientèle', GROUPE_CT) ?></a></li>
-                <li class="menu-item"><a class="nav-link" href="{{ PageHelper::get_page_permalink(PageHelper::PAGE_3_0_ASSISTANCE) }}#section-05"><?= pll__('Fournir une lecture de compteurs', GROUPE_CT) ?></a></li>
-            </ul>
-        </nav>
+    <div class="sub-menu-container-mobile nl8">
+        <div class="nav-sub-container row">
+            <nav class="nav-sub">
+                <div class="nav-section-title-container">
+                    <h3 class="nav-section-title sub-sub-menu"><a href="#">{{ __("L'approche conseil", 'GROUPE-CT') }}</a></h3>
+                    <a class="sub-sub-menu-trigger" href="#"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                    <a class="sub-sub-menu-trigger hideMe" href="#"><i class="fa fa-minus-circle" aria-hidden="true"></i></a>
+                </div>
+                <ul class="nav-link-container have-toggle">
+                     @include('partials.components.header.sub-menu-nav-link-atom', ['page_id' => PageHelper::PAGE_6_1_1_AMELIORATION, 'red_arrow' => false])
+                    @include('partials.components.header.sub-menu-nav-link-atom', ['page_id' => PageHelper::PAGE_6_1_2_CONTROLE_DES_COUTS, 'red_arrow' => false])
+                    @include('partials.components.header.sub-menu-nav-link-atom', ['page_id' => PageHelper::PAGE_6_1_3_SECURITE_CONFIDENTIALITE, 'red_arrow' => false])
+                    @include('partials.components.header.sub-menu-nav-link-atom', ['page_id' => PageHelper::PAGE_6_1_4_REDUCTION_ENVIRONNEMENTALE, 'red_arrow' => false])
+                </ul>
+            </nav>
+            <nav class="nav-sub">
+                <div class="nav-section-title-container">
+                    <h3 class="nav-section-title sub-sub-menu"><a href="#">{{ __("Nos services", 'GROUPE-CT') }}</a></h3>
+                    <a class="sub-sub-menu-trigger" href="#"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                    <a class="sub-sub-menu-trigger hideMe" href="#"><i class="fa fa-minus-circle" aria-hidden="true"></i></a>
+                </div>
+                <ul class="nav-link-container have-toggle">
+                    @include('partials.components.header.sub-menu-nav-link-atom', ['page_id' => PageHelper::PAGE_6_2_1_REPARATION_DIMPRESSION, 'red_arrow' => false])
+                    @include('partials.components.header.sub-menu-nav-link-atom', ['page_id' => PageHelper::PAGE_6_2_2_SERVICES_GERES, 'red_arrow' => false])
+                    @include('partials.components.header.sub-menu-nav-link-atom', ['page_id' => PageHelper::PAGE_6_2_3_AMERLIORATION_PROCESSUS, 'red_arrow' => false])
+                    @include('partials.components.header.sub-menu-nav-link-atom', ['page_id' => PageHelper::PAGE_6_2_4_FACTURATION_CONSOLIDEE, 'red_arrow' => false])
+                    @include('partials.components.header.sub-menu-nav-link-atom', ['page_id' => PageHelper::PAGE_6_2_5_COMMANDES, 'red_arrow' => false])
+                </ul>
+            </nav>
+        </div>
     </div>
 </li>

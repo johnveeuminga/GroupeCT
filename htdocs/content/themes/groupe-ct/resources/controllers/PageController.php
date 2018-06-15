@@ -12,6 +12,10 @@ use Theme\Models\Post;
 
 class PageController extends MainController
 {
+    public function __construct(){
+        parent::__construct();
+    }
+
     public function get_acquisition()
     {
         if (isset($_SERVER['HTTP_REFERER'])) {
