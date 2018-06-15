@@ -31,6 +31,10 @@ class PageHelper
     const PAGE_4_7_NOUS_JOINDRE = 'nous-joindre';
     const PAGE_5_0_PUBLICATIONS = 'publications';
     const PAGE_5_0_LEGAL = 'legal';
+    const PAGE_6_0_SERVICES = 'services';
+    const PAGE_7_0_PRODUITS_IMPRESSION = 'produits-dimpression';
+    const PAGE_8_0_LOGICELS = 'logicels';
+    const PAGE_9_0_DEMANDER_UNE_SOUMISSION = 'demander-une-soumission';
 
     private static function get_pages_array()
     {
@@ -151,6 +155,22 @@ class PageHelper
 			    'fr' => 1532,
 			    'en' => 1536,
 		    ],
+		    self::PAGE_6_0_SERVICES => [
+		    	'fr' => 2000,
+		    	'en' => 2000
+		    ],
+		    self::PAGE_7_0_PRODUITS_IMPRESSION => [
+		    	'fr' => 2010,
+		    	'en' => 2012
+		    ],
+		    self::PAGE_8_0_LOGICELS => [
+		    	'fr' => 2017,
+		    	'en' => 2019
+		    ],
+		    self::PAGE_9_0_DEMANDER_UNE_SOUMISSION => [
+		    	'fr' => 2021,
+		    	'en' => 2023
+		    ]
 	    ];
     }
 

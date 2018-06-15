@@ -4,6 +4,5 @@
         <div class="menu-item-triangle">
             <img class="triangle" src="{{ themosis_assets() }}/images/icon/icon-white-triangle-big.svg">
         </div>
-
     @endif
 </li>
