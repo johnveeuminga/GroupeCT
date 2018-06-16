@@ -63,6 +63,7 @@ class ProductFilters{
 	 * @return void
 	 */
 	public function editProductFiltersField($term){
+		global $user;
 		$product_attributes = wc_get_attribute_taxonomies();
 		$product_cat_filters = get_term_meta($term->term_id, 'product-cat-filters');
 		?>

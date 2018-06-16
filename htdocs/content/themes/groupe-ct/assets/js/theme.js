@@ -87,7 +87,7 @@ require('./components/filters.js');
 
         $( ".nav-content-container.desktop .nav-bottom .nav-link" ).hover(
             function() {
-                $('.sub-menu-container').addClass('hide-from-screen');
+            $('.sub-menu-container').addClass('hide-from-screen');
                 $('.show-arrow').removeClass('show-arrow');
 
                 var $navIndex = $(this).attr('class').split(' ')[1];

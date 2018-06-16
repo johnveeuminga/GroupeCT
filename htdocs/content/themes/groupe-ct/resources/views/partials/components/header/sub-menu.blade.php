@@ -70,7 +70,7 @@
 
     <div class="sub-menu-container nl2 row hide-from-screen">
         <div class="nav-sub-container row flex justify-end">
-            <nav class="nav-sub nav-sub-left col-sm-3 px-4">
+            <nav class="nav-sub nav-sub-left col-sm-4 px-4">
                 <div class="nav-section-title-container">
                     <h3 class="nav-section-title border-white border-b-2 border-solid">{{__('Approche-Conseil', 'GROUPE-CT')}}</h3>
                 </div>
@@ -81,7 +81,7 @@
                     @include('partials.components.header.sub-menu-nav-link-atom', ['page_id' => PageHelper::PAGE_6_1_4_REDUCTION_ENVIRONNEMENTALE, 'red_arrow' => false])
                 </ul>
             </nav>
-            <nav class="nav-sub nav-sub-right col-sm-3 px-4">
+            <nav class="nav-sub nav-sub-right col-sm-4 px-4">
                 <div class="nav-section-title-container">
                     <h3 class="nav-section-title border-white border-b-2 border-solid">{{ __('Nos services', 'GROUPE-CT')}}</h3>
                 </div>
