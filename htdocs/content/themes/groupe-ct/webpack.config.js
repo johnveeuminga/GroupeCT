@@ -1,5 +1,6 @@
 var webpack = require('webpack'),
     path = require('path');
+const ExtractTextPlugin = require('extract-text-plugin');
 
 module.exports = {
     cache: true,
@@ -22,6 +23,7 @@ module.exports = {
                    presets: ['es2015', ]
                 }
             },
+            
 
         ]
     },
@@ -39,6 +41,9 @@ module.exports = {
             $: "jQuery",
             backbone: "Backbone",
             underscore: "_"
+        }),
+        new ExtractTextPlugin({
+            ''
         }),
     ],
     resolve: {
