@@ -78,7 +78,7 @@
 							    <a class="bg-white inline-block border-l border-t border-r font-sans-mada py-2 px-4 text-black text-semibold" href="#" data-target='single-product__product-description'>Product Description</a>
 							  </li>
 							  <li class="mr-1 -mb-px">
-							    <a class="border-l border-t border-r inline-block py-2 px-4 text-black font-sans-mada text-semibold" href="#" data-target="single-product__product-description-list">Product Attributes</a>
+							    <a class="border-l border-t border-r inline-block py-2 px-4 text-black font-sans-mada text-semibold" href="#" data-target="single-product__product-description-list">Product Specifications</a>
 							  </li>
 							</ul>
 							<div class="tabs">
@@ -126,7 +126,7 @@
 												{{ wc_format_dimensions($product->get_dimensions(false)) }}
 											</div>
 										</div>
-										@foreach($product->get_attributes() as $attribute)
+										{{-- @foreach($product->get_attributes() as $attribute)
 											<div class="row py-3 border-b border-solid border-grey">
 												<div class="col-md-4">
 													<span class="font-bold">
@@ -137,9 +137,25 @@
 													{{ __($product->get_attribute($attribute->get_name(), 'GROUPE-CT'))}}
 												</div>
 											</div>
+										@endforeach --}}
+										@foreach($product_attribute_groups as $index=>$product_attribute_group)
+											<div class="row  border-b border-solid border-grey">
+												<div class="col-sm-12">
+													<span class="font-bold uppercase text-lg py-4 block text-red">{{ get_term($index)->name }}</span>
+													@foreach($product_attribute_group as $group )
+														<div class="row">
+															<div class="col-md-4 py-3">
+																<span class="font-bold">{{ get_taxonomy(($group->productattr_name))->label }}: </span>
+															</div>
+															<div class="col-md-8 py-3">
+																{{ $product->get_attribute($group->productattr_name) }}
+															</div>
+														</div>
+													@endforeach
+												</div>
+											</div>
 										@endforeach
 									</div>
-									
 								</div>
 							</div>
 						</div>

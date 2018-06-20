@@ -10,6 +10,7 @@ use Theme\Models\ProductType;
 use Theme\Models\WooProduct as Product;
 use Themosis\Facades\Asset;
 use Themosis\Facades\View;
+use WooCommerce\ProductAttributeGroup\Models\ProductAttributeGrouping;
 
 class ProductController extends MainController{
 	/**
@@ -99,6 +100,9 @@ class ProductController extends MainController{
 	 * @return void
 	 */
 	public function single($post){
+		global $product;
+		$product_attribute_groups = ProductAttributeGrouping::all()
+									->groupBy('productattrgroup_id');
 		$product = wc_get_product($post->ID);
 		$product_types = get_the_terms($post->ID, 'product_cat'); 
 		$product_brand = get_the_terms($post->ID, 'product_brands');
@@ -122,6 +126,7 @@ class ProductController extends MainController{
 			'product_types_name' => $product_types_name,
 			'product_brand' => $product_brand[0] ?? null,
 			'previous' => $previous,
+			'product_attribute_groups' => $product_attribute_groups
 		]);
 	}
 

@@ -1,0 +1,3 @@
+[submodule "htdocs/content/plugins/woocommerce-product-attribute-grouping"]
+	path = htdocs/content/plugins/woocommerce-product-attribute-grouping
+	url = https://github.com/johnveeuminga/woocommerce-product-attribute-grouping.git
