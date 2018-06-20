@@ -43,7 +43,7 @@
 													<p class="font-sans-mada text-lg w-full">
 														{{$product_type->description}}
 													</p>
-													<a href="{{get_term_link($product_type->term_id)}}" class="px-4 py-2 text-2xl text-white uppercase bg-blue mt-auto inline-block font-sans font-bold">
+													<a href="{{get_term_link($product_type->term_id)}}" class="px-4 py-2 text-lg text-white uppercase bg-blue mt-auto inline-block font-sans font-bold">
 														{{__('See Our ' . $product_type->name, 'GROUPE-CT')}}
 													</a>
 												</div>

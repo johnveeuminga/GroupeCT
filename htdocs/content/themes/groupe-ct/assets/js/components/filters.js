@@ -10,8 +10,15 @@
 				filters[filter_group].push( $(this).val());
 
 			}else{
-				filters[filter_group].splice(filters[filter_group].indexOf($(this).val(), 1));
+				if(filters[filter_group].indexOf($(this).val()) == 0){
+					filters[filter_group].shift();
+				}else{
+
+					filters[filter_group].splice(filters[filter_group].indexOf($(this).val()), 1);
+				}
+				console.log(filters[filter_group]);
 			}
+
 
 			$.ajax({
 				url: groupect.ajaxurl,

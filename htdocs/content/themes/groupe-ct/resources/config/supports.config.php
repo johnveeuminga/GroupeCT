@@ -62,6 +62,6 @@ return [
     //	'admin-head-callback'    => '',
     //	'admin-preview-callback' => '',
     //],
-    'woocommerce-product-attribute-group'
+    'woocommerce-product-attribute-grouping'
 
 ];

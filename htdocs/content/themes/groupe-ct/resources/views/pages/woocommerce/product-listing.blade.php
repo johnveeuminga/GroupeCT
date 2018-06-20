@@ -102,7 +102,7 @@
 	    	    							@else
 	    	    							<img src="{{ wp_get_attachment_url(1991) }}" alt="{{$product->post_title}}" class="w-100 block">
 	    	    							@endif
-	    	    							<a href="{{get_the_permalink($product->ID)}}" class="font-sans-mada text-blue text-lg">
+	    	    							<a href="{{get_the_permalink($product->ID)}}" class="font-sans-mada leading-tight text-blue text-lg">
 	    	    								{{ $product->post_title }}
 	    	    							</a>
 	    	    						</div>
