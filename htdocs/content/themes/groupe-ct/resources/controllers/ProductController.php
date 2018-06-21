@@ -115,6 +115,7 @@ class ProductController extends MainController{
 			}
 		}
 
+		$previous = null;
 		if(isset($_SERVER['HTTP_REFERER'])) {
 		    $previous = $_SERVER['HTTP_REFERER'];
 		}

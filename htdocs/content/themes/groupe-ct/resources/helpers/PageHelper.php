@@ -59,6 +59,7 @@ class PageHelper
     const PAGE_10_0_ZONE_CLIENT = 'zone-client';
     const PAGE_11_0_NOUVELLES = 'nouvelles';
     const PAGE_12_0_BLOUGE = 'blouge';
+    const PAGE_13_0_QUOTE = 'demander-un-devis';
 
     private static function get_pages_array()
     {
@@ -290,6 +291,10 @@ class PageHelper
 		    self::PAGE_12_0_BLOUGE => [
 		    	'fr' => 2094,
 		    	'en' => 2094 
+		    ],
+		    self::PAGE_13_0_QUOTE => [
+		    	'fr' => 2023,
+		    	'en' => 2023
 		    ]
 		 
 	    ];

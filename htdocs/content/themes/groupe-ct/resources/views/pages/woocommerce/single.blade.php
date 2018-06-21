@@ -4,7 +4,7 @@
 	<section class="single-product">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-12">
+				<div class="col-sm-12 col-xs-12">
 					<div class="publication-nav-container">
 					    <div class="publication-nav">
 					        @if ($previous)
@@ -18,16 +18,16 @@
 						<h2 class="text-lg text-white uppercase font-sans font-bold">{{$product->get_name()}}</h2>
 					</div>
 				</div>
-				<div class="col-sm-12">
+				<div class="col-xs-12">
 					<div class="row">
-						<div class="col-sm-8">
+						<div class="col-sm-8 col-xs-12">
 							<div class="row">
-								<div class="col-sm-12">
+								<div class="col-xs-12">
 									<div class="row">
-										<div class="col-sm-10">
+										<div class="col-sm-10 col-xs-12">
 											<div class="single-product__images">
 												<div class="row">
-													<div class="col-sm-10">
+													<div class="col-sm-10 col-xs-12">
 														@if(has_post_thumbnail($product->get_id()))
 															<div class="single-product__slider-main">
 																<div class="product-slider__slide">
@@ -45,20 +45,23 @@
 															</div>
 														@endif
 													</div>
-													<div class="col-sm-2">
+													<div class="col-sm-2 col-xs-12">
 														@if($product->get_gallery_image_ids())
-															<div class="single-product__slider-thumbnails">
-																<div class="product-slider__slide">
+															<div class="thumbnails-container md:block hidden">
+																<div class="single-product__slider-thumbnails " >
 																	<div class="product-slider__slide">
-																		<img src="{{ get_the_post_thumbnail_url( $product->get_id(), 'full') }}" alt="" class='w-full block'>
+																		<div class="product-slider__slide">
+																			<img src="{{ get_the_post_thumbnail_url( $product->get_id(), 'full') }}" alt="" class='w-full block'>
+																		</div>
 																	</div>
+																	@foreach($product->get_gallery_image_ids() as $gallery_id)
+																		<div class="product-slider__slide">
+																			<img src="{{ wp_get_attachment_url($gallery_id) }}" alt="" class="w-full block">
+																		</div>
+																	@endforeach
 																</div>
-																@foreach($product->get_gallery_image_ids() as $gallery_id)
-																	<div class="product-slider__slide">
-																		<img src="{{ wp_get_attachment_url($gallery_id) }}" alt="" class="w-full block">
-																	</div>
-																@endforeach
 															</div>
+															
 														@endif
 													</div>
 												</div>

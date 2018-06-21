@@ -144,4 +144,33 @@
         </div>
     </div>
 
+    <div class="sub-menu-container nl8 row hide-from-screen">
+
+        <div class="sub-menu-title-container col-xs-10 col-xs-offset-2">
+            <h2 class="sub-menu-title"></h2>
+        </div>
+
+        <div class="nav-sub-container row justify-end">
+            <nav class="nav-sub nav-sub-left col-xs-4 col-xs-offset-2">
+                <div class="nav-section-title-container">
+                    <h3 class="nav-section-title"><?= pll__('Zone Client', GROUPE_CT) ?></a></h3>
+                </div>
+                <ul class="nav-link-container">
+                  <li class="menu-item">
+                      <a href="https://einfo.groupect.com/Gateway/Login?ReturnUrl=%2f" class="nav-link" target="_blank">{!! __('Accéder à mon CT', 'GROUPE-CT') !!}</a>
+                  </li>
+                  <li class="menu-item">
+                      <a href="https://www.groupect.com/assistance-technique/#section-02" class="nav-link" target="_blank">{!! __("Remplir une demande d'assistance", 'GROUPE-CT') !!}</a>
+                  </li>
+                  <li class="menu-item">
+                      <a href="https://www.groupect.com/assistance-technique/#section-03" class="nav-link" target="_blank">{!! __("Commander des fournitures", 'GROUPE-CT') !!}</a>
+                  </li>
+                  <li class="menu-item">
+                      <a href=" https://www.groupect.com/assistance-technique/#section-04" class="nav-link" target="_blank">{!! __("Service à la clientèle", 'GROUPE-CT') !!}</a>
+                  </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
 </div> <!-- SUB MENU MAIN CONTAINER END -->

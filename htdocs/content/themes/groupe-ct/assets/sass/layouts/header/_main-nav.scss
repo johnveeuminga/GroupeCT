@@ -69,6 +69,10 @@
         &:hover {
           color: $red;
         }
+
+        &.text-red{
+          @apply .text-red;
+        }
       }
     }
 
