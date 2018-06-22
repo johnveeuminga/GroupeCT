@@ -9,6 +9,7 @@ class Brand{
 	public static function all(){
 		$brands = get_terms([
 			'taxonomy' => 'product_brands',
+			'hide_empty' => false,
 		]);
 
 		return $brands;

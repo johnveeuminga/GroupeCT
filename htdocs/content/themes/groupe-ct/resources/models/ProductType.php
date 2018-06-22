@@ -10,6 +10,7 @@ class ProductType{
 		$product_type = get_terms( [
 			'taxonomy' => 'product_cat',
 			'slug' => $product_cat,
+			'hide_empty' => false,
 		] );
 
 		return $product_type[0];
@@ -22,6 +23,7 @@ class ProductType{
 		$product_types = get_terms([
 			'taxonomy' => 'product_cat',
 			'parent' => $product_cat,
+			'hide_empty' => false,
 		]);
 
 		return $product_types;
