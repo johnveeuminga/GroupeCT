@@ -13,23 +13,65 @@
 	    			<input type="hidden" name="taxonomy" value="{{ $object->taxonomy }}" id="taxonomy">
 	    			@foreach($filters as $index=>$filter)
 	    				@if(count($filter) > 0)
-	    					<div class="sidebar-section my-4">
-	    						<div class="sidebar-section-header px-3 py-4 text-white font-bold bg-blue uppercase font-sans">
-	    							{{ __($index, 'GROUPE-CT') }}
-	    						</div>
-	    						<div class="sidebar-section-choices px-2 py-2">
-	    							<div class="flex wrap flex-col">
-	    								@foreach($filter as $filter_choice)
-											<div class="form-group my-2 px-3">
-		    									<input type="checkbox" id="{{$filter_choice->slug}}" name="filter_{{strtolower($index)}}" value="{{$filter_choice->term_id}}" class="filter" data-filter-group = "{{strtolower($filter_choice->taxonomy)}}">
-		    									<label for="{{$filter_choice->slug}}" class="font-sans-mada text-lg ml-2">
-		    										{{$filter_choice->name}}
+	    					@if($index == 'Print Speed' || $index == '')
+	    						<div class="sidebar-section my-4">
+		    						<div class="sidebar-section-header px-3 py-4 text-white font-bold bg-blue uppercase font-sans">
+		    							{{ __($index, 'GROUPE-CT') }}
+		    						</div>
+		    						<div class="sidebar-section-choices px-2 py-2">
+		    							<div class="flex wrap flex-col">
+		    								<div class="form-group my-2 px-3">
+		    									<input type="checkbox" id="20ppm-less" name="filter_20ppm-less" value="0-20" class="filter" data-filter-group = "{{strtolower('pa_print-speed')}}">
+		    									<label for="20ppm-less" class="font-sans-mada text-lg ml-2">
+		    										{{ __('20 ppm et moins', GROUPE_CT) }}
 		    									</label>
 		    								</div>
-	    								@endforeach
-	    							</div>
-	    						</div>
-	    					</div>
+		    								<div class="form-group my-2 px-3">
+		    									<input type="checkbox" id="21-35ppm" name="filter_21-35ppm" value="21-35" class="filter" data-filter-group = "{{strtolower('pa_print-speed')}}">
+		    									<label for="21-35ppm" class="font-sans-mada text-lg ml-2">
+		    										{{ __('Entre 21 et 35 ppm', GROUPE_CT) }}
+		    									</label>
+		    								</div>
+		    								<div class="form-group my-2 px-3">
+		    									<input type="checkbox" id="36-45ppm" name="filter_36-45ppm" value="36-45" class="filter" data-filter-group = "{{strtolower('pa_print-speed')}}">
+		    									<label for="36-45ppm" class="font-sans-mada text-lg ml-2">
+		    										{{ __('Entre 36 et 45 ppm', GROUPE_CT) }}
+		    									</label>
+		    								</div>
+	    									<div class="form-group my-2 px-3">
+		    									<input type="checkbox" id="46-55ppm" name="filter_46-55ppm" value="46-55" class="filter" data-filter-group = "{{strtolower('pa_print-speed')}}">
+		    									<label for="46-55ppm" class="font-sans-mada text-lg ml-2">
+		    										{{ __('Entre 46 et 55 ppm', GROUPE_CT) }}
+		    									</label>
+		    								</div>
+		    								<div class="form-group my-2 px-3">
+		    									<input type="checkbox" id="75plus" name="filter_75plus" value="75-+" class="filter" data-filter-group = "{{strtolower('pa_print-speed')}}">
+		    									<label for="75plus" class="font-sans-mada text-lg ml-2">
+		    										{{ __('75 ppm et plus', GROUPE_CT) }}
+		    									</label>
+		    								</div>
+		    							</div>
+		    						</div>
+		    					</div>
+	    					@else
+		    					<div class="sidebar-section my-4">
+		    						<div class="sidebar-section-header px-3 py-4 text-white font-bold bg-blue uppercase font-sans">
+		    							{{ __($index, 'GROUPE-CT') }}
+		    						</div>
+		    						<div class="sidebar-section-choices px-2 py-2">
+		    							<div class="flex wrap flex-col">
+		    								@foreach($filter as $filter_choice)
+												<div class="form-group my-2 px-3">
+			    									<input type="checkbox" id="{{$filter_choice->slug}}" name="filter_{{strtolower($index)}}" value="{{$filter_choice->term_id}}" class="filter" data-filter-group = "{{strtolower($filter_choice->taxonomy)}}">
+			    									<label for="{{$filter_choice->slug}}" class="font-sans-mada text-lg ml-2">
+			    										{{$filter_choice->name}}
+			    									</label>
+			    								</div>
+		    								@endforeach
+		    							</div>
+		    						</div>
+		    					</div>
+	    					@endif
 	    				@endif
 	    			@endforeach
 	    			<div class="sidebar-section my-4">

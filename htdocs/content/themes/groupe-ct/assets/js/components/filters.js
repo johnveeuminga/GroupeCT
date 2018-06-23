@@ -7,8 +7,8 @@
 				if(!filters[filter_group]){
 					filters[filter_group] = [];
 				}
-				filters[filter_group].push( $(this).val());
 
+				filters[filter_group].push( $(this).val());
 			}else{
 				if(filters[filter_group].indexOf($(this).val()) == 0){
 					filters[filter_group].shift();
@@ -16,9 +16,7 @@
 
 					filters[filter_group].splice(filters[filter_group].indexOf($(this).val()), 1);
 				}
-				console.log(filters[filter_group]);
 			}
-
 
 			$.ajax({
 				url: groupect.ajaxurl,

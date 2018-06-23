@@ -43,65 +43,67 @@
 		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N49C66Q" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 	</noscript>
 	<!-- End Google Tag Manager (noscript) -->
-	@if (isset($acquisition) && $acquisition)
-		<style scoped>
-			@if (is_array(get_field('acquisition_image_desktop', $acquisition->ID)))
-				#interstitiel {
-					background-image: url({{ get_field('acquisition_image_desktop', $acquisition->ID)['url'] }});
+	<div id="app">
+		@if (isset($acquisition) && $acquisition)
+			<style scoped>
+				@if (is_array(get_field('acquisition_image_desktop', $acquisition->ID)))
+					#interstitiel {
+						background-image: url({{ get_field('acquisition_image_desktop', $acquisition->ID)['url'] }});
+					}
+				@endif
+	            @if (is_array(get_field('acquisition_image_mobile', $acquisition->ID)))
+	                @media (max-width: 767px) {
+					#interstitiel {
+						background-image: url({{ get_field('acquisition_image_mobile', $acquisition->ID)['url'] }});
+					}
 				}
-			@endif
-            @if (is_array(get_field('acquisition_image_mobile', $acquisition->ID)))
-                @media (max-width: 767px) {
-				#interstitiel {
-					background-image: url({{ get_field('acquisition_image_mobile', $acquisition->ID)['url'] }});
-				}
-			}
-			@endif
-		</style>
+				@endif
+			</style>
 
-		<div id="interstitiel" class="lity-hide">
-			<div class="content">
-				<h2>{!! get_field('acquisition_title', $acquisition->ID) !!}</h2>
-				<p>{!! get_field('acquisition_description', $acquisition->ID) !!}</p>
-				<div class="btn-container">
-					<a class="btn-bloc2 primary-btn close-data-lity close-interstitiel" href="#">{!! pll__('Poursuivre votre visite') !!}</a>
-					@if (!empty(get_field('acquisition_1_cta_link', $acquisition->ID)))
-						<a class="btn-bloc2 primary-btn" style="margin: 0 15px;" href="{{ get_field('acquisition_1_cta_link', $acquisition->ID) }}" @if(get_field('acquisition_1_cta_blank', $acquisition->ID)) target="_blank" @endif>{!! get_field('acquisition_1_cta_label', $acquisition->ID) !!}</a>
+			<div id="interstitiel" class="lity-hide">
+				<div class="content">
+					<h2>{!! get_field('acquisition_title', $acquisition->ID) !!}</h2>
+					<p>{!! get_field('acquisition_description', $acquisition->ID) !!}</p>
+					<div class="btn-container">
+						<a class="btn-bloc2 primary-btn close-data-lity close-interstitiel" href="#">{!! pll__('Poursuivre votre visite') !!}</a>
+						@if (!empty(get_field('acquisition_1_cta_link', $acquisition->ID)))
+							<a class="btn-bloc2 primary-btn" style="margin: 0 15px;" href="{{ get_field('acquisition_1_cta_link', $acquisition->ID) }}" @if(get_field('acquisition_1_cta_blank', $acquisition->ID)) target="_blank" @endif>{!! get_field('acquisition_1_cta_label', $acquisition->ID) !!}</a>
+						@else
+							<span style="display: inline-block; width: 30px;">&nbsp;</span>
+						@endif
+						@if (!empty(get_field('acquisition_2_cta_link', $acquisition->ID)))
+							<a class="btn-bloc2 primary-btn" href="{{ get_field('acquisition_2_cta_link', $acquisition->ID) }}" @if(get_field('acquisition_2_cta_blank', $acquisition->ID)) target="_blank" @endif>{!! get_field('acquisition_2_cta_label', $acquisition->ID) !!}</a>
+						@endif
+					</div>
+				</div>
+
+				<div class="interstitiel-toggle">
+					@if (pll_current_language() === 'fr')
+						@if (isset(pll_get_post_translations(get_the_ID())['en']))
+							<a class="language" href="{{ get_permalink(pll_get_post_translations(get_the_ID())['en']) }}?referer={{ get_field('acquisition_custom_hash', $acquisition->ID) }}">English</a><span>|</span><a href="#" class="close-interstitiel">x</a>
+						@endif
 					@else
-						<span style="display: inline-block; width: 30px;">&nbsp;</span>
-					@endif
-					@if (!empty(get_field('acquisition_2_cta_link', $acquisition->ID)))
-						<a class="btn-bloc2 primary-btn" href="{{ get_field('acquisition_2_cta_link', $acquisition->ID) }}" @if(get_field('acquisition_2_cta_blank', $acquisition->ID)) target="_blank" @endif>{!! get_field('acquisition_2_cta_label', $acquisition->ID) !!}</a>
+						@if (isset(pll_get_post_translations(get_the_ID())['fr']))
+							<a class="language" href="{{ get_permalink(pll_get_post_translations(get_the_ID())['fr']) }}?referer={{ get_field('acquisition_custom_hash', $acquisition->ID) }}">Français</a><span>|</span><a href="#" class="close-interstitiel">x</a>
+						@else
+							<a href="#" class="close-interstitiel">x</a>
+						@endif
 					@endif
 				</div>
 			</div>
+		@endif
 
-			<div class="interstitiel-toggle">
-				@if (pll_current_language() === 'fr')
-					@if (isset(pll_get_post_translations(get_the_ID())['en']))
-						<a class="language" href="{{ get_permalink(pll_get_post_translations(get_the_ID())['en']) }}?referer={{ get_field('acquisition_custom_hash', $acquisition->ID) }}">English</a><span>|</span><a href="#" class="close-interstitiel">x</a>
-					@endif
-				@else
-					@if (isset(pll_get_post_translations(get_the_ID())['fr']))
-						<a class="language" href="{{ get_permalink(pll_get_post_translations(get_the_ID())['fr']) }}?referer={{ get_field('acquisition_custom_hash', $acquisition->ID) }}">Français</a><span>|</span><a href="#" class="close-interstitiel">x</a>
-					@else
-						<a href="#" class="close-interstitiel">x</a>
-					@endif
-				@endif
-			</div>
+		@include('partials.components.header.main-nav-mobile')
+		<div id="global-container">
+	<!--		include header -->
+	        @include('templates.header')
+			<main {{ is_front_page() ? 'class="front-page"' : 'class="main-' . get_the_ID() . '"' }}>
+				@yield ('main')
+			</main>
+			<!-- include footer -->
+	        @include('templates.footer')
 		</div>
-	@endif
-
-	@include('partials.components.header.main-nav-mobile')
-	<div id="global-container">
-<!--		include header -->
-        @include('templates.header')
-		<main {{ is_front_page() ? 'class="front-page"' : 'class="main-' . get_the_ID() . '"' }}>
-			@yield ('main')
-		</main>
-		<!-- include footer -->
-        @include('templates.footer')
-	</div>
+    </div>
     <?php wp_footer(); ?>
 </body>
 </html>

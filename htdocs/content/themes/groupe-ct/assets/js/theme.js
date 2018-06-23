@@ -1,13 +1,10 @@
-// import Vue from 'vue/dist/vue.js';
+import Test from './components/Test.vue';
+
 require('./components/filters.js');
 // window.axios = require('axios');
 
 (function($) {
     $(document).ready(function() {
-        // Vue.component('test', require('./components/Test.vue').default);
-        // const app = new Vue({
-        //     el: '#root',
-        // });
         // Scroll to content if hashtag in url
         setTimeout(function () {
             var $elem = $('#_' + window.location.hash.replace('#', ''));

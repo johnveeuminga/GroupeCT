@@ -277,18 +277,53 @@ Ajax::listen('get-products', function(){
 
         if(!empty($filter_array)){
             foreach($filter_array as $index=>$filter_group){
-                if(!empty($filter_group)){
-                    $values = [];
-                    foreach($filter_group as $filter){
-                        $values[] = $filter;
-                    }
+                if($index == 'pa_print-speed'){
+                    if(!empty($filter_group)){
+                        $values = [];
+                        foreach($filter_group as $filter){
+                            $value = explode('-', $filter);
+                            if($value[0] == '75'){
+                                $terms = get_terms([
+                                    'taxonomy' => 'pa_print-speed',
+                                    'hide_empty' => false
+                                ]);
 
-                    $attributes[] = [
-                        'taxonomy' => $index,
-                        'field' => 'term_id',
-                        'terms' => $values,
-                    ];
-                }  
+                                foreach($terms as $term){
+                                    $att_exploded = explode('-ppm-ltr', $term->slug);
+                                    if(count($att_exploded) > 1){
+                                       if( (int) $att_exploded[0] >= 75){
+                                            $values[] = $att_exploded[0] . '-ppm-ltr';
+                                       }
+                                    }
+                                }
+                            }else{
+                               for($i = $value[0]; $i <= $value[1]; $i++){
+                                   $values[] = $i . '-ppm-ltr';
+                               } 
+                           }
+                        }
+
+
+                        $attributes[] = [
+                            'taxonomy' => $index,
+                            'field' => 'slug',
+                            'terms' => $values,
+                        ];
+                    }
+                }else{
+                    if(!empty($filter_group)){
+                        $values = [];
+                        foreach($filter_group as $filter){
+                            $values[] = $filter;
+                        }
+
+                        $attributes[] = [
+                            'taxonomy' => $index,
+                            'field' => 'term_id',
+                            'terms' => $values,
+                        ];
+                    }  
+                }
             }
         }
 
@@ -312,7 +347,6 @@ Ajax::listen('get-products', function(){
 
         $query = new WP_Query($args);
 
-
         if(!$query->posts){
             if($attributes){
                 $message = 'No products according to search.';
@@ -330,7 +364,7 @@ Ajax::listen('get-products', function(){
                 <div class="col-md-3 product-brand__products-col">
                     <div class="product-brand__product my-8 text-center px-2">
                         <img src="<?php echo $product_image; ?>" alt="<?php echo $product->post_title?>" class="w-100 block">
-                        <a href="<?php echo get_the_permalink($product->ID); ?>" class="font-sans-mada text-blue text-lg">
+                        <a href="<?php echo get_the_permalink($product->ID); ?>" class="font-sans-mada text-blue text-lg leading-tight">
                             <?php echo $product->post_title; ?>
                         </a>
                     </div>

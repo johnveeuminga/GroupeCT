@@ -38,7 +38,7 @@ class MainController extends BaseController
 
         Asset::add('jquery', '//code.jquery.com/jquery-3.1.1.min.js', '3.1.1', true);
         Asset::add('screen-css', themosis_assets() . '/css/screen.min.css', ['flexgrid']);
-        Asset::add('theme-js',  themosis_assets() . '/js/theme.min.js', ['jquery', 'doughnut-chart'], '', false);
+        Asset::add('theme-js',  themosis_assets() . '/js/theme.min.js', ['jquery', 'doughnut-chart', 'slick-js'], '', true);
 
         //Asset::add('mmenu-cdn', 'https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/6.1.0/jquery.mmenu.js', '1.0.0', true);
 
