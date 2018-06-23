@@ -13,7 +13,7 @@
 	    			<input type="hidden" name="taxonomy" value="{{ $object->taxonomy }}" id="taxonomy">
 	    			@foreach($filters as $index=>$filter)
 	    				@if(count($filter) > 0)
-	    					@if($index == 'Print Speed' || $index == '')
+	    					@if($index == 'Print Speed' || $index == 'Vitesse d’impression')
 	    						<div class="sidebar-section my-4">
 		    						<div class="sidebar-section-header px-3 py-4 text-white font-bold bg-blue uppercase font-sans">
 		    							{{ __($index, 'GROUPE-CT') }}
