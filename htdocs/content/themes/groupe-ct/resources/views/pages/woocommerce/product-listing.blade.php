@@ -45,6 +45,12 @@
 		    									</label>
 		    								</div>
 		    								<div class="form-group my-2 px-3">
+		    									<input type="checkbox" id="56-75ppm" name="filter_56-75" value="56-75" class="filter" data-filter-group = "{{strtolower('pa_print-speed')}}">
+		    									<label for="56-75ppm" class="font-sans-mada text-lg ml-2">
+		    										{{ __('Entre 56 et 75 ppm', GROUPE_CT) }}
+		    									</label>
+		    								</div>
+		    								<div class="form-group my-2 px-3">
 		    									<input type="checkbox" id="75plus" name="filter_75plus" value="75-+" class="filter" data-filter-group = "{{strtolower('pa_print-speed')}}">
 		    									<label for="75plus" class="font-sans-mada text-lg ml-2">
 		    										{{ __('75 ppm et plus', GROUPE_CT) }}
