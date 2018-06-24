@@ -1,3 +1,9 @@
+<style scoped>
+    .hero-content-container{
+        background-image: url("{{ wp_get_attachment_url(1170) }}");
+    }
+</style>
+
 @if ((get_post_type(get_the_ID()) === 'post' && !isset($page_title)) || is_product())
     <style scoped>
         .hero-title-container{
@@ -12,7 +18,8 @@
 @if (get_post_type(get_the_ID()) !== 'post' && !is_product())
     <style scoped>
         .hero-content-container {
-            background: black;
+            /*background: black;*/
+
         }
 
         @if (is_array(get_field('page_header_image_desktop')))

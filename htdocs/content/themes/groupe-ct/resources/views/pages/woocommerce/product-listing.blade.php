@@ -7,7 +7,7 @@
     	    <div class="row between-sm py-8">
 	    		<aside class="col-md-3">
 	    			<div class="sidebar-header text-center">
-	    				<h3 class="text-center mx-3 text-blue uppercase font-sans font-bold py-2 border-b-4 border-blue border-solid inline-block text-xl">{{ __('Refine Your Research', 'GROUPE-CT') }}</h3>
+	    				<h3 class="text-center mx-3 text-blue uppercase font-sans font-bold py-2 border-b-4 border-blue border-solid inline-block text-lg">{{ __('Raffiner Votre Recherche', 'GROUPE-CT') }}</h3>
 	    			</div>
 	    			<input type="hidden" name="term_id" value="{{$object->term_id}}" id="base_id">
 	    			<input type="hidden" name="taxonomy" value="{{ $object->taxonomy }}" id="taxonomy">
@@ -82,7 +82,7 @@
 	    			@endforeach
 	    			<div class="sidebar-section my-4">
 						<div class="sidebar-section-header px-3 py-3 text-blue font-bold uppercase font-sans">
-							{{ __('Categories of Our Printing Products', 'GROUPE-CT') }}
+							{{ __("Les Catégories de nos produits d'impression", 'GROUPE-CT') }}
 						</div>
 						<div class="sidebar-section-choices px-2 py-2">
 							<div class="flex wrap flex-col">
@@ -102,7 +102,7 @@
 					</div>
 					<div class="sidebar-section my-4">
 						<div class="sidebar-section-header px-3 py-3 text-blue font-bold uppercase font-sans">
-							{{ __('Brands of our Printing Products', 'GROUPE-CT') }}
+							{{ __("Les Marques de nos produits d'impression", 'GROUPE-CT') }}
 						</div>
 						<div class="sidebar-section-choices px-2 py-2">
 							<div class="flex wrap flex-col">
@@ -123,7 +123,7 @@
 					</div>
 	    		</aside>
     	    	<div class="col-md-8">
-    	    		<h2 class="product-brand__title text-3xl uppercase font-bold font-sans">{{ __($object->name . ' ' . $product_type->name, 'GROUPE-CT') }}</h2>
+    	    		<h2 class="product-brand__title text-3xl uppercase font-bold font-sans">{{ $page_title }}</h2>
     	    		<div class="product-brand-header">
     	    			<div class="row middle-xs my-3">
     	    				<div class="col-md-3">
@@ -138,7 +138,7 @@
     	    		</div>
     	    		<div class="product-brand__products mt-8">
     	    			<div class="product-brand__products-header px-4 py-3 bg-red">
-    	    				<span class="font-bold font-sans text-white uppercase">{{__($page_title . ' ' . 'products', 'GROUPE-CT')}}</span>
+    	    				<span class="font-bold font-sans text-white uppercase">{{__("Produits D'Impression " . $object->name, 'GROUPE-CT')}}</span>
     	    			</div>
     	    			<div class="row my-4 product-brand__products-row">
     	    				@if(!empty($products))

@@ -138,7 +138,7 @@ class ProductController extends MainController{
 	 */
 	public function productSubCat($product_type = false){
 		$product_type_children = ProductType::getSubcategories($this->printers_product_cat->term_id);
-		$page_title = __($this->printers_product_cat->name . ' Categories', 'GROUPE-CT');
+		$page_title = __("Catégories de nos produits d'impression", 'GROUPE-CT');
 		return view('pages.woocommerce.product_cat_listing', [
 			'product_types' => $product_type_children,
 			'page_title' => $page_title,
@@ -152,7 +152,7 @@ class ProductController extends MainController{
 	 */
 	public function getProductBrands(){
 		$product_type_children = ProductType::getSubcategories($this->printers_product_cat->term_id);
-		$page_title = __('Brands of our Printing Products');
+		$page_title = __("Marques de nos produits d'impression", "GROUPE-CT");
 		return view('pages.woocommerce.product-brand-listing',[
 			'product_types' => $product_type_children,
 			'page_title' => $page_title,
@@ -162,18 +162,18 @@ class ProductController extends MainController{
 	/**
 	 * Gets the page title according to if its a brand or a category
 	 *
-	 * @return string The corresponding page title.
+ * @return string The corresponding page title.
 	 */
 	private function getTitle($object, $product_type = null){
 		if($object->taxonomy === $this->product_brand_tax_name){
-			return __($object->name. ' ' . $product_type->name, 'GROUPE-CT');
+			return __( $product_type->name . ' '  . $object->name , 'GROUPE-CT');
 		}
 
 		return __($object->name, 'GROUPE-CT');
 	}
 
 	/**
-	 * Gets the brand or category logo
+ * Gets the brand or category logo
 	 *
 	 * @return string The logo url.
 	 */

@@ -11,7 +11,7 @@
 								<div class="sidebar-section">
 									<div class="sidebar-section">
 										<div class="sidebar-section-header px-3 text-blue font-bold uppercase font-sans">
-											{{ __('Brands of our Printing Products', 'GROUPE-CT') }}
+											{{ __("Les Marques de nos produits d'impression", 'GROUPE-CT') }}
 										</div>
 										<div class="sidebar-section-choices px-2 py-2">
 											<div class="flex wrap flex-col">
@@ -44,7 +44,7 @@
 														{{$product_type->description}}
 													</p>
 													<a href="{{get_term_link($product_type->term_id)}}" class="px-4 py-2 text-lg text-white uppercase bg-blue mt-auto inline-block font-sans font-bold">
-														{{__('See Our ' . $product_type->name, 'GROUPE-CT')}}
+														{{__('Voir Nos ' . $product_type->name, 'GROUPE-CT')}}
 													</a>
 												</div>
 											</div>
