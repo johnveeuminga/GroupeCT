@@ -1,6 +1,7 @@
 <style scoped>
     .hero-content-container{
         background-image: url("{{ wp_get_attachment_url(1170) }}");
+        background-size: cover;
     }
 </style>
 
