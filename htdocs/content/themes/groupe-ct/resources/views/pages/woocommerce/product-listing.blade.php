@@ -157,7 +157,7 @@
 	    	    					</div>
 	    	    				@endforeach
 	    	    			@else
-	    	    				<p class="font-sans-mada text-center text-lg py-4 w-full font-bold">No products.</p>
+	    	    				<p class="font-sans-mada text-center text-lg py-4 w-full font-bold">{{ __('Aucun prodiot trouvt é.', 'GROUPE-CT')}}.</p>
 	    	    			@endif
     	    			</div>
     	    		</div>
