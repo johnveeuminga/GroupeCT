@@ -78,10 +78,10 @@
 						<div class="single-product__tabs">
 							<ul class="list-reset flex border-b border-grey border-solid">
 							  <li class="-mb-px mr-1 active">
-							    <a class="bg-white inline-block border-l border-t border-r font-sans-mada py-2 px-4 text-black text-semibold" href="#" data-target='single-product__product-description'>Product Description</a>
+							    <a class="bg-white inline-block border-l border-t border-r font-sans-mada py-2 px-4 text-black text-semibold" href="#" data-target='single-product__product-description'>{{ __('Survol', 'GROUPE-CT')}}</a>
 							  </li>
 							  <li class="mr-1 -mb-px">
-							    <a class="border-l border-t border-r inline-block py-2 px-4 text-black font-sans-mada text-semibold" href="#" data-target="single-product__product-description-list">Product Specifications</a>
+							    <a class="border-l border-t border-r inline-block py-2 px-4 text-black font-sans-mada text-semibold" href="#" data-target="single-product__product-description-list">{{ __('Spécifications du produit') }}</a>
 							  </li>
 							</ul>
 							<div class="tabs">
@@ -100,18 +100,18 @@
 										<div class="row py-3 border-b border-solid border-grey">
 											<div class="col-md-4">
 												<span class="font-bold">
-													Type: 
+													Type d'equipement: 
 												</span>
 											</div>
 											<div class="col-md-8">
-												{{ implode($product_types_name , ', ') }}
+												{{ implode($product_types_name_single , ', ') }}
 											</div>
 										</div>
 										@if($product_brand)
 											<div class="row py-3 border-b border-solid border-grey">
 												<div class="col-md-4">
 													<span class="font-bold">
-														Make: 
+														Marque: 
 													</span>
 												</div>
 												<div class="col-md-8">
