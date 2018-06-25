@@ -349,9 +349,9 @@ Ajax::listen('get-products', function(){
 
         if(!$query->posts){
             if($attributes){
-                $message = 'No products according to search.';
+                $message = 'Aucun prodiot trouvt é.';
             }else{
-                $message = 'No products.';
+                $message = 'Aucun prodiot trouvt é.';
             }
             $result['data'] = '<p class="font-sans-mada text-center text-lg py-4 w-full font-bold">' . $message .'</p>';
         }else{

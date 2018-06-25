@@ -8,7 +8,7 @@
 					<div class="publication-nav-container">
 					    <div class="publication-nav">
 					        @if ($previous)
-					            <a class="publication-nav-item cta-pub-left" href="{{ $previous }}">{{ pll__('Go Back to the Product Listing Page') }}</a>
+					            <a class="publication-nav-item cta-pub-left" href="{{ $previous }}">{{ pll__('Retour à la page de la liste des produits') }}</a>
 					        @else
 					            <span></span>
 					        @endif
