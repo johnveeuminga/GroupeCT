@@ -23,10 +23,7 @@ class ProductFilters{
 		Action::add($this->product_cat_tax_name . '_edit_form_fields', array($this, 'editProductFiltersField'));
 		Action::add('edited_'.$this->product_cat_tax_name, array($this, 'saveProductFiltersMeta'), 10, 1);
 		Action::add('create_'.$this->product_cat_tax_name, array($this, 'saveProductFiltersMeta'), 10, 1);
-
-		$version = '2';
-        $namespace = 'wp/v' . $version;
-        $base = 'all-terms';
+		$this->registerAddUseAsFilter();
 	}
 
 	/**
@@ -114,6 +111,8 @@ class ProductFilters{
 	 * @return void
 	 */
 	public function saveProductFiltersMeta($term_id){
+		
+
 		if(isset($_POST['parent']) && $_POST['parent'] == '-1'){
 			$old_product_filters = get_term_meta($term_id, 'product-cat-filters', false);
 			$new_product_filters = isset($_POST['product_cat_filters']) ? $_POST['product_cat_filters'] : [];
@@ -143,6 +142,84 @@ class ProductFilters{
 				}
 			}
 
+		}
+	}
+
+	/**
+	 * Registers custom options for creation of terms of product attributes.
+	 *
+	 * @return void
+	 */
+	public function registerAddUseAsFilter(){
+		foreach(wc_get_attribute_taxonomies() as $attribute){
+			Action::add('pa_' . $attribute->attribute_name . '_add_form_fields', array($this, 'createSearchTermFormField'));
+			Action::add('pa_' . $attribute->attribute_name . '_edit_form_fields', array($this, 'createSearchTermFormFieldEdit'), 10, 1 );
+			Action::add('edited_'.'pa_' . $attribute->attribute_name, array($this, 'addTermMetaForSearchIndex'), 10, 1);
+			Action::add('create_' . 'pa_' . $attribute->attribute_name, array($this, 'addTermMetaForSearchIndex'), 10, 1);
+		}
+	}
+
+	/**
+	 * Create use as search term form field.
+	 *
+	 * @return void
+	 */
+	public function createSearchTermFormField(){
+		$input = Form::checkbox('use_search_term_index', 'Use this field as a search term index');
+		?>
+
+		<div class="form-field product-filters-container">
+			<?php echo $input ?>
+			<p>
+				<?php echo __('Check to use this term to search index and also display it on the front end.', 'GROUPE-CT'); ?>
+			</p>
+		</div>
+
+		<?php 
+	}
+
+	/**
+	 * Create use as search term for edit view.
+	 *
+	 * @return void
+	 */
+	public function createSearchTermFormFieldEdit($term){
+		$term_meta = get_term_meta($term->term_id, 'search-term-index');
+		if($term_meta){
+			$selected = ['true'];
+		}
+
+		$input = Form::checkbox('use_search_term_index', 
+			['true' => 'Use this term as index'],
+			$selected ?? null,
+			[
+				'id' => 'search-term-index'
+			]
+		);
+		?>
+
+		<tr class="form-field">
+			<th scope="row" valign="top">
+				<label for="search-term-index"><?php echo __('Use this field as a search term index', 'GROUPE-CT'); ?></label>
+			</th>
+			<td>
+				<?php echo $input ?>
+				<p class="description">
+					<?php echo __('Check to use this term to search index and also display it on the front end.', 'GROUPE-CT') ?>
+				</p>
+			</td>
+		</tr>
+
+		<?php 
+	}
+
+	public function addTermMetaForSearchIndex($term){
+		if(isset($_POST['use_search_term_index'])){
+			add_term_meta($term, 'search-term-index', true, true);
+		}else{
+			if(get_term_meta($term, 'search-term-index', false)){
+				delete_term_meta($term, 'search-term-index');
+			}
 		}
 	}
 }

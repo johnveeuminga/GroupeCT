@@ -151,7 +151,20 @@
 																<span class="font-bold">{{ get_taxonomy(($group->productattr_name))->label }}: </span>
 															</div>
 															<div class="col-md-8 py-3">
-																{{ $product->get_attribute($group->productattr_name) }}
+																<?php
+																	global $post;
+																	$terms = get_the_terms($post, $group->productattr_name);
+
+																	foreach($terms as $index=>$term){
+																		$term_meta = get_term_meta($term->term_id, 'search-term-index', true);
+																		if($term_meta){
+																			array_splice($terms, $index, 1);
+																		}
+																	}
+																?>
+																@foreach($terms as $term)
+																	{{ $term->name }}@if(!$loop->last), @endif
+																@endforeach
 															</div>
 														</div>
 													@endforeach
