@@ -66,13 +66,15 @@
 		    						</div>
 		    						<div class="sidebar-section-choices px-2 py-2">
 		    							<div class="flex wrap flex-col">
-		    								@foreach($filter as $filter_choice)
-												<div class="form-group my-2 px-3">
-			    									<input type="checkbox" id="{{$filter_choice->slug}}" name="filter_{{strtolower($index)}}" value="{{$filter_choice->term_id}}" class="filter" data-filter-group = "{{strtolower($filter_choice->taxonomy)}}">
-			    									<label for="{{$filter_choice->slug}}" class="font-sans-mada text-lg ml-2">
-			    										{{$filter_choice->name}}
-			    									</label>
-			    								</div>
+											@foreach($filter as $filter_choice)
+												@if(get_term_meta($filter_choice->term_id, 'search-term-index', true))
+													<div class="form-group my-2 px-3">
+														<input type="checkbox" id="{{$filter_choice->slug}}" name="filter_{{strtolower($index)}}" value="{{$filter_choice->term_id}}" class="filter" data-filter-group = "{{strtolower($filter_choice->taxonomy)}}">
+														<label for="{{ $filter_choice->slug }}" class="font-sans-mada text-lg ml-2">
+															{{ $filter_choice->name }}
+														</label>
+													</div>
+												@endif
 		    								@endforeach
 		    							</div>
 		    						</div>
