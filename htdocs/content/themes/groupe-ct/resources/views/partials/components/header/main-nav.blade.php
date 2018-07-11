@@ -54,7 +54,7 @@
 
         </a>
         <div class="contact-us-text link-account justify-center">
-            <div class="flex items-center justify-center"><span>{{ pll__('Demander un devis') }}</span>  <i class="ml-2 fas fa-angle-right fa-lg"></i></div>
+            <div class="flex items-center justify-center"><span>{!! pll__('Demander un devis') !!}</span>  <i class="ml-2 fas fa-angle-right fa-lg"></i></div>
         </div>
 
     </div>
