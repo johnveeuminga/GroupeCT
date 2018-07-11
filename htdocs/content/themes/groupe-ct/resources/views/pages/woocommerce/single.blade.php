@@ -155,16 +155,22 @@
 																	global $post;
 																	$terms = get_the_terms($post, $group->productattr_name);
 
-																	foreach($terms as $index=>$term){
-																		$term_meta = get_term_meta($term->term_id, 'search-term-index', true);
-																		if($term_meta){
-																			array_splice($terms, $index, 1);
+
+																	if($terms) {
+																		foreach($terms as $index=>$term){
+																			$term_meta = get_term_meta($term->term_id, 'search-term-index', true);
+																			if($term_meta){
+																				array_splice($terms, $index, 1);
+																			}
 																		}
 																	}
+																	
 																?>
-																@foreach($terms as $term)
-																	{{ $term->name }}@if(!$loop->last), @endif
-																@endforeach
+																@if($terms)
+																	@foreach($terms as $term)
+																		{{ $term->name }}@if(!$loop->last), @endif
+																	@endforeach
+																@endif
 															</div>
 														</div>
 													@endforeach

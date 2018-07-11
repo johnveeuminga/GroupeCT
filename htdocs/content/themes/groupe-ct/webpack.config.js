@@ -1,7 +1,7 @@
 var webpack = require('webpack'),
     path = require('path');
 
-const { VueLoaderPlugin } = require('vue-loader');
+// const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
     cache: true,
@@ -29,11 +29,11 @@ module.exports = {
                    presets: ['es2015', ]
                 }
             },
-            {
-                test: /\.vue$/,
-                exclude: /node_modules/,
-                use: 'vue-loader', 
-            }
+            // {
+            //     test: /\.vue$/,
+            //     exclude: /node_modules/,
+            //     use: 'vue-loader', 
+            // }
         ]
     },
     externals: {
@@ -51,7 +51,7 @@ module.exports = {
             backbone: "Backbone",
             underscore: "_"
         }),
-        new VueLoaderPlugin(),
+        // new VueLoaderPlugin(),
     ],
     resolve: {
         alias: {
