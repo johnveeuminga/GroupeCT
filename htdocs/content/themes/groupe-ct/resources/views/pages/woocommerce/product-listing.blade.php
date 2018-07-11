@@ -147,13 +147,14 @@
 	    	    				@foreach($products as $product)
 	    	    					<div class="col-md-3 product-brand__products-col">
 	    	    						<div class="product-brand__product my-8 text-center px-2">
-	    	    							@if(has_post_thumbnail($product->ID))
-	    	    							<img src="{{ get_the_post_thumbnail_url($product->ID) }}" alt="{{$product->post_title}}" class="w-100 block">
-	    	    							@else
-	    	    							<img src="{{ wp_get_attachment_url(1991) }}" alt="{{$product->post_title}}" class="w-100 block">
-	    	    							@endif
-	    	    							<a href="{{get_the_permalink($product->ID)}}" class="font-sans-mada leading-tight text-blue text-lg">
-	    	    								{{ $product->post_title }}
+											<a href="{{get_the_permalink($product->ID)}}" class="font-sans-mada leading-tight text-blue text-lg">
+												@if(has_post_thumbnail($product->ID))
+												<img src="{{ get_the_post_thumbnail_url($product->ID) }}" alt="{{$product->post_title}}" class="w-100 block">
+												@else
+												<img src="{{ wp_get_attachment_url(1991) }}" alt="{{$product->post_title}}" class="w-100 block">
+												@endif
+	    	    								<span class="font-sans-mada leading-tight text-blue text-lg">
+	    	    									{{ $product->post_title }} </span>
 	    	    							</a>
 	    	    						</div>
 	    	    					</div>

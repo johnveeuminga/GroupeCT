@@ -294,5 +294,8 @@ if (function_exists('pll_register_string'))
     /** */
     pll_register_string('', 'Poste:', false);
 
+    pll_register_string('NAV MENU', 'Demander un devis', GROUPE_CT, false);
+    pll_register_string('NAV MENU', 'Zone Client', GROUPE_CT, false);
+
 
 }

@@ -293,7 +293,7 @@ class PageHelper
 		    	'en' => 2094 
 		    ],
 		    self::PAGE_13_0_QUOTE => [
-		    	'fr' => 2023,
+		    	'fr' => 2109,
 		    	'en' => 2023
 		    ]
 		 
