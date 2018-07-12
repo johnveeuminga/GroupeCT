@@ -9,6 +9,8 @@ class WooProduct{
 		$query = new WP_Query([
 			'post_type' => 'product',
 			'posts_per_page' => -1,
+			'orderby'	=> 'title',
+			'order'		=> 'ASC',
 			'tax_query' => [
 				'relation' => 'AND',
 				[
@@ -31,6 +33,8 @@ class WooProduct{
 	public static function getProductsOfCategory($type_id){
 		$query = new WP_Query([
 			'post_type' => 'product',
+			'orderby'	=> 'title',
+			'order'		=> 'ASC',
 			'posts_per_page' => -1,
 			'tax_query' => [
 				'relation' => 'AND',

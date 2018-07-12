@@ -329,6 +329,8 @@ Ajax::listen('get-products', function(){
 
         $args = [
             'post_type' => 'product',
+            'orderby'	=> 'title',
+			'order'		=> 'ASC',
         ];
 
         $args['tax_query'] = [
