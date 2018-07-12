@@ -80,9 +80,12 @@ class ProductController extends MainController{
 		$product_type_children = ProductType::getSubcategories($this->printers_product_cat->term_id);
 
 		if($this->object->taxonomy === $this->product_brand_tax_name){
-			$products = Product::getProductsWithBrandAndType($this->object->term_id, $this->printers_product_cat->term_id);
+			$products = Product::getProductsWithBrandAndType($this->object->term_id, 
+			$this->printers_product_cat->term_id);
+			$tax_route = 'product-brands';
 		}else{
 			$products = Product::getProductsOfCategory($this->object->term_id);
+			$tax_route = 'product-categories';
 		}
 
 		return view('pages.woocommerce.product-listing',[
@@ -90,6 +93,7 @@ class ProductController extends MainController{
 			'logo' => $this->getLogo($this->object),
 			'page_title' => $this->getTitle($this->object, $this->printers_product_cat),
 			'products' => $products,
+			'tax_route'	=> $tax_route,
 		]);
 	}
 
