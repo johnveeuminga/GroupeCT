@@ -345,7 +345,9 @@ Ajax::listen('get-products', function(){
             $args['tax_query'][] = $attributes;
         }
 
+
         $query = new WP_Query($args);
+
 
         if(!$query->posts){
             if($attributes){

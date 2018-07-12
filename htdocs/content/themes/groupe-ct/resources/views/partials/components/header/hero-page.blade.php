@@ -58,7 +58,7 @@
         <div class="hero-content-container">
             <div class="hero-title-container">
                 @if(isset($page_title))
-                    <h1 class="hero-title"><span class="red-border">{{ $page_title }}</span></h1>
+                    <h1 class="hero-title {{ $tax_listing ? 'tax-listing' : '' }}"><span class="red-border">{{ $page_title }}</span></h1>
                 @endif
             </div>
             <div class="overlay"></div>

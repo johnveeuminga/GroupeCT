@@ -27,7 +27,7 @@
 							<div class="col-md-8">
 								@foreach($brands as $brand)
 									<div class="product-cat-listing__product-cat-container mb-8">
-										<h3 class="text-2xl font-sans font-bold uppercase">
+										<h3 class="text-xl font-sans font-bold uppercase">
 											{{$brand->name}}
 										</h3>
 										@php
@@ -40,11 +40,11 @@
 											</div>
 											<div class="col-md-8">
 												<div class="flex h-full flex-wrap">
-													<p class="font-sans-mada text-lg w-full">
+													<p class="font-sans-mada w-full">
 														{{$brand->description}}
 													</p>
-													<a href="{{get_term_link($brand->term_id)}}" class="px-4 py-2 text-2xl text-white uppercase bg-blue mt-auto inline-block font-sans font-bold">
-														{{__('Voir Nos ' . $brand->name, 'GROUPE-CT')}}
+													<a href="{{get_term_link($brand->term_id)}}" class="px-4 py-2 text-sm text-white uppercase bg-blue mt-auto w-full block font-sans font-bold text-center">
+														{{ pll__('Voir Nos', GROUPE_CT) . ' '. $brand->name }}
 													</a>
 												</div>
 											</div>

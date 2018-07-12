@@ -62,7 +62,6 @@ class ProductController extends MainController{
 	public function __construct(){
 		parent::__construct();
 		$this->object = get_queried_object();
-		$this->printers_product_cat =  ProductType::findProductType('printers');
 		$this->brands = Brand::all();
 		$this->filters = Filter::getFilters($this->printers_product_cat->term_id);
 		if(is_tax()){
@@ -138,10 +137,12 @@ class ProductController extends MainController{
 	 */
 	public function productSubCat($product_type = false){
 		$product_type_children = ProductType::getSubcategories($this->printers_product_cat->term_id);
-		$page_title = __("Catégories de nos produits d'impression", 'GROUPE-CT');
+		$page_title = __("Catégories des produits d'impression", 'GROUPE-CT');
 		return view('pages.woocommerce.product_cat_listing', [
 			'product_types' => $product_type_children,
 			'page_title' => $page_title,
+			'tax_listing'	=> true,
+			'tax_route'		=> 'product-categories'
 		]);
 	}
 
@@ -152,10 +153,12 @@ class ProductController extends MainController{
 	 */
 	public function getProductBrands(){
 		$product_type_children = ProductType::getSubcategories($this->printers_product_cat->term_id);
-		$page_title = __("Marques de nos produits d'impression", "GROUPE-CT");
+		$page_title = __("Marques des produits d'impression", "GROUPE-CT");
 		return view('pages.woocommerce.product-brand-listing',[
 			'product_types' => $product_type_children,
 			'page_title' => $page_title,
+			'tax_listing'	=> true,
+			'tax_route'		=> 'product-categories'
 		]);
 	}
 

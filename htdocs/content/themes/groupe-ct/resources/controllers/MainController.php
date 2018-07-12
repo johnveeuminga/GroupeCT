@@ -32,7 +32,7 @@ class MainController extends BaseController
 
     public function __construct()
     {
-        $this->printers_product_cat =  ProductType::findProductType('printers');
+        $this->printers_product_cat =  ProductType::findProductType( 'printers' );
         $this->product_types = ProductType::getSubcategories($this->printers_product_cat->term_id);
         $this->brands = Brand::all();
 
