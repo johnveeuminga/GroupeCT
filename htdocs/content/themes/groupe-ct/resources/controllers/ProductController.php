@@ -167,6 +167,24 @@ class ProductController extends MainController{
 	}
 
 	/**
+	 * Displays a listing of all products
+	 *
+	 * @return \Illuminate\Routing\view
+	 */
+	public function getAllProducts() {
+		global $post;
+		$products = Product::all();
+	
+		$product_type_children = ProductType::getSubcategories($this->printers_product_cat->term_id);
+		$page_title = $post->post_title;
+		return view('pages.woocommerce.product-archive',[
+			'product_type_children' => $product_type_children,
+			'products' => $products,
+			'page_title'	=> $page_title,
+		]);
+	}
+
+	/**
 	 * Gets the page title according to if its a brand or a category
 	 *
  * @return string The corresponding page title.

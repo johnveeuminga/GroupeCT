@@ -8,7 +8,6 @@ module.exports = {
     target: 'web',
     entry: {
         theme: path.join(__dirname, 'assets/js/theme.js'),
-        // components: path.join(__dirname, 'assets/js/scripts.js')
     },
     output: {
         path: path.join(__dirname, 'dist/js'),
@@ -54,8 +53,8 @@ module.exports = {
         // new VueLoaderPlugin(),
     ],
     resolve: {
-        alias: {
-            'vue$': 'vue/dist/vue.esm.js'
-        }
+        // alias: {
+        //     'vue$': 'vue/dist/vue.esm.js'
+        // }
     }
 };

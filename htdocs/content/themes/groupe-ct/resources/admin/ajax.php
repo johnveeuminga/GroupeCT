@@ -330,26 +330,28 @@ Ajax::listen('get-products', function(){
         $args = [
             'post_type' => 'product',
             'orderby'	=> 'title',
-			'order'		=> 'ASC',
+            'order'		=> 'ASC',
+            'posts_per_page' => -1,
+            'hide_empty' => false,
+            'post_status'   => 'publish'
         ];
 
-        $args['tax_query'] = [
-            'relation' => 'AND', 
-            [
-                'taxonomy' => $_GET['taxonomy'],
-                'field' => 'term_id',
-                'terms' => $_GET['term_id']
-            ],
-        ];
-
+        if( isset($_GET['taxonomy'] )) {
+            $args['tax_query'] = [
+                'relation' => 'AND', 
+                [
+                    'taxonomy' => $_GET['taxonomy'],
+                    'field' => 'term_id',
+                    'terms' => $_GET['term_id']
+                ],
+            ];
+        }
 
         if($attributes){
             $args['tax_query'][] = $attributes;
         }
 
-
         $query = new WP_Query($args);
-
 
         if(!$query->posts){
             if($attributes){
