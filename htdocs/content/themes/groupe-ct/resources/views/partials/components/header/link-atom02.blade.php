@@ -6,7 +6,7 @@
         <div class="nav-sub-container row">
             <nav class="nav-sub">
                 <div class="nav-section-title-container">
-                    <h3 class="nav-section-title"><a class="sub-sub-menu" href="/product-categories">{{ __('PAR CATÉGORIE', 'GROUPE-CT') }}</a></h3>
+                    <h3 class="nav-section-title"><a class="sub-sub-menu" href="/product-categories">{{ pll__('PAR CATÉGORIE', 'GROUPE-CT') }}</a></h3>
                     <a class="sub-sub-menu-trigger" href="#"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
                     <a class="sub-sub-menu-trigger hideMe" href="#"><i class="fa fa-minus-circle" aria-hidden="true"></i></a>
                 </div>
@@ -20,21 +20,21 @@
             </nav>
             <nav class="nav-sub">
                 <div class="nav-section-title-container">
-                    <h3 class="nav-section-title"><a class="sub-sub-menu" href="/product-brands">{{ __('PAR MARQUE', 'GROUPE-CT') }}</a></h3>
+                    <h3 class="nav-section-title"><a class="sub-sub-menu" href="/product-brands">{{ pll__('PAR MARQUE', 'GROUPE-CT') }}</a></h3>
                     <a class="sub-sub-menu-trigger" href="#"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
                     <a class="sub-sub-menu-trigger hideMe" href="#"><i class="fa fa-minus-circle" aria-hidden="true"></i></a>
                 </div>
                 <ul class="nav-link-container have-toggle">
                     @foreach($brands as $brand)
                          <li class="menu-item">
-                            <a href="{{get_term_link($product_type)}}" class="nav-link">{{ __($product_type->name, 'GROUPE-CT') }}</a>
+                            <a href="{{get_term_link($brand)}}" class="nav-link">{{ __($brand->name, 'GROUPE-CT') }}</a>
                         </li>
                     @endforeach
                 </ul>
             </nav>
             <nav class="nav-sub">
                 <div class="nav-section-title-container">
-                    <h3 class="nav-section-title"><a class="sub-sub-menu" href="#">{{ __('FOURNITURES', 'GROUPE-CT') }}</a></h3>
+                    <h3 class="nav-section-title"><a class="sub-sub-menu" href="#">{{ pll__('FOURNITURES', 'GROUPE-CT') }}</a></h3>
                     <a class="sub-sub-menu-trigger" href="#"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
                     <a class="sub-sub-menu-trigger hideMe" href="#"><i class="fa fa-minus-circle" aria-hidden="true"></i></a>
                 </div>
