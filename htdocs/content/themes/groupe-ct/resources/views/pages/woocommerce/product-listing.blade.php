@@ -138,9 +138,9 @@
 									@foreach($product_type_children as $product_type_child)
 										@if($object->taxonomy === 'product_cat')
 											@if($product_type_child->slug !== $active_link && $object->taxonomy === 'product_cat')
-												<a href="{{ get_term_link($product_type_child)}}" class="font-sans-mada text-blue-light my-1 px-3 inline-block"> <span class="underline">{{__($product_type_child->name, 'GROUPE-CT')}}</span></a>
+												<a href="{{ get_term_link($product_type_child)}}" class="font-sans-mada text-red my-1 px-3 inline-block"> <span class="underline">{{__($product_type_child->name, 'GROUPE-CT')}}</span></a>
 											@else
-												<span class="font-sans-mada text-blue my-1 px-3 inline-block font-bold "> {{__($product_type_child->name, 'GROUPE-CT')}}</span>
+												<span class="font-sans-mada text-blue-light my-1 px-3 inline-block font-bold "> {{__($product_type_child->name, 'GROUPE-CT')}}</span>
 											@endif
 										@else
 											<a href="{{ get_term_link($product_type_child)}}" class="font-sans-mada text-red my-1 px-3 inline-block"> <span class="underline">{{__($product_type_child->name, 'GROUPE-CT')}}</span></a>
