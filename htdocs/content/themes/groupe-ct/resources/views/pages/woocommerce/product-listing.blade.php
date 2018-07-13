@@ -208,7 +208,7 @@
 	    	    					</div>
 	    	    				@endforeach
 	    	    			@else
-	    	    				<p class="font-sans-mada text-center text-lg py-4 w-full font-bold">{{ __('Aucun prodiot trouvé', 'GROUPE-CT')}}</p>
+	    	    				<p class="font-sans-mada text-center text-lg py-4 w-full font-bold">{{ __('Aucun produit trouvé', 'GROUPE-CT')}}</p>
 	    	    			@endif
     	    			</div>
     	    		</div>
