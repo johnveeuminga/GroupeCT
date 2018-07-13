@@ -100,7 +100,7 @@ let colors = {
   'blue-darker': '#1c3d5a',
   'blue-dark': '#2779bd',
   'blue': '#052940',
-  'blue-light': '#3588ba',
+  'blue-light': '#2e87bc',
   'blue-lighter': '#bcdefa',
   'blue-lightest': '#eff8ff',
 
