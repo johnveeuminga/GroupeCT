@@ -141,7 +141,7 @@ class ProductController extends MainController{
 	 */
 	public function productSubCat($product_type = false){
 		$product_type_children = ProductType::getSubcategories($this->printers_product_cat->term_id);
-		$page_title = __("Catégories des produits d'impression", 'GROUPE-CT');
+		$page_title = pll__("CATÉGORIES DES PRODUITS D'IMPRESSION", GROUPE_CT);
 		return view('pages.woocommerce.product_cat_listing', [
 			'product_types' => $product_type_children,
 			'page_title' => $page_title,
@@ -157,7 +157,7 @@ class ProductController extends MainController{
 	 */
 	public function getProductBrands(){
 		$product_type_children = ProductType::getSubcategories($this->printers_product_cat->term_id);
-		$page_title = __("Marques des produits d'impression", "GROUPE-CT");
+		$page_title = pll__("MARQUES DES PRODUITS D'IMPRESSION", GROUPE_CT);
 		return view('pages.woocommerce.product-brand-listing',[
 			'product_types' => $product_type_children,
 			'page_title' => $page_title,
