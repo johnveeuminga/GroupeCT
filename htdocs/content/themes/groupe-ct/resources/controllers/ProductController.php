@@ -191,7 +191,7 @@ class ProductController extends MainController{
 	 */
 	private function getTitle($object, $product_type = null){
 		if($object->taxonomy === $this->product_brand_tax_name){
-			if( pll_get_current_language() == 'fr' ){
+			if( pll_current_language() == 'fr' ){
 				return __( $product_type->name . ' '  . $object->name , 'GROUPE-CT'); 
 			} else {
 				return __( $object->name . ' '  . $product_type->name  , 'GROUPE-CT'); 
