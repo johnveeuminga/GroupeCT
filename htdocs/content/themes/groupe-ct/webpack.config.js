@@ -1,14 +1,13 @@
 var webpack = require('webpack'),
     path = require('path');
 
-const { VueLoaderPlugin } = require('vue-loader');
+// const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
     cache: true,
     target: 'web',
     entry: {
         theme: path.join(__dirname, 'assets/js/theme.js'),
-        // components: path.join(__dirname, 'assets/js/scripts.js')
     },
     output: {
         path: path.join(__dirname, 'dist/js'),
@@ -29,11 +28,11 @@ module.exports = {
                    presets: ['es2015', ]
                 }
             },
-            {
-                test: /\.vue$/,
-                exclude: /node_modules/,
-                use: 'vue-loader', 
-            }
+            // {
+            //     test: /\.vue$/,
+            //     exclude: /node_modules/,
+            //     use: 'vue-loader', 
+            // }
         ]
     },
     externals: {
@@ -51,11 +50,11 @@ module.exports = {
             backbone: "Backbone",
             underscore: "_"
         }),
-        new VueLoaderPlugin(),
+        // new VueLoaderPlugin(),
     ],
     resolve: {
-        alias: {
-            'vue$': 'vue/dist/vue.esm.js'
-        }
+        // alias: {
+        //     'vue$': 'vue/dist/vue.esm.js'
+        // }
     }
 };

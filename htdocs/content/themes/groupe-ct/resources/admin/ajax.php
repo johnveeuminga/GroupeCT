@@ -329,17 +329,23 @@ Ajax::listen('get-products', function(){
 
         $args = [
             'post_type' => 'product',
+            'orderby'	=> 'title',
+            'order'		=> 'ASC',
+            'posts_per_page' => -1,
+            'hide_empty' => false,
+            'post_status'   => 'publish'
         ];
 
-        $args['tax_query'] = [
-            'relation' => 'AND', 
-            [
-                'taxonomy' => $_GET['taxonomy'],
-                'field' => 'term_id',
-                'terms' => $_GET['term_id']
-            ],
-        ];
-
+        if( isset($_GET['taxonomy'] )) {
+            $args['tax_query'] = [
+                'relation' => 'AND', 
+                [
+                    'taxonomy' => $_GET['taxonomy'],
+                    'field' => 'term_id',
+                    'terms' => $_GET['term_id']
+                ],
+            ];
+        }
 
         if($attributes){
             $args['tax_query'][] = $attributes;
@@ -349,9 +355,9 @@ Ajax::listen('get-products', function(){
 
         if(!$query->posts){
             if($attributes){
-                $message = 'Aucun prodiot trouvt é.';
+                $message = 'Aucun produit trouvé';
             }else{
-                $message = 'Aucun prodiot trouvt é.';
+                $message = 'Aucun produit trouvé';
             }
             $result['data'] = '<p class="font-sans-mada text-center text-lg py-4 w-full font-bold">' . $message .'</p>';
         }else{

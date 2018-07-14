@@ -59,7 +59,8 @@ class PageHelper
     const PAGE_10_0_ZONE_CLIENT = 'zone-client';
     const PAGE_11_0_NOUVELLES = 'nouvelles';
     const PAGE_12_0_BLOUGE = 'blouge';
-    const PAGE_13_0_QUOTE = 'demander-un-devis';
+	const PAGE_13_0_QUOTE = 'demander-un-devis';
+	const PAGE_14_0_NEWSLETTER = 'infolettre';
 
     private static function get_pages_array()
     {
@@ -210,11 +211,11 @@ class PageHelper
 		    ],
 		    self::PAGE_6_2_3_AMERLIORATION_PROCESSUS => [
 		    	'fr' => 2060,
-		    	'en' => 2060
+		    	'en' => 2137
 		    ],
 		    self::PAGE_6_2_4_FACTURATION_CONSOLIDEE => [
 		    	'fr' => 2062,
-		    	'en' => 2062
+		    	'en' => 2139
 		    ],
 		    self::PAGE_6_2_5_COMMANDES => [
 		    	'fr' => 2064,
@@ -226,23 +227,23 @@ class PageHelper
 		    ],
 		    self::PAGE_7_1_1 => [
 		    	'fr' => 2068,
-		    	'en' => 2068
+		    	'en' => 2127
 		    ],
 		    self::PAGE_7_1_2 => [
 		    	'fr' => 2070,
-		    	'en' => 2070
+		    	'en' => 2129
 		    ],
 		    self::PAGE_7_1_3 => [
 		    	'fr' => 2072,
-		    	'en' => 2072
+		    	'en' => 2131
 		    ],
 		    self::PAGE_7_1_4 => [
 		    	'fr' => 2074,
-		    	'en' => 2074
+		    	'en' => 2133
 		    ],
 		    self::PAGE_7_1_5 => [
 		    	'fr' => 2064,
-		    	'en' => 2064
+		    	'en' => 2135
 		    ], 
 		    self::PAGE_8_0_LOGICELS => [
 		    	'fr' => 2017,
@@ -250,31 +251,31 @@ class PageHelper
 		    ],
 		    self::PAGE_8_1_1 => [
 		    	'fr' => 2078,
-		    	'en' => 2078
+		    	'en' => 2141
 		    ],
 		    self::PAGE_8_1_2 => [
 		    	'fr' => 2080,
-		    	'en' => 2080
+		    	'en' => 2143
 		    ],
 		    self::PAGE_8_1_3 => [
 		    	'fr' => 2082,
-		    	'en' => 2082
+		    	'en' => 2145
 		    ],
 		    self::PAGE_8_2_1 => [
 		    	'fr' => 2084,
-		    	'en' => 2084
+		    	'en' => 2147
 		    ],
 		    self::PAGE_8_2_2 => [
 		    	'fr' => 2086,
-		    	'en' => 2086
+		    	'en' => 2149
 		    ],
 		    self::PAGE_8_2_3 => [
 		    	'fr' => 2088,
-		    	'en' => 2088
+		    	'en' => 2151
 		    ],
 		    self::PAGE_8_2_4 => [
 		    	'fr' => 2090,
-		    	'en' => 2090
+		    	'en' => 2153
 		    ],
 		    self::PAGE_9_0_DEMANDER_UNE_SOUMISSION => [
 		    	'fr' => 2021,
@@ -286,16 +287,22 @@ class PageHelper
 		    ],
 		    self::PAGE_11_0_NOUVELLES => [
 		    	'fr' => 2092,
-		    	'en' => 2092
+		    	'en' => 2156
 		    ],
 		    self::PAGE_12_0_BLOUGE => [
 		    	'fr' => 2094,
 		    	'en' => 2094 
-		    ],
+			],
+			
 		    self::PAGE_13_0_QUOTE => [
-		    	'fr' => 2023,
+		    	'fr' => 2109,
 		    	'en' => 2023
-		    ]
+			],
+			
+			self::PAGE_14_0_NEWSLETTER => [
+				'fr' => 2160,
+				'en' => 2158
+			]
 		 
 	    ];
     }

@@ -17,14 +17,15 @@
                 <li class="menu-item"><a class="nav-link text-primary" href="#"><i class="far fa-user-circle mr-1"></i>{{ pll__('ZONE CLIENT') }}</a></li>
                 {{-- <li class="menu-item"><a class="nav-link" href="{{ PageHelper::get_page_permalink(PageHelper::PAGE_4_7_NOUS_JOINDRE) }}">{{ PageHelper::get_page_title(PageHelper::PAGE_4_7_NOUS_JOINDRE) }}</a></li> --}}
                 <li class="menu-item"><a class="nav-link" href="{{ PageHelper::get_page_permalink(PageHelper::PAGE_11_0_NOUVELLES) }}">{{ PageHelper::get_page_title(PageHelper::PAGE_11_0_NOUVELLES) }}</a></li>
-                <li class="menu-item"><a class="nav-link" href="{{ PageHelper::get_page_permalink(PageHelper::PAGE_12_0_BLOUGE) }}">{{ PageHelper::get_page_title(PageHelper::PAGE_12_0_BLOUGE) }}</a></li>
+                {{-- <li class="menu-item"><a class="nav-link" href="{{ PageHelper::get_page_permalink(PageHelper::PAGE_12_0_BLOUGE) }}">{{ PageHelper::get_page_title(PageHelper::PAGE_12_0_BLOUGE) }}</a></li> --}}
                 <li class="menu-item"><a class="nav-link scroll-to" href="#" data-target="#form-newsletter">{{ pll__('Infolettre') }}</a></li>
                 <li class="menu-item"><a class="nav-link" href="{{ PageHelper::get_page_permalink(PageHelper::PAGE_4_6_CARRIERE) }}">{{ PageHelper::get_page_title(PageHelper::PAGE_4_6_CARRIERE) }}</a></li>
-                <li class="menu-item"><a class="nav-link text-red" href="{{ PageHelper::get_page_permalink(PageHelper::PAGE_3_0_ASSISTANCE) }}#section-01">{{ pll__('Demander une soumission') }}</a></li>
-                @if (isset(pll_get_post_translations(get_the_ID())['en']))
+                <li class="menu-item"><a class="nav-link" href="{{PageHelper::get_page_permalink(PageHelper::PAGE_13_0_QUOTE)}}">{{ PageHelper::get_page_title(PageHelper::PAGE_13_0_QUOTE) }}</a></li>
+                {{-- <li class="menu-item"><a class="nav-link text-red" href="{{ PageHelper::get_page_permalink(PageHelper::PAGE_3_0_ASSISTANCE) }}#section-01">{{ pll__('Demander une soumission') }}</a></li> --}}
+                @if (isset(pll_get_post_translations(get_the_ID())['en']) && pll_current_language() == 'fr')
                     <li class="menu-item"><a class="nav-link" href="{{ get_permalink(pll_get_post_translations(get_the_ID())['en']) }}">English</a></li>
                 @endif
-                @if (isset(pll_get_post_translations(get_the_ID())['fr']))
+                @if (isset(pll_get_post_translations(get_the_ID())['fr']) && pll_current_language() == 'en')
                     <li class="menu-item"><a class="nav-link" href="{{ get_permalink(pll_get_post_translations(get_the_ID())['fr']) }}">Français</a></li>
                 @endif
             </ul>

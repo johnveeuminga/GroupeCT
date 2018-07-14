@@ -17,6 +17,11 @@ Route::get('tax', ['product_brands', 'uses' => 'ProductController@getProductsWit
 Route::any('tax', ['product_cat', 'uses' => 'ProductController@getProductsWithBrandType']);
 
 Route::any('template', [
+    'printing-products',
+    'uses'  => 'ProductController@getAllproducts'
+]);
+
+Route::any('template', [
     'page-2-1',
     'uses' => 'PageController@page_2_1'
 ]);

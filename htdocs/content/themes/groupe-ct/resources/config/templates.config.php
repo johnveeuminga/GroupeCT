@@ -16,5 +16,5 @@ return [
     'page-2-3' => ['Page 2.3', ['page']],
     'page-3-0' => ['Page 3.0', ['page']],
     'post-list' => ['Publications', ['page']],
-
+    'printing-products' => [ "Produits D'Impression", ['page']],
 ];

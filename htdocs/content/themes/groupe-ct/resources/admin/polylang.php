@@ -294,5 +294,31 @@ if (function_exists('pll_register_string'))
     /** */
     pll_register_string('', 'Poste:', false);
 
+    pll_register_string('NAV MENU', 'Demander un devis', GROUPE_CT, false);
+    pll_register_string('NAV MENU', 'Zone Client', GROUPE_CT, false);
+    pll_register_string('PRODUCT_TAX_LISTING', 'Voir Nos', GROUPE_CT, false);
+    pll_register_string("LES MARQUES DE NOS PRODUITS D'IMPRESSION", "LES MARQUES DE NOS PRODUITS D'IMPRESSION", GROUPE_CT, false);
+    pll_register_string("LES CATÉGORIES DE NOS PRODUITS D'IMPRESSION", "LES CATÉGORIES DE NOS PRODUITS D'IMPRESSION", GROUPE_CT, false);
+    pll_register_string("MARQUES DE NOS PRODUITS D'IMPRESSION", "MARQUES DE NOS PRODUITS D'IMPRESSION", GROUPE_CT, false);
+    pll_register_string("CATÉGORIES DE NOS PRODUITS D'IMPRESSION", "CATÉGORIES DE NOS PRODUITS D'IMPRESSION", GROUPE_CT, false);
+    pll_register_string( "PRINTING PRODUCTS", "PAR CATÉGORIE", GROUPE_CT, false);
+    pll_register_string( "PRINTING PRODUCTS", "PAR MARQUE", GROUPE_CT, false);
+    pll_register_string( "PRINTING PRODUCTS", "FOURNITURES", GROUPE_CT, false);
+    pll_register_string( "SERVICES", "APPROCHE-CONSEIL", GROUPE_CT, false);
+    pll_register_string( "SERVICES", "NOS SERVICES", GROUPE_CT, false);
+    pll_register_string( "SOFTWARE", "GESTION D'IMPRESSION", GROUPE_CT);
+    pll_register_string( "SOFTWARE", "GESTION ÉLECTRONIQUE DES DOCUMENTS", GROUPE_CT);
+
+    // Customer Zone
+    pll_register_string( "CUSTOMER ZONE", "ACCÉDER À MON CT", GROUPE_CT);
+    pll_register_string( "CUSTOMER ZONE", "REMPLIR UNE DEMANDE D'ASSISTANCE", GROUPE_CT);
+    pll_register_string( "CUSTOMER ZONE", "COMMANDER DES FOURNITURES", GROUPE_CT);
+    pll_register_string( "CUSTOMER ZONE", "SERVICE À LA CLIENTÈLE", GROUPE_CT);
+
+    // Language
+    pll_register_string( "LANGUAGE", "Français", GROUPE_CT);
+
+    // Newsletter
+    pll_register_string( "NEWSLETTER", "Infolettre", GROUPE_CT);
 
 }

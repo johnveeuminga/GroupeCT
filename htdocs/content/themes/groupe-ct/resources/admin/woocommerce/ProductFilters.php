@@ -118,7 +118,7 @@ class ProductFilters{
 			$new_product_filters = isset($_POST['product_cat_filters']) ? $_POST['product_cat_filters'] : [];
 
 			if(empty($new_product_filters)){
-				delete_term_meta($term, 'product-cat-filters');
+				delete_term_meta($term_id, 'product-cat-filters');
 			}else{
 				$product_cat_filters_existing = [];
 

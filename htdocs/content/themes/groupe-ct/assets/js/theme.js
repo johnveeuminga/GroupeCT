@@ -1,4 +1,4 @@
-import Test from './components/Test.vue';
+// import Test from './components/Test.vue';
 
 require('./components/filters.js');
 // window.axios = require('axios');

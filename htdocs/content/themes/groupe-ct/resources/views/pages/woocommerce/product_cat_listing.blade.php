@@ -1,57 +1,38 @@
 @extends('templates.main')
 
 @section('main')
-	<div class="product-cat-listing">
+	<div class="product-cat-listing py-4">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="product-cat-listing__header">
 						<div class="row between-md  py-8">
-							<aside class="col-md-3">
-								<div class="sidebar-section">
-									<div class="sidebar-section">
-										<div class="sidebar-section-header px-3 text-blue font-bold uppercase font-sans">
-											{{ __("Les Marques de nos produits d'impression", 'GROUPE-CT') }}
+							@foreach($product_types as $product_type)
+								<div class="product-cat-listing__product-cat-container mb-8 col-md-6 col-12">
+									<h3 class="text-xl font-sans font-bold uppercase">
+										{{$product_type->name}}
+									</h3>
+									@php
+										$thumbnail_id = get_woocommerce_term_meta( $product_type->term_id, 'thumbnail_id', true );
+										$image = wp_get_attachment_url( $thumbnail_id && $thumbnail_id != 0 ? $thumbnail_id : 1991 );
+									@endphp
+									<div class="row stretch py-4">
+										<div class="col-md-5">
+											<img src="{{$image}}" alt="" class="w-full block">
 										</div>
-										<div class="sidebar-section-choices px-2 py-2">
-											<div class="flex wrap flex-col">
-												@foreach($brands as $brand_single)
-													<a href="{{ get_term_link($brand_single)}}" class="font-sans-mada text-red my-1 px-3 inline-block"> <span class="underline">{{__($brand_single->name, 'GROUPE-CT')}}</span></a>
-												@endforeach
+										<div class="col-md-7">
+											<div class="flex h-full flex-wrap">
+												<p class="font-sans-mada w-full">
+													{{$product_type->description}}
+												</p>
+												<a href="{{get_term_link($product_type->term_id)}}" class="px-4 py-2 text-xs text-white uppercase bg-blue mt-auto w-full text-center block font-sans font-bold">
+													{{ pll__('Voir Nos', GROUPE_CT) . ' ' .  $product_type->name }}
+												</a>
 											</div>
 										</div>
-										
 									</div>
 								</div>
-							</aside>
-							<div class="col-md-8">
-								@foreach($product_types as $product_type)
-									<div class="product-cat-listing__product-cat-container mb-8">
-										<h3 class="text-2xl font-sans font-bold uppercase">
-											{{$product_type->name}}
-										</h3>
-										@php
-											$thumbnail_id = get_woocommerce_term_meta( $product_type->term_id, 'thumbnail_id', true );
-											$image = wp_get_attachment_url( $thumbnail_id && $thumbnail_id != 0 ? $thumbnail_id : 1991 );
-										@endphp
-										<div class="row stretch py-4">
-											<div class="col-md-4">
-												<img src="{{$image}}" alt="" class="w-full block">
-											</div>
-											<div class="col-md-8">
-												<div class="flex h-full flex-wrap">
-													<p class="font-sans-mada text-lg w-full">
-														{{$product_type->description}}
-													</p>
-													<a href="{{get_term_link($product_type->term_id)}}" class="px-4 py-2 text-lg text-white uppercase bg-blue mt-auto inline-block font-sans font-bold">
-														{{__('Voir Nos ' . $product_type->name, 'GROUPE-CT')}}
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								@endforeach
-							</div>
+							@endforeach
 						</div>
 					</div>
 				</div>
