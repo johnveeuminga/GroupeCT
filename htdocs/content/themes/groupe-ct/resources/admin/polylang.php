@@ -321,4 +321,28 @@ if (function_exists('pll_register_string'))
     // Newsletter
     pll_register_string( "NEWSLETTER", "Infolettre", GROUPE_CT);
 
+    // WooCommerce translations
+    pll_register_string( "Attribute", "Type d'équipement", "WooCommerce" );
+    pll_register_string( "Filters", "RAFFINER VOTRE RECHERCHE", GROUPE_CT );
+    pll_register_string( "Filters", "Les Catégories de nos produits d'impression", GROUPE_CT );
+    pll_register_string( "Filters", "Les Marques de nos produits d'impression", GROUPE_CT );
+    pll_register_string( "Messages", "Aucun produit trouvé", GROUPE_CT);
+    pll_register_string( "Label", "PRODUITS D'IMPRESSION", GROUPE_CT);
+    pll_register_string( "Filters - print speed", "20 ppm et moins", GROUPE_CT);
+    pll_register_string( "Filters - print speed", "Entre 21 et 35 ppm", GROUPE_CT);
+    pll_register_string( "Filters - print speed", "Entre 36 et 45 ppm", GROUPE_CT);
+    pll_register_string( "Filters - print speed", "Entre 46 et 55 ppm", GROUPE_CT);
+    pll_register_string( "Filters - print speed", "Entre 56 et 75 ppm", GROUPE_CT);
+    pll_register_string( "Filters - print speed", "75 ppm et plus", GROUPE_CT);
+    pll_register_string( "Product - Tabs", "Survol", GROUPE_CT);
+    pll_register_string( "Product - Tabs", "Spécifications du produit", GROUPE_CT);
+    pll_register_string( "Product - Single", "Retour à la page de la liste des produits", GROUPE_CT);
+    pll_register_string( "Product - Single", "Attributes", GROUPE_CT);
+    pll_register_string( "Product - Single", "Make", GROUPE_CT);
+
+    pll_register_string( "Product Group", "Unité principal", GROUPE_CT);
+    pll_register_string( "Product Group", "Impression", GROUPE_CT);
+    pll_register_string( "Product Group", "Numérisation", GROUPE_CT);
+    pll_register_string( "Product Group", "Capacité de papier", GROUPE_CT);
+    pll_register_string( "Product Group", "Consommation énergétique", GROUPE_CT);
 }

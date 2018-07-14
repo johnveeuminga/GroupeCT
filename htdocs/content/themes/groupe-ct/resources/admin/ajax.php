@@ -361,7 +361,7 @@ Ajax::listen('get-products', function(){
         $query = new WP_Query($args);
 
         if(!$query->posts){
-            $message = 'Aucun produit trouvé';
+            $message = pll__('Aucun produit trouvé', GROUPE_CT);
             $result['data'] = '<p class="font-sans-mada text-center text-lg py-4 w-full font-bold">' . $message .'</p>';
         }else{
             ob_start();

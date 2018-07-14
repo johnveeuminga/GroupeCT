@@ -74,10 +74,10 @@
 										<div class="single-product__tabs">
 											<ul class="list-reset flex border-b border-grey border-solid">
 											  <li class="-mb-px mr-1 active">
-												<a class="bg-white inline-block border-l border-t border-r font-sans-mada py-2 px-4 text-black text-semibold" href="#" data-target='single-product__product-description'>{{ __('Survol', 'GROUPE-CT')}}</a>
+												<a class="bg-white inline-block border-l border-t border-r font-sans-mada py-2 px-4 text-black text-semibold" href="#" data-target='single-product__product-description'>{{ pll__('Survol', GROUPE_CT)}}</a>
 											  </li>
 											  <li class="mr-1 -mb-px">
-												<a class="border-l border-t border-r inline-block py-2 px-4 text-black font-sans-mada text-semibold" href="#" data-target="single-product__product-description-list">{{ __('Spécifications du produit') }}</a>
+												<a class="border-l border-t border-r inline-block py-2 px-4 text-black font-sans-mada text-semibold" href="#" data-target="single-product__product-description-list">{{ pll__('Spécifications du produit', GROUPE_CT) }}</a>
 											  </li>
 											</ul>
 											<div class="tabs">
@@ -91,12 +91,12 @@
 													</div>
 												</div>
 												<div id="single-product__product-description-list" class="fade tab">
-													<h2>Attributes</h2>
+													<h2>{{ pll__("Attributes", GROUPE_CT) }}</h2>
 													<div class="single-product__attr-list">
 														<div class="row py-3 border-b border-solid border-grey">
 															<div class="col-md-4">
 																<span class="font-bold">
-																	Type d'equipement: 
+																	{{ pll__("Type d'équipement", 'WooCommerce')}}: 
 																</span>
 															</div>
 															<div class="col-md-8">
@@ -107,7 +107,7 @@
 															<div class="row py-3 border-b border-solid border-grey">
 																<div class="col-md-4">
 																	<span class="font-bold">
-																		Marque: 
+																		{{ pll__("Make", GROUPE_CT) }}: 
 																	</span>
 																</div>
 																<div class="col-md-8">
@@ -118,7 +118,7 @@
 														<div class="row py-3 border-b border-solid border-grey">
 															<div class="col-md-4">
 																<span class="font-bold">
-																	Dimensions:
+																	{{ pll__("Dimensions", GROUPE_CT) }}:
 																</span>
 															</div>
 															<div class="col-md-8">
@@ -140,11 +140,11 @@
 														@foreach($product_attribute_groups as $index=>$product_attribute_group)
 															<div class="row  border-b border-solid border-grey">
 																<div class="col-sm-12">
-																	<span class="font-bold uppercase text-lg py-4 block text-red">{{ get_term($index)->name }}</span>
+																	<span class="font-bold uppercase text-lg py-4 block text-red">{{ pll__(get_term($index)->name, GROUPE_CT) }}</span>
 																	@foreach($product_attribute_group as $group )
 																		<div class="row">
 																			<div class="col-md-4 py-3">
-																				<span class="font-bold">{{ get_taxonomy(($group->productattr_name))->label }}: </span>
+																				<span class="font-bold">{{ pll__(get_taxonomy(($group->productattr_name))->labels->singular_name, 'WooCommerce') }}: </span>
 																			</div>
 																			<div class="col-md-8 py-3">
 																				<?php
@@ -164,7 +164,7 @@
 																				?>
 																				@if($terms)
 																					@foreach($terms as $term)
-																						{{ $term->name }}@if(!$loop->last), @endif
+																						{!! $term->name !!}@if(!$loop->last), @endif
 																					@endforeach
 																				@endif
 																			</div>

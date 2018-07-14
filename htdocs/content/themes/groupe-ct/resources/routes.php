@@ -21,6 +21,11 @@ Route::any('template', [
     'uses'  => 'ProductController@getAllproducts'
 ]);
 
+Route::any( 'template', [
+    'product-tax-listing',
+    'uses'  => 'ProductController@productTaxListing'
+]);
+
 Route::any('template', [
     'page-2-1',
     'uses' => 'PageController@page_2_1'

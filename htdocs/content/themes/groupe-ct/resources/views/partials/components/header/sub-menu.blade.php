@@ -5,7 +5,7 @@
         <div class="nav-sub-container row flex justify-center">
             <nav class="nav-sub col-sm-3 px-4">
                 <div class="nav-section-title-container">
-                    <h3 class="nav-section-title border-white border-b-2 border-solid"><a href="/product-categories">{{ pll__('PAR CATÉGORIE', 'GROUPE-CT') }}</a></h3>
+                    <h3 class="nav-section-title border-white border-b-2 border-solid"><a href="{{  PageHelper::get_page_permalink(PageHelper::PAGE_16_0_PAR_CATEGORIE) }}">{{ pll__('PAR CATÉGORIE', 'GROUPE-CT') }}</a></h3>
                 </div>
                 <ul class="nav-link-container">
                     @foreach($product_types as $product_type)
@@ -17,7 +17,7 @@
             </nav>
             <nav class="nav-sub col-sm-3 px-4">
                 <div class="nav-section-title-container">
-                    <h3 class="nav-section-title border-white border-b-2 border-solid"><a href="/product-brands">{{ pll__('PAR MARQUE', 'GROUPE-CT') }}</a></h3>
+                    <h3 class="nav-section-title border-white border-b-2 border-solid"><a href="{{ PageHelper::get_page_permalink(PageHelper::PAGE_15_0_PAR_MARQUE)}}">{{ pll__('PAR MARQUE', 'GROUPE-CT') }}</a></h3>
                 </div>
                 <ul class="nav-link-container">
                     @foreach($brands as $brand)

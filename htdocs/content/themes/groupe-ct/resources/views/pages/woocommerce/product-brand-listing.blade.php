@@ -26,7 +26,7 @@
 													{{$brand->description}}
 												</p>
 												<a href="{{get_term_link($brand->term_id)}}" class="px-4 py-2 text-sm text-white uppercase bg-blue mt-auto w-full block font-sans font-bold text-center">
-													{{ pll__('Voir Nos', GROUPE_CT) . ' '. $brand->name }}
+													{{ pll__('Voir Nos', GROUPE_CT) . ' '. $brand->name .( pll_current_language() == 'en' ? ' Products' : '')}}
 												</a>
 											</div>
 										</div>

@@ -17,4 +17,5 @@ return [
     'page-3-0' => ['Page 3.0', ['page']],
     'post-list' => ['Publications', ['page']],
     'printing-products' => [ "Produits D'Impression", ['page']],
+    'product-tax-listing'   => [ "Liste des catégories de produits", ['page']],
 ];

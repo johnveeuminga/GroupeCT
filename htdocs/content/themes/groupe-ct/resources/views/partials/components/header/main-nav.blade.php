@@ -23,7 +23,7 @@
                         <li class="menu-item"><a class="nav-link" href=" {{ get_term_link(pll_get_term($object->term_id, 'en')) }} ">English</a></li>
                     @endif
                     @if( pll_get_term($object->term_id, 'fr') != null && pll_current_language() == 'en')
-                        <li class="menu-item"><a class="nav-link" href=" {{ get_term_link(pll_get_term($object->term_id, 'fr')) }} ">{!! pll_('Français', GROUPE_CT); !!}</a></li>
+                        <li class="menu-item"><a class="nav-link" href=" {{ get_term_link(pll_get_term($object->term_id, 'fr')) }} ">{!! pll__('Français', GROUPE_CT); !!}</a></li>
                     @endif
                 {{-- @elseif( isset($tax_listing) )
                     @if( pll_current_language() == 'fr' )

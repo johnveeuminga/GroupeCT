@@ -111,7 +111,7 @@ class ProductController extends MainController{
 		$product_brand = get_the_terms($post->ID, 'product_brands');
 		$product_types_name = [];
 		foreach($product_types as $index=>$product_type){
-			if($product_type->parent == 264 ){
+			if($product_type->parent == 264 || $product_type->parent == 442){
 				$product_types_name[] = __($product_type->name, 'GROUPE-CT');
 			}else{
 				unset($product_types[$index]);
@@ -198,7 +198,7 @@ class ProductController extends MainController{
 	}
 
 	/**
- * Gets the brand or category logo
+ 	 * Gets the brand or category logo
 	 *
 	 * @return string The logo url.
 	 */
@@ -211,5 +211,15 @@ class ProductController extends MainController{
 		$image = wp_get_attachment_url( $thumbnail_id != 0 ? $thumbnail_id : 1991 );
 
 		return $image;
+	}
+
+	public function productTaxListing() {
+		global $post;
+
+		if( $post->ID == 2176 || $post->ID == 2179 ) {
+			return $this->getProductBrands();
+		}else {
+			return $this->productSubCat();
+		}
 	}
 }

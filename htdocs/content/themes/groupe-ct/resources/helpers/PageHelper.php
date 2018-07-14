@@ -61,6 +61,8 @@ class PageHelper
     const PAGE_12_0_BLOUGE = 'blouge';
 	const PAGE_13_0_QUOTE = 'demander-un-devis';
 	const PAGE_14_0_NEWSLETTER = 'infolettre';
+	const PAGE_15_0_PAR_MARQUE = 'par-marque';
+	const PAGE_16_0_PAR_CATEGORIE = 'par-categorie';
 
     private static function get_pages_array()
     {
@@ -302,7 +304,21 @@ class PageHelper
 			self::PAGE_14_0_NEWSLETTER => [
 				'fr' => 2160,
 				'en' => 2158
+			],
+
+			self::PAGE_15_0_PAR_MARQUE => [
+				'fr'	=> 2176,
+				'en'	=> 2179
+			],
+
+			self::PAGE_16_0_PAR_CATEGORIE => [
+				'fr'	=> 2181,
+				'en'	=> 2183
 			]
+
+			// self::PAGE_15_0_PAR_CATEGORIE => [
+			// 	''
+			// ]
 		 
 	    ];
     }

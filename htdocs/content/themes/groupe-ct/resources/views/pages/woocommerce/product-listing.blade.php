@@ -7,13 +7,13 @@
     	    <div class="row between-sm py-8">
 	    		<aside class="col-md-3">
 	    			<div class="sidebar-header text-center">
-	    				<h3 class="text-center mx-3 text-blue uppercase font-sans font-bold py-2 border-b-4 border-blue border-solid inline-block text-lg">{{ __('Raffiner Votre Recherche', 'GROUPE-CT') }}</h3>
+	    				<h3 class="text-center mx-3 text-blue uppercase font-sans font-bold py-2 border-b-4 border-blue border-solid inline-block text-lg">{{ pll__('RAFFINER VOTRE RECHERCHE', 'GROUPE-CT') }}</h3>
 	    			</div>
 	    			<input type="hidden" name="term_id" value="{{$object->term_id}}" id="base_id">
 					<input type="hidden" name="taxonomy" value="{{ $object->taxonomy }}" id="taxonomy">
 					<div class="sidebar-section my-4">
 						<div class="sidebar-section-header px-3 py-4 text-white font-bold bg-blue uppercase font-sans text-center">
-							{{ __("Les Catégories de nos produits d'impression", 'GROUPE-CT') }}							
+							{{ pll__("Les Catégories de nos produits d'impression", 'GROUPE-CT') }}							
 						</div>
 						<div class="sidebar-section-choices px-2 py-2">
 							<div class="flex wrap flex-col">
@@ -39,7 +39,7 @@
 					</div>
 					<div class="sidebar-section my-4">
 						<div class="sidebar-section-header px-3 py-4 text-white font-bold bg-blue uppercase font-sans text-center">
-							{{ __("Les Marques de nos produits d'impression", 'GROUPE-CT') }}	
+							{{ pll__("Les Marques de nos produits d'impression", 'GROUPE-CT') }}	
 						</div>
 						<div class="sidebar-section-choices px-2 py-2">
 							<div class="flex wrap flex-col">
@@ -67,44 +67,44 @@
 	    					@if($index == 'Print Speed' || $index == 'Vitesse d’impression')
 	    						<div class="sidebar-section my-4">
 		    						<div class="sidebar-section-header px-3 py-4 text-white font-bold bg-blue uppercase font-sans text-center">
-		    							{{ __($index, 'GROUPE-CT') }}
+		    							{{ pll__($index, GROUPE_CT) }}
 		    						</div>
 		    						<div class="sidebar-section-choices px-2 py-2">
 		    							<div class="flex wrap flex-col">
 		    								<div class="form-group my-2 px-3">
 		    									<input type="checkbox" id="20ppm-less" name="filter_20ppm-less" value="0-20" class="filter" data-filter-group = "{{strtolower('pa_print-speed')}}">
 		    									<label for="20ppm-less" class="font-sans-mada text-lg ml-2">
-		    										{{ __('20 ppm et moins', GROUPE_CT) }}
+		    										{{ pll__('20 ppm et moins', GROUPE_CT) }}
 		    									</label>
 		    								</div>
 		    								<div class="form-group my-2 px-3">
 		    									<input type="checkbox" id="21-35ppm" name="filter_21-35ppm" value="21-35" class="filter" data-filter-group = "{{strtolower('pa_print-speed')}}">
 		    									<label for="21-35ppm" class="font-sans-mada text-lg ml-2">
-		    										{{ __('Entre 21 et 35 ppm', GROUPE_CT) }}
+		    										{{ pll__('Entre 21 et 35 ppm', GROUPE_CT) }}
 		    									</label>
 		    								</div>
 		    								<div class="form-group my-2 px-3">
 		    									<input type="checkbox" id="36-45ppm" name="filter_36-45ppm" value="36-45" class="filter" data-filter-group = "{{strtolower('pa_print-speed')}}">
 		    									<label for="36-45ppm" class="font-sans-mada text-lg ml-2">
-		    										{{ __('Entre 36 et 45 ppm', GROUPE_CT) }}
+		    										{{ pll__('Entre 36 et 45 ppm', GROUPE_CT) }}
 		    									</label>
 		    								</div>
 	    									<div class="form-group my-2 px-3">
 		    									<input type="checkbox" id="46-55ppm" name="filter_46-55ppm" value="46-55" class="filter" data-filter-group = "{{strtolower('pa_print-speed')}}">
 		    									<label for="46-55ppm" class="font-sans-mada text-lg ml-2">
-		    										{{ __('Entre 46 et 55 ppm', GROUPE_CT) }}
+		    										{{ pll__('Entre 46 et 55 ppm', GROUPE_CT) }}
 		    									</label>
 		    								</div>
 		    								<div class="form-group my-2 px-3">
 		    									<input type="checkbox" id="56-75ppm" name="filter_56-75" value="56-75" class="filter" data-filter-group = "{{strtolower('pa_print-speed')}}">
 		    									<label for="56-75ppm" class="font-sans-mada text-lg ml-2">
-		    										{{ __('Entre 56 et 75 ppm', GROUPE_CT) }}
+		    										{{ pll__('Entre 56 et 75 ppm', GROUPE_CT) }}
 		    									</label>
 		    								</div>
 		    								<div class="form-group my-2 px-3">
 		    									<input type="checkbox" id="75plus" name="filter_75plus" value="75-+" class="filter" data-filter-group = "{{strtolower('pa_print-speed')}}">
 		    									<label for="75plus" class="font-sans-mada text-lg ml-2">
-		    										{{ __('75 ppm et plus', GROUPE_CT) }}
+		    										{{ pll__('75 ppm et plus', GROUPE_CT) }}
 		    									</label>
 		    								</div>
 		    							</div>
@@ -113,12 +113,24 @@
 	    					@else
 		    					<div class="sidebar-section my-4">
 		    						<div class="sidebar-section-header px-3 py-4 text-white font-bold bg-blue uppercase font-sans text-center">
-		    							{{ __($index, 'GROUPE-CT') }}
+		    							{{ pll__($index, GROUPE_CT) }}
 		    						</div>
 		    						<div class="sidebar-section-choices px-2 py-2">
 		    							<div class="flex wrap flex-col">
-											@foreach($filter as $filter_choice)
-												@if(get_term_meta($filter_choice->term_id, 'search-term-index', true))
+											@foreach($filter as $index=>$filter_choice)
+												@if( $filter_choice->taxonomy == 'pa_supported-media-sizes' )
+													@if(get_term_meta($filter_choice->term_id, 'search-term-index', true) )
+														<div class="form-group my-2 px-3">
+															<input type="checkbox" id="{{$filter_choice->slug}}" name="filter_{{strtolower($index)}}" value="{{$filter_choice->term_id}}" class="filter" data-filter-group = "{{strtolower($filter_choice->taxonomy)}}">
+															<label for="{{ $filter_choice->slug }}" class="font-sans-mada text-lg ml-2">
+																<?php
+																	$name = explode( " - Search Term", $filter_choice->name );
+																	echo $name[0]
+																?>
+															</label>
+														</div>
+													@endif
+												@else
 													<div class="form-group my-2 px-3">
 														<input type="checkbox" id="{{$filter_choice->slug}}" name="filter_{{strtolower($index)}}" value="{{$filter_choice->term_id}}" class="filter" data-filter-group = "{{strtolower($filter_choice->taxonomy)}}">
 														<label for="{{ $filter_choice->slug }}" class="font-sans-mada text-lg ml-2">
@@ -193,7 +205,7 @@
     	    		</div>
     	    		<div class="product-brand__products mt-8">
     	    			<div class="product-brand__products-header px-4 py-3 bg-red">
-    	    				<span class="font-bold font-sans text-white uppercase">{{__("Produits D'Impression " . $object->name, 'GROUPE-CT')}}</span>
+    	    				<span class="font-bold font-sans text-white uppercase">{{ pll__("PRODUITS D'IMPRESSION", GROUPE_CT) . " - " . $object->name }} </span>
     	    			</div>
     	    			<div class="row my-4 product-brand__products-row">
     	    				@if(!empty($products))
@@ -213,7 +225,7 @@
 	    	    					</div>
 	    	    				@endforeach
 	    	    			@else
-	    	    				<p class="font-sans-mada text-center text-lg py-4 w-full font-bold">{{ __('Aucun produit trouvé', 'GROUPE-CT')}}</p>
+	    	    				<p class="font-sans-mada text-center text-lg py-4 w-full font-bold">{{ pll__('Aucun produit trouvé', 'GROUPE-CT')}}</p>
 	    	    			@endif
     	    			</div>
     	    		</div>
