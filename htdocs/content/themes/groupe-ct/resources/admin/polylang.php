@@ -345,4 +345,6 @@ if (function_exists('pll_register_string'))
     pll_register_string( "Product Group", "Numérisation", GROUPE_CT);
     pll_register_string( "Product Group", "Capacité de papier", GROUPE_CT);
     pll_register_string( "Product Group", "Consommation énergétique", GROUPE_CT);
+    pll_register_string( "Product Tax Page Titles", "CATÉGORIES DES PRODUITS D'IMPRESSION", GROUPE_CT);
+    pll_register_string( "Product Tax Page Titles", "MARQUES DES PRODUITS D'IMPRESSION", GROUPE_CT);
 }
