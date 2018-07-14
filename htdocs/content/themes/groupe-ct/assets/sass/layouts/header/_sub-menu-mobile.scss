@@ -29,8 +29,12 @@
 
   .nav-sub-container {
     @include flexbox();
-    @include flex-direction(column);
+    // @include flex-direction(column);
+    flex-wrap: wrap;
     padding: 15px 0;
+    .nav-sub {
+      width: 100%;
+    }
   }
 
   .have-toggle {
