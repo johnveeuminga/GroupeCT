@@ -65,6 +65,9 @@ class MainController extends BaseController
         Asset::add('slick-css', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css');
         Asset::add('slick-js', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', ['jquery'], '1.9.0', true);
 
+        // Components
+        Asset::add( 'groupect-components', themosis_assets() . '/js/components.min.js', [], '', true );
+
         View::share('product_types', $this->product_types);
         View::share('product_cat', $this->printers_product_cat);
         View::share('brands', $this->brands);

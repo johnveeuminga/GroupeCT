@@ -272,7 +272,6 @@ Ajax::listen('get-products', function(){
     $result = [];
     if(isset($_GET['filters'])){
         $filter_array = json_decode(stripslashes($_GET['filters']));
-
         $attributes = [];
 
         if(!empty($filter_array)){
@@ -303,7 +302,6 @@ Ajax::listen('get-products', function(){
                            }
                         }
 
-
                         $attributes[] = [
                             'taxonomy' => $index,
                             'field' => 'slug',
@@ -327,6 +325,10 @@ Ajax::listen('get-products', function(){
             }
         }
 
+        if( isset($_GET['taxonomies'])){
+            $taxonomies = ( json_decode( stripslashes($_GET['taxonomies'] )));
+        }
+
         $args = [
             'post_type' => 'product',
             'orderby'	=> 'title',
@@ -336,29 +338,30 @@ Ajax::listen('get-products', function(){
             'post_status'   => 'publish'
         ];
 
-        if( isset($_GET['taxonomy'] )) {
+        if( isset($taxonomies) ) {
             $args['tax_query'] = [
-                'relation' => 'AND', 
-                [
-                    'taxonomy' => $_GET['taxonomy'],
-                    'field' => 'term_id',
-                    'terms' => $_GET['term_id']
-                ],
+                'relation' => 'AND'
             ];
+            foreach( $taxonomies as $index=>$taxonomy_query ) {
+                $tax_args = [
+                    'taxonomy'  => $index,
+                    'field'     => 'term_id',
+                    'terms'     => $taxonomy_query
+                ];
+
+                $args['tax_query'][] = $tax_args;
+            }
         }
 
         if($attributes){
             $args['tax_query'][] = $attributes;
         }
 
+
         $query = new WP_Query($args);
 
         if(!$query->posts){
-            if($attributes){
-                $message = 'Aucun produit trouvé';
-            }else{
-                $message = 'Aucun produit trouvé';
-            }
+            $message = 'Aucun produit trouvé';
             $result['data'] = '<p class="font-sans-mada text-center text-lg py-4 w-full font-bold">' . $message .'</p>';
         }else{
             ob_start();

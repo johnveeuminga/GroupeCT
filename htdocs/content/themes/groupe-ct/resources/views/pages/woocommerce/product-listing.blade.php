@@ -11,92 +11,57 @@
 	    			</div>
 	    			<input type="hidden" name="term_id" value="{{$object->term_id}}" id="base_id">
 					<input type="hidden" name="taxonomy" value="{{ $object->taxonomy }}" id="taxonomy">
-					@if( $tax_route == 'product-brands' )
-						<div class="sidebar-section my-4">
-							<div class="sidebar-section-header px-3 py-4 text-white font-bold bg-blue uppercase font-sans text-center">
-								{{ __("Les Catégories de nos produits d'impression", 'GROUPE-CT') }}							
-							</div>
-							<div class="sidebar-section-choices px-2 py-2">
-								<div class="flex wrap flex-col">
-									@foreach($product_type_children as $product_type_child)
-										<div class="form-group my-2 px-3">
-											<input type="checkbox" id="{{ $product_type_child->slug}}" name="{{ $product_type_child->slug }}" value="{{ $product_type_child->term_id }}" class="filter" data-filter-group = "product_cat">
-											<label for="{{ $product_type_child->slug }}" class="font-sans-mada text-lg ml-2">
-												{{ __($product_type_child->name, GROUPE_CT) }}
-											</label>
-										</div>
-									@endforeach
-								</div>
-							</div>
+					<div class="sidebar-section my-4">
+						<div class="sidebar-section-header px-3 py-4 text-white font-bold bg-blue uppercase font-sans text-center">
+							{{ __("Les Catégories de nos produits d'impression", 'GROUPE-CT') }}							
 						</div>
-						<div class="sidebar-section my-4">
-							<div class="sidebar-section-header px-3 py-4 text-white font-bold bg-blue uppercase font-sans text-center">
-								{{ __("Les Marques de nos produits d'impression", 'GROUPE-CT') }}
-							</div>
-							<div class="sidebar-section-choices px-2 py-2">
-								<div class="flex wrap flex-col">
-									@foreach($brands as $brand_single)
-										@if($object->taxonomy === 'product_brands')
-											@if($brand_single->slug !== $active_link)
-												<a href="{{ get_term_link($brand_single)}}" class="font-sans-mada text-red my-1 px-3 inline-block"> <span class="underline">{{__($brand_single->name, 'GROUPE-CT')}}</span></a>
-											@else
-												<span class="font-sans-mada text-blue-light my-1 px-3 inline-block font-bold "> {{__($brand_single->name, 'GROUPE-CT')}}</span>
-											@endif
-										@else
-											<a href="{{ get_term_link($brand_single)}}" class="font-sans-mada text-red my-1 px-3 inline-block"> <span class="underline">{{__($brand_single->name, 'GROUPE-CT')}}</span></a>
-										@endif
-									@endforeach
-								</div>
-							</div>
-						</div>
-					@else
-						<div class="sidebar-section my-4">
-							<div class="sidebar-section-header px-3 py-4 text-white font-bold bg-blue uppercase font-sans text-center">
-								{{ __("Les Catégories de nos produits d'impression", 'GROUPE-CT') }}
-							</div>
-							<div class="sidebar-section-choices px-2 py-2">
-								<div class="flex wrap flex-col">
-									@foreach($product_type_children as $product_type_child)
-										@if($object->taxonomy === 'product_cat')
-											@if($product_type_child->slug !== $active_link && $object->taxonomy === 'product_cat')
-												<a href="{{ get_term_link($product_type_child)}}" class="font-sans-mada text-red my-1 px-3 inline-block"> <span class="underline">{{__($product_type_child->name, 'GROUPE-CT')}}</span></a>
-											@else
-												<span class="font-sans-mada text-blue-light my-1 px-3 inline-block font-bold "> {{__($product_type_child->name, 'GROUPE-CT')}}</span>
-											@endif
-										@else
-											<a href="{{ get_term_link($product_type_child)}}" class="font-sans-mada text-red my-1 px-3 inline-block"> <span class="underline">{{__($product_type_child->name, 'GROUPE-CT')}}</span></a>
-										@endif
-									@endforeach
-								</div>
-							</div>
-						</div>				
 						<div class="sidebar-section-choices px-2 py-2">
-							<div class="sidebar-section-header px-3 py-4 text-white font-bold bg-blue uppercase font-sans text-center">
-								{{ __("Les Marques de nos produits d'impression", 'GROUPE-CT') }}	
-							</div>
 							<div class="flex wrap flex-col">
-								@foreach($brands as $brand_single)
+								@foreach($product_type_children as $product_type_child)
 									<div class="form-group my-2 px-3">
-										<input type="checkbox" id="{{ $brand_single->slug}}" name="{{ $brand_single->slug }}" value="{{ $brand_single->term_id }}" class="filter" data-filter-group = "product_brands">
-										<label for="{{ $brand_single->slug }}" class="font-sans-mada text-lg ml-2">
-											{{ __($brand_single->name, GROUPE_CT) }}
+										<input 
+											type="checkbox" 
+											id="{{ $product_type_child->slug}}" 
+											name="{{ $product_type_child->slug }}" 
+											value="{{ $product_type_child->term_id }}" 
+											class="filter" 
+											data-filter-group = "product_cat" 
+											data-term-id = "{{ $product_type_child->term_taxonomy_id }}"
+											{{ $object->term_id == $product_type_child->term_id ? 'checked' : ''}}
+										>
+										<label for="{{ $product_type_child->slug }}" class="font-sans-mada text-lg ml-2">
+											{{ __($product_type_child->name, GROUPE_CT) }}
 										</label>
 									</div>
 								@endforeach
 							</div>
 						</div>
-					@endif
-						{{-- @foreach($product_type_children as $product_type_child)
-							@if($object->taxonomy === 'product_cat')
-								@if($product_type_child->slug !== $active_link && $object->taxonomy === 'product_cat')
-									<a href="{{ get_term_link($product_type_child)}}" class="font-sans-mada text-red my-1 px-3 inline-block"> <span class="underline">{{__($product_type_child->name, 'GROUPE-CT')}}</span></a>
-								@else
-									<span class="font-sans-mada text-blue my-1 px-3 inline-block font-bold "> {{__($product_type_child->name, 'GROUPE-CT')}}</span>
-								@endif
-							@else
-								<a href="{{ get_term_link($product_type_child)}}" class="font-sans-mada text-red my-1 px-3 inline-block"> <span class="underline">{{__($product_type_child->name, 'GROUPE-CT')}}</span></a>
-							@endif
-						@endforeach --}}
+					</div>
+					<div class="sidebar-section my-4">
+						<div class="sidebar-section-header px-3 py-4 text-white font-bold bg-blue uppercase font-sans text-center">
+							{{ __("Les Marques de nos produits d'impression", 'GROUPE-CT') }}	
+						</div>
+						<div class="sidebar-section-choices px-2 py-2">
+							<div class="flex wrap flex-col">
+								@foreach($brands as $brand_single)
+									<div class="form-group my-2 px-3">
+									<input 
+									type="checkbox" 
+										id="{{ $brand_single->slug}}" 
+										name="{{ $brand_single->slug }}" 
+										value="{{ $brand_single->term_id }}" 
+										class="filter"
+										data-filter-group="product_brands" 
+										data-term-id = "{{ $brand_single->term_taxonomy_id }}"
+										{{ $object->term_id === $brand_single->term_id ? 'checked' : '' }}
+									>
+										<label for="{{ $brand_single->slug }}" class="font-sans-mada text-lg ml-2"> {{ __($brand_single->name, GROUPE_CT) }}
+										</label>
+									</div>
+								@endforeach
+							</div>
+						</div>
+					</div>
 	    			@foreach($filters as $index=>$filter)
 	    				@if(count($filter) > 0)
 	    					@if($index == 'Print Speed' || $index == 'Vitesse d’impression')

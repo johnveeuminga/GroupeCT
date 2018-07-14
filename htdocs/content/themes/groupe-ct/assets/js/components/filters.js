@@ -1,33 +1,51 @@
 (function($) {
 	$(document).ready(function(){
 		var filters = {};
+		var tax = $('#taxonomy').val();
+		var term_id = $('#term_id').val();
 		$('.filter').change( function() {
+			var checked = ( $('.filter:checkbox:checked' ));
 			var filter_group = $(this).data('filter-group');
-			if($(this).prop('checked')){
-				if(!filters[filter_group]){
-					filters[filter_group] = [];
+			var taxonomies = {};
+
+			$.each( checked, function( index ) {
+				if( $(this).data( 'term-id' )) {
+					var taxonomy = $(this).data( 'filter-group' );
+					if( !taxonomies[taxonomy] ){
+						taxonomies[taxonomy] = [];
+					}
+					taxonomies[taxonomy].push( $(this).data( 'term-id' ));
 				}
+			});
 
-				filters[filter_group].push( $(this).val());
-			}else{
-				if(filters[filter_group].indexOf($(this).val()) == 0){
-					filters[filter_group].shift();
+			if( !($(this).data( 'term-id' ))) {
+				if($(this).prop('checked') && !($(this).data( 'term-id' ))){
+					if(!filters[filter_group]){
+						filters[filter_group] = [];
+					}
+	
+					filters[filter_group].push( $(this).val());
 				}else{
-
-					filters[filter_group].splice(filters[filter_group].indexOf($(this).val()), 1);
+					if(filters[filter_group].indexOf($(this).val()) == 0){
+						filters[filter_group].shift();
+					}else{
+	
+						filters[filter_group].splice(filters[filter_group].indexOf($(this).val()), 1);
+					}
 				}
 			}
+			
 
 			$.ajax({
 				url: groupect.ajaxurl,
 				type: 'GET',
 				dataType: 'html',
 				data:{
-				action: 'get-products',
+					action: 'get-products',
 					security: 'get-products',
 					filters: JSON.stringify(filters),
-					taxonomy: $('#taxonomy').val(),
-					term_id: $('#base_id').val(),
+					taxonomies: JSON.stringify(taxonomies),
+					// term_id: $('#base_id').val(),
 				},
 
 				beforeSend: function(){
